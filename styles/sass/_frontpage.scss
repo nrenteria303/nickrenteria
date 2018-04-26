@@ -1,12 +1,38 @@
-body {
-    background-image: url('../../images/front-page-mtns.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+#front-page-main {
+    background: url('../../images/front-page-mtns.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
+    font-family: $front-font;
 }
 
-h1 {
-    color: yellow;
-    font-size: 100px;
+#front-page-title {
+    padding-top: 10px;
+    background-color: rgba($color: #daf6ff, $alpha: 0.76);
+    border-bottom: rgb(0, 6, 92) solid 3px;
+    display: flex;
+    h1 {
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+        color: rgb(0, 6, 92);
+        padding: 5px 25px;
+    }
 }
+
+nav {
+    width: 60%;
+    height: 16%;
+    background-color: purple;
+    margin: 200px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    a{
+        font-size: 1.6em;
+        color: white;
+    }
+}
+
+
