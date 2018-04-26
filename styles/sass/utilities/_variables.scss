@@ -4,13 +4,16 @@
 
 // Fonts
 
-$front-font:'Poppins', sans-serif;
-
+$front-font: 'Source Code Pro', monospace;
+$front-font-2:'Poppins', sans-serif;
 
 // Break Points
 
+$break-xxs: 376px;
 $break-xs: 575px;
 $break-sm: 576px;
-// $break-md: ;
-// $break-lg: ;
-// $break-xl: ;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1098px;
+
+$break-lndscp: 420px;
