@@ -48,41 +48,62 @@ nav {
     @media (min-width : $break-sm) {
         width: 66%;
     }
+    @media (min-width : $break-md ) {
+        margin-top: 100px;
+        width: 50%;
+    }
+    @media (min-width : $break-lg ) {
+        width: 40%;
+    }
     .front-nav-item {
         background-color: rgb(29, 3, 116);
         padding: 12px;
         font-family: $front-font-2;
         color: white;
-        height: 58px;
-        // transition: height .65s ease-out;
+        height: 76px;
+        transition: height .65s ease-out;
         p {
             margin-top: 6px;
+            opacity: 0;
+            z-index: -1000;
             font-size: 1.07em;
             display: none;
+            @media (min-width : $break-md ) {
+                font-size: 1.14em;
+            }
+            @media (min-width : $break-sm) {
+                display: block;
+            }
         }
         @media (min-width : $break-sm) {
             &:hover {
-                height: 128px;
+                height: 146px;
                 p {
-                    display: inline;
+                    transition: opacity .28s ease-out;
+                    transition-delay: .44s;
+                    opacity: 1;
                 }
             }
         }
         &:first-child {
             border-top-left-radius: 24px;
             border-top-right-radius: 24px;
-            margin-bottom: 4px;
+            margin-bottom: 18px;
         }
         &:last-child {
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
         a{
+            z-index: 1000;
             font-size: 1.6em;
             font-weight: 500;
             color: white;
             display: block;
-}
+            @media (min-width : $break-md ) {
+                font-size: 1.8em;
+            }
+        }
     }
 }
 
@@ -90,16 +111,5 @@ nav {
     #front-header {
         padding-top: 110px;
     }
-    #front-page-title {
-    }
-    nav {
-        margin-top: 100px;
-        width: 50%;
-    }
 }
 
-@media (min-width : $break-lg ) {
-    nav {
-        width: 40%;
-    }
-}

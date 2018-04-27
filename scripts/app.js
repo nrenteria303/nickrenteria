@@ -8,4 +8,8 @@ const $frontPosDesc = $('.front-pos-desc');
 
 // Functions
 
+// $frontPosDesc.hide();
 
+// $frontNavItem.hover(function() {
+//     $frontPosDesc.show();
+// } );
