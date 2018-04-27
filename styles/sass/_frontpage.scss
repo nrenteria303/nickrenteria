@@ -46,13 +46,16 @@ nav {
         margin-top: 90px;
     }
     @media (min-width : $break-sm) {
-        width: 66%;
+        width: 69%;
     }
     @media (min-width : $break-md ) {
         margin-top: 100px;
         width: 50%;
     }
     @media (min-width : $break-lg ) {
+        width: 46%;
+    }
+    @media (min-width : $break-xl ) {
         width: 40%;
     }
     .front-nav-item {
@@ -73,6 +76,9 @@ nav {
             }
             @media (min-width : $break-sm) {
                 display: block;
+            }
+            @media (min-width : $break-lg) {
+                font-size: 1.18em;
             }
         }
         @media (min-width : $break-sm) {
