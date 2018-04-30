@@ -41,82 +41,124 @@
 // Main Nav Section ===============================
 // ===============================================
 
-#front-page-nav {
-    font-family: $front-font-2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 80%;
-    max-width: 900px;
-    margin: 100px auto;
-    // display: grid;
-    // grid-template-columns: 20% 40%;
-    // grid-column-gap: 300px;
-}
-
-.front-nav-item {
-    perspective: 1200px;
-}
-
-.tri-roller {
-    transition: transform 1.8s ease-in-out;
-    transform-style: preserve-3d;
-    &:hover {
-        transform: rotateY(-240deg);
+@media (max-width: $break-md) {
+    .roller-img {
+        display: none;
+    }
+    #front-page-nav {
+        margin: 100px auto;
+        font-family: $front-font-2;
+        @media (max-width: $break-xxs) {
+            margin: 50px auto;
+        }
+    }
+    .front-nav-item {
+        background-color: rgba($color: $color-front-sec, $alpha: 0.86);
+        width: 95%;
+        margin: 40px auto;
+        padding: 12px 8px;
+        border-radius: 12px;
+        color: darken($color-front-pri, 10%);
+        @media (max-width: $break-xxs) {
+            margin: 20px auto;
+        }
+        h3 {
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        button {
+            background-color: $color-front-pri;
+            &:hover {
+                background-color: lighten($color-front-pri, 8%);
+            }
+            a {
+                color: white;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
 
-.front-face,
-.left-face,
-.right-face,
-.roller-img {
-    height: 280px;
-    width: 300px;
-    display: block;
-    position: absolute;
-    transform-origin: bottom center;
-    backface-visibility: hidden;
-}
- .front-face {
-     transform: translate3d( -150px, 0, 65px );
-     background-color: $color-front-pri;
-     color: white;
-     text-align: center; 
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     h3 {
-        font-weight: bold;
-        font-size: 2.34em;
-     }
- }
-
- .right-face {
-    transform: translate3d( -75px, 0, -65px ) rotateY(120deg);
- }
-
- .left-face {
-    transform: translate3d( -225px, 0, -65px ) rotateY(-120deg);
-    background-color: $color-front-sec;
-    color: $color-front-pri;
-    text-align: center;
-    p {
-        font-size: 1.5em;
-        padding: 30px 16px 16px;
+@media (min-width: $break-md) {
+    #front-page-nav {
+        font-family: $front-font-2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 900px;
+        margin: 100px auto;
     }
-    button {
+    .front-nav-item {
+        perspective: 1200px;
+    }
+    .tri-roller {
+        transition: transform 1.8s ease-in-out;
+        transform-style: preserve-3d;
+        &:hover {
+            transform: rotateY(-240deg);
+        }
+    }
+    .front-face,
+    .left-face,
+    .right-face,
+    .roller-img {
+        height: 280px;
+        width: 300px;
+        display: block;
+        position: absolute;
+        transform-origin: bottom center;
+        backface-visibility: hidden;
+    }
+    .front-face {
+        transform: translate3d( -150px, 0, 65px );
         background-color: $color-front-pri;
-        margin: 0 auto;
-        border-radius: 8px;
-        a {
-        display: inline-block;
-        font-size: 1.4em;
         color: white;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h3 {
+            font-weight: bold;
+            font-size: 2.34em;
+            text-decoration: underline;
+        }
     }
+    .right-face {
+        transform: translate3d( -75px, 0, -65px ) rotateY(120deg);
     }
- }
-
+    .left-face {
+        transform: translate3d( -225px, 0, -65px ) rotateY(-120deg);
+        background-color: $color-front-sec;
+        color: $color-front-pri;
+        text-align: center;
+        p {
+            font-size: 1.5em;
+            padding: 30px 16px 16px;
+        }
+        button {
+            background-color: $color-front-pri;
+            margin: 0 auto;
+            border-radius: 8px;
+            &:hover {
+                background-color: lighten($color-front-pri, 8%);
+            }
+            a {
+            display: inline-block;
+            font-size: 1.4em;
+            color: white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        }
+    }
+}
 
 // #front-page-nav {
 //     width: 74%;
