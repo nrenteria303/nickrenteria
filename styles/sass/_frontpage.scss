@@ -5,6 +5,7 @@
     font-family: $front-font;
 }
 
+// Adding top padding before Name/Title in bigger screens
 @media (min-width : $break-md ) {
     #front-header {
         padding-top: 110px;
@@ -22,7 +23,7 @@
     }
     h1 {
         font-weight: 700;
-        font-size: 44px;
+        font-size: 48px;
         text-align: center;
         color: rgb(44, 24, 107);
         padding: 3px 25px;
@@ -31,12 +32,16 @@
             display: inline-block;
         }
         @media ( min-width : $break-md ) {
-            font-size: 60px;
+            font-size: 64px;
         }
     }
 }
 
-nav {
+// =================================================
+// Main Nav Section ===============================
+// ===============================================
+
+#front-page-nav {
     width: 74%;
     height: 20%;
     margin: 210px auto 0;
@@ -64,21 +69,21 @@ nav {
     @media (min-width : $break-xl ) {
         width: 40%;
     }
-    .front-nav-item {
+    .front-nav-item {       // Individual Tutor/Web-Dev Divs
         background-color: rgb(29, 3, 116);
         padding: 12px;
         font-family: $front-font-2;
         color: white;
-        height: 76px;
+        height: 140x;
         transition: height .65s ease-out;
         p {
             margin-top: 6px;
-            opacity: 0;
+            opacity: 1;
             z-index: -1000;
             font-size: 1.07em;
-            display: none;
             @media (min-width : $break-sm) {
                 display: block;
+                opacity: 0;
             }
             @media (min-width : $break-md ) {
                 font-size: 1.18em;
@@ -88,6 +93,7 @@ nav {
             }
         }
         @media (min-width : $break-sm) {
+            height: 76px;
             &:hover {
                 height: 146px;
                 p {
@@ -98,17 +104,15 @@ nav {
             }
         }
         &:first-child {
-            border-top-left-radius: 18px;
-            border-top-right-radius: 18px;
-            border-top: 3px solid white;
-            border-left: solid white 3px;
-            margin-bottom: 24px;
+            border-radius: 18px 18px 0 0;
+            border: solid white;
+            border-width: 3px 0 0 4px;
+            margin-bottom: 32px;
         }
         &:last-child {
-            border-bottom-left-radius: 18px;
-            border-bottom-right-radius: 18px;
-            border-top: 3px solid white;
-            border-left: solid white 3px;
+            border-radius: 0 0 18px 18px;
+            border: 3px solid white;
+            border-width: 3px 0 0 4px;
         }
         a{
             z-index: 1000;
@@ -125,5 +129,3 @@ nav {
         }
     }
 }
-
-
