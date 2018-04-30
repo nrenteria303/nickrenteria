@@ -8,13 +8,13 @@
 // Adding top padding before Name/Title in bigger screens
 @media (min-width : $break-md ) {
     #front-header {
-        padding-top: 110px;
+        padding-top: 75px;
     }
 }
 
 #front-page-title {
     padding-top: 6px;
-    background-color: rgba($color: #daf6ff, $alpha: 0.76);
+    background-color: rgba($color: $color-front-sec, $alpha: 0.76);
     border-bottom: rgb(0, 6, 92) solid 3px;
     border-top: #00065c solid 3px;
     display: flex;
@@ -42,90 +42,168 @@
 // ===============================================
 
 #front-page-nav {
-    width: 74%;
-    height: 20%;
-    margin: 210px auto 0;
-    text-align: center;
+    font-family: $front-font-2;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    @media (max-width : $break-xxs) {
-        width: 86%;
-        margin-top: 170px;
-    }
-    @media (max-height : $break-lndscp) {
-        margin-top: 90px;
-    }
-    @media (min-width : $break-sm) {
-        width: 69%;
-    }
-    @media (min-width : $break-md ) {
-        margin-top: 100px;
-        width: 53%;
-    }
-    @media (min-width : $break-lg ) {
-        width: 46%;
-    }
-    @media (min-width : $break-xl ) {
-        width: 40%;
-    }
-    .front-nav-item {       // Individual Tutor/Web-Dev Divs
-        background-color: rgb(29, 3, 116);
-        padding: 12px;
-        font-family: $front-font-2;
-        color: white;
-        height: 140x;
-        transition: height .65s ease-out;
-        p {
-            margin-top: 6px;
-            opacity: 1;
-            z-index: -1000;
-            font-size: 1.07em;
-            @media (min-width : $break-sm) {
-                display: block;
-                opacity: 0;
-            }
-            @media (min-width : $break-md ) {
-                font-size: 1.18em;
-            }
-            @media (min-width : $break-lg) {
-                font-size: 1.24em;
-            }
-        }
-        @media (min-width : $break-sm) {
-            height: 76px;
-            &:hover {
-                height: 146px;
-                p {
-                    transition: opacity .28s ease-out;
-                    transition-delay: .44s;
-                    opacity: 1;
-                }
-            }
-        }
-        &:first-child {
-            border-radius: 18px 18px 0 0;
-            border: solid white;
-            border-width: 3px 0 0 4px;
-            margin-bottom: 32px;
-        }
-        &:last-child {
-            border-radius: 0 0 18px 18px;
-            border: 3px solid white;
-            border-width: 3px 0 0 4px;
-        }
-        a{
-            z-index: 1000;
-            font-size: 1.6em;
-            font-weight: 700;
-            color: white;
-            display: block;
-            @media (min-width : $break-md ) {
-                font-size: 1.8em;
-                &:hover {
-                    color: rgb(180, 246, 255); 
-                } 
-            }
-        }
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 900px;
+    margin: 100px auto;
+    // display: grid;
+    // grid-template-columns: 20% 40%;
+    // grid-column-gap: 300px;
+}
+
+.front-nav-item {
+    perspective: 1200px;
+}
+
+.tri-roller {
+    transition: transform 1.8s ease-in-out;
+    transform-style: preserve-3d;
+    &:hover {
+        transform: rotateY(-240deg);
     }
 }
+
+.front-face,
+.left-face,
+.right-face,
+.roller-img {
+    height: 280px;
+    width: 300px;
+    display: block;
+    position: absolute;
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+}
+ .front-face {
+     transform: translate3d( -150px, 0, 65px );
+     background-color: $color-front-pri;
+     color: white;
+     text-align: center; 
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     h3 {
+        font-weight: bold;
+        font-size: 2.34em;
+     }
+ }
+
+ .right-face {
+    transform: translate3d( -75px, 0, -65px ) rotateY(120deg);
+ }
+
+ .left-face {
+    transform: translate3d( -225px, 0, -65px ) rotateY(-120deg);
+    background-color: $color-front-sec;
+    color: $color-front-pri;
+    text-align: center;
+    p {
+        font-size: 1.5em;
+        padding: 30px 16px 16px;
+    }
+    button {
+        background-color: $color-front-pri;
+        margin: 0 auto;
+        border-radius: 8px;
+        a {
+        display: inline-block;
+        font-size: 1.4em;
+        color: white;
+    }
+    }
+ }
+
+
+// #front-page-nav {
+//     width: 74%;
+//     height: 20%;
+//     margin: 210px auto 0;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     @media (max-width : $break-xxs) {
+//         width: 86%;
+//         margin-top: 170px;
+//     }
+//     @media (max-height : $break-lndscp) {
+//         margin-top: 90px;
+//     }
+//     @media (min-width : $break-sm) {
+//         width: 69%;
+//     }
+//     @media (min-width : $break-md ) {
+//         margin-top: 100px;
+//         width: 53%;
+//     }
+//     @media (min-width : $break-lg ) {
+//         width: 70%;
+//     }
+//     @media (min-width : $break-xl ) {
+//         width: 65%;
+//     }
+//     .front-nav-item {       // Individual Tutor/Web-Dev Divs
+//         background-color: rgb(29, 3, 116);
+//         padding: 12px;
+//         font-family: $front-font-2;
+//         color: white;
+//         width: 320px;
+//         height: 140x;
+//         transition: height .65s ease-out;
+//         p {
+//             margin-top: 6px;
+//             opacity: 1;
+//             z-index: -1000;
+//             font-size: 1.07em;
+//             @media (min-width : $break-sm) {
+//                 display: block;
+//                 opacity: 0;
+//             }
+//             @media (min-width : $break-md ) {
+//                 font-size: 1.18em;
+//             }
+//             @media (min-width : $break-lg) {
+//                 font-size: 1.24em;
+//             }
+//         }
+//         @media (min-width : $break-sm) {
+//             height: 76px;
+//             &:hover {
+//                 height: 146px;
+//                 p {
+//                     transition: opacity .28s ease-out;
+//                     transition-delay: .44s;
+//                     opacity: 1;
+//                 }
+//             }
+//         }
+//         &:first-child {
+//             border-radius: 18px 18px 0 0;
+//             border: solid white;
+//             border-width: 3px 0 0 4px;
+//             margin-bottom: 32px;
+//         }
+//         &:last-child {
+//             border-radius: 0 0 18px 18px;
+//             border: 3px solid white;
+//             border-width: 3px 0 0 4px;
+//         }
+//         a{
+//             z-index: 1000;
+//             font-size: 1.6em;
+//             font-weight: 700;
+//             color: white;
+//             display: block;
+//             @media (min-width : $break-md ) {
+//                 font-size: 1.8em;
+//                 &:hover {
+//                     color: rgb(180, 246, 255); 
+//                 } 
+//             }
+//         }
+//     }
+// }
