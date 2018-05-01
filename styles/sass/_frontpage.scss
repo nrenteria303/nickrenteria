@@ -2,10 +2,11 @@
     background: url('../../images/front-page-mtns.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     font-family: $front-font;
 }
 
-// Adding top padding before Name/Title in bigger screens
+// Adding top space before Name/Title in bigger screens
 @media (min-width : $break-md ) {
     #front-header {
         padding-top: 75px;
@@ -34,6 +35,9 @@
         @media ( min-width : $break-md ) {
             font-size: 64px;
         }
+        @media (max-height:$break-lndscp) {
+            font-size: 35px;
+        }
     }
 }
 
@@ -41,15 +45,18 @@
 // Main Nav Section ===============================
 // ===============================================
 
-@media (max-width: $break-md) {
+@media (max-width: $break-md), (max-height : 545px) {
     .roller-img {
         display: none;
     }
     #front-page-nav {
-        margin: 100px auto;
+        margin: 48px auto;
         font-family: $front-font-2;
         @media (max-width: $break-xxs) {
-            margin: 50px auto;
+            margin: 20px auto;
+        }
+        @media (max-height:$break-lndscp) {
+            margin: 12px 0;
         }
     }
     .front-nav-item {
@@ -62,11 +69,27 @@
         @media (max-width: $break-xxs) {
             margin: 20px auto;
         }
+        @media (max-height: $break-lndscp) {
+            margin: 2px auto;
+        }
         h3 {
             font-weight: bold;
+            @media (max-height:$break-lndscp) {
+                font-size: 1.4em;
+            }
+            @media (max-width: $break-xxs) {
+                font-size: 1.45em;
+            }
         }
         p {
             font-size: 1.2em;
+            @media (max-height:$break-lndscp) {
+                font-size: 1.06em;
+                margin-bottom: 1px;
+            }
+            @media (max-width: $break-xxs) {
+                font-size: 1.1em;
+            }
         }
         button {
             background-color: $color-front-pri;
@@ -83,7 +106,7 @@
     }
 }
 
-@media (min-width: $break-md) {
+@media (min-width: $break-md) and (min-height: 545px) {
     #front-page-nav {
         font-family: $front-font-2;
         display: flex;
@@ -95,10 +118,10 @@
         margin: 100px auto;
     }
     .front-nav-item {
-        perspective: 1200px;
+        perspective: 1300px;
     }
     .tri-roller {
-        transition: transform 1.8s ease-in-out;
+        transition: transform 1.8s cubic-bezier(.28,-0.17,.33,.6);
         transform-style: preserve-3d;
         &:hover {
             transform: rotateY(-240deg);
@@ -112,11 +135,11 @@
         width: 300px;
         display: block;
         position: absolute;
-        transform-origin: bottom center;
+        transform-origin: center center;
         backface-visibility: hidden;
     }
     .front-face {
-        transform: translate3d( -150px, 0, 65px );
+        transform: translate3d( -150px, 0, 78px );
         background-color: $color-front-pri;
         color: white;
         text-align: center; 
@@ -130,10 +153,10 @@
         }
     }
     .right-face {
-        transform: translate3d( -75px, 0, -65px ) rotateY(120deg);
+        transform: translate3d( -75px, 0, -52px ) rotateY(120deg);
     }
     .left-face {
-        transform: translate3d( -225px, 0, -65px ) rotateY(-120deg);
+        transform: translate3d( -225px, 0, -52px ) rotateY(-120deg);
         background-color: $color-front-sec;
         color: $color-front-pri;
         text-align: center;
@@ -146,13 +169,14 @@
             margin: 0 auto;
             border-radius: 8px;
             &:hover {
-                background-color: lighten($color-front-pri, 8%);
+                background-color: lighten($color-front-pri, 10%);
             }
             a {
             display: inline-block;
             font-size: 1.4em;
             color: white;
             &:hover {
+                color: $color-front-sec;
                 text-decoration: none;
             }
         }
