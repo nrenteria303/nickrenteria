@@ -1,0 +1,63 @@
+
+#tut-title-wrap {
+    background-color: $color-front-pri;
+    color: $color-front-sec;
+    width: 100%;
+    padding: 8px 0 8px 12px;
+    border-bottom: 1px solid $color-front-sec;
+    h1, h4 {
+
+    }
+    h1 {
+        font-family: $front-font;
+        font-weight: bold;
+        font-size: 3rem;
+        @media (max-width: $break-xxs) {
+            font-size: 2.2rem;
+        }
+    }
+    h4 {
+        font-family: $front-font-2;
+        margin-bottom: 0;
+        @media (max-width: $break-xxs) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#tut-main-img {
+    width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $color-front-pri;
+    color: $color-front-sec;
+    border-top: 1px solid $color-front-sec;
+    border-bottom: 1px solid $color-front-sec;
+    h5, ul {
+        margin-bottom: 0;
+    }
+    h5 {
+        padding: 12px 0;
+        font-family: $front-font;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    ul {
+        text-align: center;
+        li {
+            padding: 12px 0;
+            display: inline-block;
+            font-size: 1.25rem;
+            a {
+                color: $color-front-sec;
+            }
+        }
+    }
+}
+
+
+

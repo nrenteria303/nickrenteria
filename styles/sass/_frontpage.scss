@@ -8,7 +8,7 @@
 }
 
 // Adding top space before Name/Title in bigger screens
-@media (min-width : $break-md ) {
+@media (min-width : $break-md ) and (min-height: $break-lndscp) {
     #front-header {
         padding-top: 75px;
     }
@@ -43,7 +43,7 @@
 }
 
 // =================================================
-// Main Nav Section ===============================
+// Main 3D Nav Section ============================
 // ===============================================
 
 #front-page-nav {
@@ -62,7 +62,7 @@
         margin: 20px auto 2px;
         height: 480px;
     }
-    @media ( min-width: $break-md) {
+    @media ( min-width: $break-md) and (min-height: $break-lndscp) {
         display: grid;
         grid-template-columns: 300px minmax(8px, 1fr) 300px;
         width: 80%;
@@ -79,7 +79,7 @@
     width: 2px;
 }
 .tri-roller {
-    transition: transform 1.88s cubic-bezier(.44,-0.15,.25,.55);
+    transition: transform 1.9s cubic-bezier(.44,-0.15,.25,.55);
     transform-style: preserve-3d;
     height: 224px;
     width: 240px;
@@ -101,7 +101,6 @@
     width: 100%;
     display: block;
     position: absolute;
-    transform-origin: top center;
     backface-visibility: hidden;
 }
 .front-face {
