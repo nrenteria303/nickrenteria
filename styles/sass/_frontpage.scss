@@ -88,7 +88,7 @@
         width: 300px;
     }
     &:hover {
-        transform: rotateY(-240deg);
+        transform: rotateY(-240deg) translateX(-28px);
     }
 }
 .front-face,
@@ -133,6 +133,7 @@
     @media (min-width: $break-md) {
         transform: translate3d( -(tri-x(300px)), 0, -(tri-z(300px)) ) rotateY(-120deg);
     }
+
     transform: translate3d( -(tri-x(240px)), 0, -(tri-z(240px)) ) rotateY(-120deg);
     background-color: $color-front-sec;
     color: $color-front-pri;
@@ -141,16 +142,20 @@
         @media (min-width: $break-md) {
             font-size: 1.5em;
         }
+
         font-size: 1.2em;
         padding: 30px 16px 16px;
     }
+
     button {
         background-color: $color-front-pri;
         margin: 0 auto;
         border-radius: 8px;
+
         &:hover {
             background-color: lighten($color-front-pri, 10%);
         }
+
         a {
         display: inline-block;
         font-size: 1.1em;
