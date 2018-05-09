@@ -1,0 +1,29 @@
+// ==============================
+// Style Mixins =================
+// ==============================
+
+// Prism Faces Translate ========
+@mixin triangle-prism-front($width) {
+    transform:  translateZ( ($width * 1.73205081) / 8 );
+}
+
+@mixin triangle-prism-right($width) {
+    transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) 
+                rotateY(120deg);
+}
+
+@mixin triangle-prism-left($width) {
+    transform:  translate3d( -($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(-120deg);
+}
+
+// Div Container Gradient =========
+@mixin container-gradient($height)  {
+    background: linear-gradient((0.069771 * $height / 1px * 1deg + 2.1856 ), $color-pri 50%, $color-sec (-.071442 *$height / 1px * 1% + 219.5349));
+    text-shadow: -6px 6px 18px darken($color-pri, 50%);
+}
+
+@mixin container-gradient-inverse($height)  {
+    background: linear-gradient((0.069771 * $height / 1px * 1deg + 2.1856 ), $color-sec 57%, $color-pri (-.071442 *$height / 1px * 1% + 229.5349));
+    text-shadow: -6px 6px 18px white;
+}
+

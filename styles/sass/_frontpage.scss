@@ -4,7 +4,7 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    font-family: $front-font;
+    font-family: $font-title;
 }
 
 // Adding top space before Name/Title in bigger screens
@@ -16,10 +16,11 @@
 
 #front-page-title {
     padding-top: 6px;
-    background-color: rgba($color: $color-front-sec, $alpha: 0.76);
+    background-color: rgba($color: $color-sec, $alpha: 0.76);
     border-bottom: rgb(0, 6, 92) solid 3px;
     border-top: #00065c solid 3px;
     display: flex;
+    @include container-gradient-inverse(83.333px); 
     @media ( min-width : $break-md ) {
         display: block;
     }
@@ -47,7 +48,7 @@
 // ===============================================
 
 #front-page-nav {
-    font-family: $front-font-2;
+    font-family: $font-main;
     width: 240px;
     height: 514px;
     display: flex;
@@ -71,13 +72,16 @@
         margin: 100px auto 0;
     }
 }
+
 .front-nav-item {
     perspective: 1300px;
 }
+
 .empty-grid-div {
     height: 2px;
     width: 2px;
 }
+
 .tri-roller {
     transition: transform 1.9s cubic-bezier(.44,-0.15,.25,.55);
     transform-style: preserve-3d;
@@ -91,6 +95,7 @@
         transform: rotateY(-240deg) translateX(-28px);
     }
 }
+
 .front-face,
 .left-face,
 .right-face,
@@ -103,12 +108,15 @@
     position: absolute;
     backface-visibility: hidden;
 }
+
 .front-face {
     @media (min-width: $break-md) {
-        transform: translate3d( 0, 0, tri-z(300px) );
+        @include triangle-prism-front(300px);
+        @include container-gradient(280px);
     }
-    transform: translate3d( 0, 0, tri-z(240px) );
-    background-color: $color-front-pri;
+    @include triangle-prism-front(240px);
+    @include container-gradient(224px);
+    background-color: $color-pri;
     color: white;
     text-align: center; 
     display: flex;
@@ -123,20 +131,20 @@
         text-decoration: underline overline;
     }
 }
+
 .right-face {
     @media (min-width: $break-md) {
-        transform: translate3d( tri-x(300px), 0, -(tri-z(300px)) ) rotateY(120deg);
+        @include triangle-prism-right(300px);    
     }
-    transform: translate3d( tri-x(240px), 0, -(tri-z(240px)) ) rotateY(120deg);
-}
+    @include triangle-prism-right(240px);}
+
 .left-face {
     @media (min-width: $break-md) {
-        transform: translate3d( -(tri-x(300px)), 0, -(tri-z(300px)) ) rotateY(-120deg);
+        @include triangle-prism-left(300px);
     }
-
-    transform: translate3d( -(tri-x(240px)), 0, -(tri-z(240px)) ) rotateY(-120deg);
-    background-color: $color-front-sec;
-    color: $color-front-pri;
+    @include triangle-prism-left(240px);
+    background-color: $color-sec;
+    color: $color-pri;
     text-align: center;
     p {
         @media (min-width: $break-md) {
@@ -148,25 +156,25 @@
     }
 
     button {
-        background-color: $color-front-pri;
+        background-color: $color-pri;
         margin: 0 auto;
         border-radius: 8px;
 
         &:hover {
-            background-color: lighten($color-front-pri, 10%);
+            background-color: lighten($color-pri, 10%);
         }
 
         a {
         display: inline-block;
         font-size: 1.1em;
         @media (min-width: $break-md) {
-        font-size: 1.4em;
+            font-size: 1.4em;
         }
         color: white;
         &:hover {
-            color: $color-front-sec;
+            color: $color-sec;
             text-decoration: none;
         }
-    }
+        }
     }
 }

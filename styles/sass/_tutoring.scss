@@ -1,13 +1,12 @@
 
 #tut-title-wrap {
-    background: linear-gradient(10deg, $color-front-pri 50%, $color-front-sec 200%);
-    color: $color-front-sec;
+    @include container-gradient(112px);
+    color: $color-sec;
     width: 100%;
     padding: 8px 0 8px 12px;
-    border-bottom: 1px solid $color-front-sec;
-    text-shadow: -6px 6px 18px darken($color-front-pri, 50%);
+    border-bottom: 1px solid $color-sec;
     h1 {
-        font-family: $front-font;
+        font-family: $font-title;
         font-weight: bold;
         font-size: 3rem;
         @media (max-width: $break-xxs) {
@@ -15,7 +14,7 @@
         }
     }
     h4 {
-        font-family: $front-font-2;
+        font-family: $font-main;
         margin-bottom: 0;
         @media (max-width: $break-xxs) {
             font-size: 1.2rem;
@@ -31,20 +30,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(6deg, $color-front-pri 50%, $color-front-sec 210%);
-    color: $color-front-sec;
-    border-top: 1px solid $color-front-sec;
-    border-bottom: 1px solid $color-front-sec;
-    text-shadow: -6px 6px 18px darken($color-front-pri, 50%);
+    @include container-gradient(54.667px);
+    color: $color-sec;
+    border-top: 1px solid $color-sec;
+    border-bottom: 1px solid $color-sec;
     position: sticky;
-    top: 0px;
+    top: -1px;
     h5, ul {
         margin-bottom: 0;
     }
     h5 {
         padding: 12px 15px;
-        border-right: 2px solid $color-front-sec;
-        font-family: $front-font;
+        border-right: 2px solid $color-sec;
+        font-family: $font-title;
         font-size: 1.5rem;
         font-weight: bold;
     }
@@ -65,7 +63,7 @@
                 list-style-type: none;
             }
             a {
-                color: $color-front-sec;
+                color: $color-sec;
                 padding-right: 18px;
             }
         }
@@ -73,18 +71,18 @@
 }
 
 #tut-main {
-    background: $color-front-sec;
+    background: $color-sec;
     padding-top: 12px;
 }
 
 .div-cont {
-    background-color: lighten($color-front-sec, 8%);
-    color: darken($color-front-pri, 20%);
+    background-color: lighten($color-sec, 8%);
+    color: darken($color-pri, 5%);
     width: 95%;
     margin: 12px auto 12px;
     border-radius: 20px;
-    border: 1px $color-front-sec solid;
-    box-shadow: -4px 4px 12px darken($color-front-pri, 20%);
+    border: 1px $color-sec solid;
+    box-shadow: -4px 4px 12px darken($color-pri, 20%);
     h2, 
     p {
         padding: 12px 4px 2px 8px;
@@ -93,6 +91,7 @@
     h2 {
         font-size: 2.9rem;
         font-weight: bold;
+        text-decoration: underline;
     }
     p {
         &:first-of-type::first-letter {
@@ -102,6 +101,7 @@
             margin-right: 5px;
             margin-top: 10px;
             font-size: 4rem;
+            font-family: 'Times New Roman', Times, serif;
         }
     }
 }

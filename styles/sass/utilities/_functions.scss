@@ -2,10 +2,4 @@
 // Tri-roller ===========================
 // =======================================
 
-@function tri-z($width) {
-    @return ($width * 1.73205081) / 8;
-}
 
-@function tri-x($width) {
-    @return ($width / 4);
-}
