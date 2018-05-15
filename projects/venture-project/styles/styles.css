@@ -662,6 +662,22 @@ footer p {
     }
     #call_side_btns {
         max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 135px;
+    }
+    #game_btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 26px;
+        width: 90%;
+    }
+    
+    #roll_btn_cont {
+        display: inline-flex;
+        justify-content: space-around;
     }
     .side_btn {
         width: 200px;
@@ -681,7 +697,7 @@ footer p {
         width: 60%;
     }
     #videos {
-        44%
+        width: 44%;
     }
     #news h2 {
         font-size: 2.3rem;
@@ -692,7 +708,16 @@ footer p {
     }
 }
 
+@media (max-width: 1014px) {
+    .as_p,
+    #as_adult,
+    #as_swim {
+        display: none;
+    }
+}
+
 @media (max-width: 864px ) {
+
     #news_videos_cont {
         display: inline-block;
         width: 100%;
@@ -759,11 +784,6 @@ footer p {
         padding-bottom: 10px;
     }
     
-    .as_p,
-    #as_adult,
-    #as_swim {
-        display: none;
-    }
     main {
         width: 93%;
         margin-top: 24px;
@@ -852,30 +872,12 @@ footer p {
         font-size: 3.2em;
     }
     
-    #game_btns {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-top: 26px;
-    }
-    
-    #roll_btn_cont {
-        display: inline-flex;
-        justify-content: space-around;
-    }
-    
     #roll_dice {
         font-size: 1.3rem;
         padding: 8px 12px;
         max-height: 50px;
     }
-    
-    #call_side_btns {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 135px;
-    }
+
     
     .side_btn {
         padding: 0px 8px;
