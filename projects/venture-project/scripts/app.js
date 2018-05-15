@@ -108,7 +108,7 @@ $('.char_sort').click(function() {
 	var sort_id = $this.text();
 
 	$.ajax({
-		url: "../characters.json",
+		url: "./characters.json",
 		dataType: "json",
 		method: "get",
 		success: function(response) {
