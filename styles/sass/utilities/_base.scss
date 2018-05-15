@@ -1,0 +1,29 @@
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body,
+html {
+    background: $color-dark;
+    color: $color-earth-grey;
+    box-sizing: border-box;
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-title;
+}
+
+p {
+    font-family: $font-main;
+}

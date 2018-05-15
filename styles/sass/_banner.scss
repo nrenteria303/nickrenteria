@@ -1,0 +1,35 @@
+.banner-inner {
+    @include wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    width: 96%;
+}
+
+.banner {
+    background-image: url('../../../images/denver-union-station.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 100vh;
+    display: flex;
+    border-bottom: $color-earth-grey 2px solid;
+}
+
+h1.banner-h1 {
+    font-size: 4rem;
+    color: lighten($color-earth-grey, 2%);
+    text-shadow: 4px 4px 2px darken($color-dark, 12%);
+    text-decoration: underline overline;
+}
+
+h4 {
+    color: lighten($color-earth-grey, 2%);
+    text-shadow: 2px 2px darken($color-dark, 12%);
+}
+
+.banner-last {
+    margin-left: 170px;
+}

@@ -1,0 +1,39 @@
+.heading {
+    @include border-tb;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+    background: darken($color-dark, 20%);
+    margin-top: 70px;
+    
+    h2 {
+        @include wrapper {
+
+        }
+        font-size: 4rem;
+    }
+}
+
+.fill {
+    @include wrapper {
+        background-color: $color-earth-grey;
+        color: darken($color-dark, 20%);
+    }
+    @include border-fill;
+    width: 94%;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 24px 16px 10px;
+    p {
+        &:first-of-type::first-letter {
+            display: block;
+            float: left;
+            line-height: .54;
+            margin-right: 5px;
+            margin-top: 10px;
+            font-size: 4rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+}

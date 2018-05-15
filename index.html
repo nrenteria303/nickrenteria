@@ -2,62 +2,138 @@
 <html>
   
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Yantramanav" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Nick Renteria</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="./scripts/app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
   </head>
   
   <body>
-    <div id="front-page-main">
-      <header id="front-header">
-        <div id="front-page-title">
-          <h1>Nick Renteria</h1>
+    <header class="">
+        <div class="header-inner">
+            <nav id="nav-left">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resum&eacute</a></li>
+                </ul>
+            </nav>
+            <h1 class="logo">
+                <span>N</span>
+                <span>R</span>
+            </h1>
+            <nav id="nav-right">
+                <ul>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
-      <nav id="front-page-nav">
-        <div class="front-nav-item">
-          <div class="tri-roller" id="tutor-roller">
-            <div class="front-face">
-              <h3>Math Tutor</h3>
-            </div>
-            <div class="right-face">
-                <img class="roller-img" src="images/book-calculator-sqr.jpg" title="Calculator on a math textbook" alt="A calculator sits on a math textbook.">
-              </div>
-            <div class="left-face">
-                <p class="front-pos-desc">See what my years of tutoring and teaching experience can do for you or your student.</p>
-                <button class="find-out-more"><a href="tutoring.html">Find out more...</a></button>
-            </div>
-          </div>
-        </div>
+    </header>
 
-        <div class="empty-grid-div"></div>
-
-        <div class="front-nav-item">
-          <div class="tri-roller" id="web-roller">
-            <div class="front-face">
-              <h3>Web Developer</h3>
-            </div>
-            <div class="right-face">
-              <img class="roller-img" src="images/computer-code-sqr.jpg" title="Computer with code on screen" alt="Computer with CSS code on screen">
-            </div>
-            <div class="left-face">
-                <p class="front-pos-desc">Experience my past projects and see how I can help your website come to life.</p>
-                <button class="find-out-more"><a href="web-development.html">Find out more...</a></button>
-            </div>
-          </div>
+    <div class="banner">
+        <div class="banner-inner">
+            <h4>Hi, my name is</h4>
+            <h1 class="banner-h1">Nick Renteria</h1>
+            <h4 class="banner-last">and I build websites.</h4>
         </div>
-      </nav>
     </div>
-    
-    <footer>
 
+    <main>
+
+        <!-- =========== About ========== -->
+
+        <div class="heading" id="about">
+            <h2>Why Web Development?</h2>
+        </div>
+
+        <div class="fill">
+            <p>From grade school on, I always found mathematics and logic fascinating. Math was and is my best subject academically speaking, and I have always enjoyed training my brain logically. I’ve always been a big chess and puzzle nerd.</p>
+            <p>Starting college as an astrophysics major at the University of Colorado - Boulder, I had high hopes of making a living as a theoretical astrophysicist, putting my natural curiosity and interest in applied mathematics to use. Unfortunately, something was missing from my education: creativity. I eventually dropped the physics focus in favor of English and mathematics, and graduated with a BA in 2014.</p>
+            <p>As much as I enjoyed my education, I had no idea what I would use it for professionally. After teaching and tutoring for a few years, I got a part time job as the assistant to the CEO of a renewable energy tech company. After answering emails for a couple months, I was given more responsibility writing press releases, designing and writing email newsletters, and organizing the website via the company CMS.</p>
+            <p>After a year of that, I was ready to put my love of logic and language to better use and challenge myself to learn more about web development.</p>
+        </div>
+
+        <div class="heading" id="resume">
+            <h2>Resum&eacute &amp Skills</h2>
+        </div>
+
+        <!-- =========== Resume ========== -->
+
+        <div class="fill" id="resume-fill">
+            <h3>Professional Experience:</h3>
+            <ul>
+                <li>Iron Edison Battery Company
+                    <ul>
+                        <li>Wrote copy for website</li>
+                        <li>Wrote &amp designed email newsletters</li>
+                        <li>Wrote company press releases</li>
+                        <li>Garnered hundreds of thousands of headline impressions online</li>
+                        <li>Organized website via company CMS</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Coding Stuff:</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS4 
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>SASS</li>
+                    </ul>
+                </li>
+                <li>ES6/Javascript
+                    <ul>
+                        <li>jQuery</li>
+                        <li>AJAX</li>
+                    </ul>
+                </li>
+                <li>Git/GitHub</li>
+                <li>Performance Optimization</li>
+            </ul>
+        </div>
+
+        <!-- =========== Projects ========== -->
+
+        <div class="heading" id="projects">
+            <h2>Projects</h2>
+        </div>
+
+        <div id="project-fill">
+            <div class="prism">
+                <div class="prism-front">
+                    <img src="./images/venture-project.jpg" alt="My Venture Bros. fan site project front page" title="Venture Bros. project page screengrab"> 
+                </div>
+
+                <div class="prism-right">
+                    <img src="./images/venture-project-2.jpg" alt="My Venture Bros. fan site project front page" title="Venture Bros. project page screengrab"> 
+                </div>
+
+                <div class="prism-left">
+                    <p>Take a look at a self-commissioned project of mine: a fan site for my favorite show, The Venture Bros. It features my knowledge of the basics, plus an AJAX character page and some DOM stuff in the form of a virtual dice game.</p>
+                    <a href="#">Have some fun, check it out!</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="">
+        <h2>Nick Renteria</h2>
+        <h3>nrenteria303@gmail.com</h3>
+        <h3>(303) 323 - 5033</h3>
     </footer>
-  
+
   </body>
 
 </html>
