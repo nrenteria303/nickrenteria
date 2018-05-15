@@ -8,6 +8,10 @@
     transition: transform 2.2s cubic-bezier(.44,-0.15,.25,.55);
     transform-style: preserve-3d;
 
+    @media (max-width: $break-xs) {
+        width: 340px;
+    }
+
     &:hover {
         transform: rotateY(-240deg) translateX(-44px);
     }
@@ -24,14 +28,26 @@
     position: absolute;
     backface-visibility: hidden;
     border: solid 1px $color-earth-grey;
+
+    @media (max-width: $break-xs) {
+        height: 202.14px;
+    }
 }
 
 .prism-front {
     @include triangle-prism-front(460px);
+
+    @media (max-width: $break-xs) {
+        @include triangle-prism-front(340px);
+    }   
 }
 
 .prism-right {
     @include triangle-prism-right(460px);
+
+    @media (max-width: $break-xs) {
+        @include triangle-prism-right(340px);
+    }  
 }
 
 .prism-left {
@@ -41,4 +57,10 @@
     padding: 20px 22px;
     text-align: center;
     font-size: 1.2rem;
+
+    @media (max-width: $break-xs) {
+        @include triangle-prism-left(340px);
+        font-size: .96rem;
+        padding: 16px 18px;
+    }  
 }

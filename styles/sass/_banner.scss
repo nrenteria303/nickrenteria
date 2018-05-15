@@ -23,13 +23,21 @@ h1.banner-h1 {
     color: lighten($color-earth-grey, 2%);
     text-shadow: 4px 4px 2px darken($color-dark, 12%);
     text-decoration: underline overline;
+
+    @media (max-width: $break-xs) {
+        font-size: 3rem;
+    }
 }
 
 h4 {
     color: lighten($color-earth-grey, 2%);
     text-shadow: 2px 2px darken($color-dark, 12%);
+    
+    @media (max-width: $break-xs) {
+        font-size: 1.3rem;
+    }
 }
 
 .banner-last {
-    margin-left: 170px;
+    margin-left: 110px;
 }

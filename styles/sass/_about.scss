@@ -8,10 +8,11 @@
     margin-top: 70px;
     
     h2 {
-        @include wrapper {
-
-        }
+        @include wrapper;
         font-size: 4rem;
+        @media (max-width: $break-xs) {
+            font-size: 3rem;
+        }
     }
 }
 

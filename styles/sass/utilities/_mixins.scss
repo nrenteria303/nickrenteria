@@ -12,15 +12,15 @@
 }
 
 @mixin border-tb {
-    border-top: solid 2px $color-green;
-    border-bottom: solid 2px $color-blue;
+    border-top: solid 4px $color-green;
+    border-bottom: solid 4px $color-blue;
 }
 
 @mixin border-fill {
-    border-top: 2px solid $color-green;
-    border-right: 2px solid $color-green;
-    border-bottom: 2px solid $color-blue;
-    border-left: 2px solid $color-blue;
+    border-top: 4px solid $color-green;
+    border-right: 4px solid $color-green;
+    border-bottom: 4px solid $color-blue;
+    border-left: 4px solid $color-blue;
 }
 
 // Prism Faces Translate ========

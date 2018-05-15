@@ -2,7 +2,9 @@ footer {
     background: darken($color-dark, 20%);
     border-top: $color-earth-grey solid 2px;
     margin-top: 470px;
-    h3 {
+    h3,
+    h2 {
         margin-bottom: 0;
+        text-align: center;
     }
 }
