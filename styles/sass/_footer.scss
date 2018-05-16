@@ -1,10 +1,26 @@
 footer {
-    background: darken($color-dark, 20%);
+    background: $color-grey-xl;
     border-top: $color-earth-grey solid 2px;
-    margin-top: 470px;
+    color: $color-dark-xd;
+    box-shadow: inset 0 8px 18px $color-dark;
+    margin-top: 120px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h3,
-    h2 {
+    h1 {
+        @include wrapper;
         margin-bottom: 0;
-        text-align: center;
+    }
+    h3 {
+        @media (max-width: $break-xs) {
+            font-size: 1.4rem;
+        }
+    }
+    h1 {
+        @media (max-width: $break-xs) {
+            font-size: 2rem;
+        }
     }
 }

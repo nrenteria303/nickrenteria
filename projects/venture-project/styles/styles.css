@@ -370,6 +370,18 @@ h2 {
     font-size: 4em;
 }
 
+#info-icn {
+    text-align: center;
+    width: 40px;
+    margin: 0 auto;
+}
+
+#info-icn:hover {
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
 #game_btns {
     display: flex;
     justify-content: space-between;

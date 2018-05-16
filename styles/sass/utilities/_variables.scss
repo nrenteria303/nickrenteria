@@ -9,14 +9,17 @@ $font-main: 'Yantramanav', sans-serif;
 
 //  Colors
 
-$color-pri: black;
-$color-sec: white;
+// $color-pri: black;
+// $color-sec: white;
 
 $color-blue: #0077b5;
 $color-green: #12d400;
 $color-dark: #50514f;
 $color-earth-grey: #b1c1c0;
 $color-earth-brown: #d4cb92;
+
+$color-dark-xd: darken($color-dark, 20%);
+$color-grey-xl: lighten($color-earth-grey, 8%);
 
 
 // Break Points

@@ -27,6 +27,12 @@ header {
             font-size: 3rem;
             color: $color-earth-grey;
         }
+        nav ul li a {
+            color: $color-grey-xl;
+            &:first-child:hover {
+                color: $color-green;
+            }
+        }
     }
     
 }
@@ -50,11 +56,16 @@ nav {
             display: flex;
             align-items: center;
             a {
+                font-weight: bold;
                 &:hover {
                     font-weight: bold;
                     text-decoration: underline overline;
                     color: $color-green;
                     text-shadow: 1px 1px $color-dark;
+                }
+
+                @media (min-width: $break-lg) {
+                    font-size: 1.25rem;
                 }
             }
         }
@@ -62,6 +73,9 @@ nav {
             margin-right: 22px;
             @media (max-width: $break-xs) {
                 margin-right: 12px;
+            }
+            @media (min-width: $break-lg) {
+                margin-right: 38px;
             }
         }
     }

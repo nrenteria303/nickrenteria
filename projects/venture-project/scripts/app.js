@@ -26,6 +26,7 @@ const $ventureFriends = $('.venture_friend');
 let isStartTimeBtnClicked = false;
 let isRollBtnClicked = false;
 let sides = 6;
+const $infoIcn = $('#info-icn');
 const $rollDiceBtn = $('#roll_dice');
 const $4sided = $('#4_sides');
 const $6sided = $('#6_sides');
@@ -210,6 +211,10 @@ $('.char_sort').click(function() {
 
 $logTenzi.hide();
 $go.hide();
+
+$infoIcn.click( function() {
+    alert('How to play: Roll the virtual dice with the "Roll Active Dice" button. Try to get all of the dice to show the same face by freezing the ones you want to keep. When they all show the same face, hit the "Tenzi!" button to win. For an extra challenge, try a time trial and see how many points you can get before the time runs out!');
+});
 
 function rollActive(sides) {
     for (var i = 0; i < diceActive.length; i += 1 ) {

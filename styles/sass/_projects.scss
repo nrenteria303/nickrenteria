@@ -1,5 +1,19 @@
+#projects {
+    background-image: url('../../images/lightbulbs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    h2 {
+        color: $color-green;
+        text-shadow: 4px 4px $color-blue;
+    }
+}
+
 #project-fill {
     perspective: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
 }
 
 .prism {
@@ -52,8 +66,8 @@
 
 .prism-left {
     @include triangle-prism-left(460px);
-    background: darken($color-dark, 20%);
-    color: lighten($color-earth-grey, 12%);
+    background: $color-grey-xl;
+    color: $color-dark-xd;
     padding: 20px 22px;
     text-align: center;
     font-size: 1.2rem;
@@ -63,4 +77,9 @@
         font-size: .96rem;
         padding: 16px 18px;
     }  
+}
+
+.coming-soon {
+    text-align: center;
+    margin-top: 320px;
 }
