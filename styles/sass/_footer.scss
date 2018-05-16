@@ -23,4 +23,10 @@ footer {
             font-size: 2rem;
         }
     }
+    a {
+        color: $color-blue;
+        &:hover {
+            color: $color-green;
+        }
+    }
 }

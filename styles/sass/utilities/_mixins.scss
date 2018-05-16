@@ -26,15 +26,17 @@
 // Prism Faces Translate ========
 @mixin triangle-prism-front($width) {
     transform:  translateZ( ($width * 1.73205081) / 8 );
+    -webkit-transform:  translateZ( ($width * 1.73205081) / 8 );
 }
 
 @mixin triangle-prism-right($width) {
-    transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) 
-                rotateY(120deg);
+    transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(120deg);
+    -webkit-transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(120deg);
 }
 
 @mixin triangle-prism-left($width) {
     transform:  translate3d( -($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(-120deg);
+    -webkit-transform:  translate3d( -($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(-120deg);
 }
 
 // Div Container Gradient =========

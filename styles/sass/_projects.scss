@@ -1,12 +1,25 @@
 #projects {
+    position: relative;
     background-image: url('../../images/lightbulbs.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 75%;
-    h2 {
-        color: $color-green;
-        text-shadow: 4px 4px $color-blue;
-    }
+    border-top: solid 4px $color-blue;
+}
+
+#projects:before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .5;
+    background: $color-green;
+    mix-blend-mode: screen;
 }
 
 #project-fill {
@@ -28,6 +41,7 @@
 
     &:hover {
         transform: rotateY(-240deg) translateX(-44px);
+        -webkit-transform: rotateY(-240deg) translateX(-44px);
     }
 }
 
@@ -77,6 +91,12 @@
         font-size: .96rem;
         padding: 16px 18px;
     }  
+    a {
+        color: $color-blue;
+        &:hover {
+            color: $color-green;
+        }
+    }
 }
 
 .coming-soon {
