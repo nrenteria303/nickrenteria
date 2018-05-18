@@ -27,6 +27,9 @@ h6 {
 p {
   font-family: "Yantramanav", sans-serif; }
 
+main {
+  position: relative; }
+
 header {
   position: fixed;
   top: 0;
@@ -34,19 +37,12 @@ header {
   right: 0;
   z-index: 10;
   background: transparent; }
-  header:hover .logo span {
-    transition: .35s ease-out; }
-    header:hover .logo span:first-child {
-      color: #12d400; }
-    header:hover .logo span:last-child {
-      color: #0077b5; }
   header.is-fixed {
     border-bottom: 2px solid #b1c1c0;
     transition: .25s ease-out;
     background: #50514f; }
     header.is-fixed .logo {
-      font-size: 3rem;
-      color: #b1c1c0; }
+      font-size: 3rem; }
     header.is-fixed nav ul li a {
       color: #d3dcdc; }
       header.is-fixed nav ul li a:first-child:hover {
@@ -92,11 +88,16 @@ nav {
           margin-right: 38px; } }
 
 .logo {
-  color: #50514f;
   display: flex;
   margin: 0;
   align-items: center;
   font-size: 5.5rem; }
+  .logo span {
+    transition: .35s ease-out; }
+    .logo span:first-child {
+      color: #12d400; }
+    .logo span:last-child {
+      color: #0077b5; }
   @media (max-width: 376px) {
     .logo {
       font-size: 3.5rem;

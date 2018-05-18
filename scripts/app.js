@@ -2,6 +2,7 @@
 // Front Page ==============================
 // =========================================
 
+
 $(document).ready(function() {
     adjustBody();
     $(window).on('resize orientationchange', adjustBody);
@@ -20,3 +21,4 @@ $(window).scroll(function() {
         $('header').removeClass('is-fixed');
     }
 });
+

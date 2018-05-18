@@ -1,7 +1,4 @@
 
-// CHADDY POO, SCROLL DOWN TO "Character Page" 
-// SECTION FOR THE AJAX STUFF
-
 // +_+_+_+_+_+_+_+_+_ Variables +_+_+_+_+_+_+_+_+_
 
 const $header = $('.header');
@@ -309,7 +306,7 @@ function rmvSideBtnClick() {
     rmvBtnElement.removeClass("side_btn_click");
 }
 
-$4sided.click( function() {
+$4sided.click( function() { 
     if (isRollBtnClicked === true) {
         alert("You cannot switch dice after you begin rolling. To start over, please refresh the page.");
     } else {

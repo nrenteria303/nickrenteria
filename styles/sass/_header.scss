@@ -5,27 +5,12 @@ header {
     right:0;
     z-index: 10;
     background: transparent;
-
-    &:hover {
-        .logo {
-            span {
-                transition: .35s ease-out;
-                &:first-child {
-                    color: $color-green;
-                }
-                &:last-child {
-                    color: $color-blue;
-                }
-            }
-        }
-    }
     &.is-fixed {
         border-bottom: 2px solid $color-earth-grey;
         transition: .25s ease-out;
         background: $color-dark;
         .logo {
             font-size: 3rem;
-            color: $color-earth-grey;
         }
         nav ul li a {
             color: $color-grey-xl;
@@ -82,11 +67,19 @@ nav {
 }
 
 .logo {
-    color: $color-dark;
     display: flex;
     margin: 0;
     align-items: center;
     font-size: 5.5rem;
+    span {
+        transition: .35s ease-out;
+        &:first-child {
+            color: $color-green;
+        }
+        &:last-child {
+            color: $color-blue;
+        }
+    }
     @media (max-width: $break-xxs) {
         font-size: 3.5rem;
         order: -1;
