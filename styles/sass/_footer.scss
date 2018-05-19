@@ -1,12 +1,10 @@
 footer {
-    // position: fixed;
-    // bottom: 0;
-    // width: 100%;
-    // z-index: -2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
     background: $color-grey-xl;
-    border-top: $color-earth-grey solid 2px;
     color: $color-dark-xd;
-    box-shadow: inset 0 8px 18px $color-dark;
     margin-top: 120px;
     height: 200px;
     display: flex;
@@ -31,6 +29,7 @@ footer {
         color: $color-blue;
         &:hover {
             color: $color-green;
+            text-decoration: none;
         }
     }
 }
