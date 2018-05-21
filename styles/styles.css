@@ -37,7 +37,7 @@ header {
   header.is-fixed {
     border-bottom: 2px solid #b1c1c0;
     transition: .25s ease-out;
-    background-image: radial-gradient(at bottom, #d3dcdc -300%, #50514f 45%, #50514f 55%, #1d1d1d 145%); }
+    background-image: radial-gradient(at bottom, #d3dcdc -160%, #50514f 34%, #50514f 40%, #1d1d1d 116%); }
     header.is-fixed .logo {
       font-size: 3rem;
       transition: .08s ease-out; }
