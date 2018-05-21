@@ -8,7 +8,7 @@ header {
     &.is-fixed {
         border-bottom: 2px solid $color-earth-grey;
         transition: .25s ease-out;
-        background: $color-dark;
+        background-image: radial-gradient(at bottom, $color-grey-xl -300%,  $color-dark 45%, $color-dark 55%, $color-dark-xd 145%);
         .logo {
             font-size: 3rem;
         }
@@ -16,6 +16,11 @@ header {
             color: $color-grey-xl;
             &:first-child:hover {
                 color: $color-green;
+            }
+        }
+        &:hover {
+            .logo {
+                text-shadow: 1px 1px 1px $color-grey-xl;
             }
         }
     }
@@ -71,8 +76,8 @@ nav {
     margin: 0;
     align-items: center;
     font-size: 5.5rem;
+    transition: text-shadow .25s ease-in;
     span {
-        transition: .35s ease-out;
         &:first-child {
             color: $color-green;
         }

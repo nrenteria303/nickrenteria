@@ -32,9 +32,12 @@
         list-style-type: none;
         max-width: 400px;
 
-        li:nth-child(2n)::before {content: "►"; color: $color-green;
-            display: inline-block; width: 1em;
-            margin-left: -1em
+        li:nth-child(2n)::before {
+            content: "►"; 
+            color: $color-green;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
         }
         li:nth-child(2n + 1)::before {content: "►"; color: $color-blue;
             display: inline-block; width: 1em;

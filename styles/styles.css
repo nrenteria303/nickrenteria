@@ -37,13 +37,15 @@ header {
   header.is-fixed {
     border-bottom: 2px solid #b1c1c0;
     transition: .25s ease-out;
-    background: #50514f; }
+    background-image: radial-gradient(at bottom, #d3dcdc -300%, #50514f 45%, #50514f 55%, #1d1d1d 145%); }
     header.is-fixed .logo {
       font-size: 3rem; }
     header.is-fixed nav ul li a {
       color: #d3dcdc; }
       header.is-fixed nav ul li a:first-child:hover {
         color: #12d400; }
+    header.is-fixed:hover .logo {
+      text-shadow: 1px 1px 1px #d3dcdc; }
 
 .header-inner {
   display: flex;
@@ -88,13 +90,12 @@ nav {
   display: flex;
   margin: 0;
   align-items: center;
-  font-size: 5.5rem; }
-  .logo span {
-    transition: .35s ease-out; }
-    .logo span:first-child {
-      color: #12d400; }
-    .logo span:last-child {
-      color: #0077b5; }
+  font-size: 5.5rem;
+  transition: text-shadow .25s ease-in; }
+  .logo span:first-child {
+    color: #12d400; }
+  .logo span:last-child {
+    color: #0077b5; }
   @media (max-width: 376px) {
     .logo {
       font-size: 3.5rem;
