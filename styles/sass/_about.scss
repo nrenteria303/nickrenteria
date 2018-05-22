@@ -3,7 +3,7 @@
     align-items: center;
     width: 100%;
     height: 160px;
-    margin-top: 90px;
+    margin-top: 130px;
     
     h2 {
         @include wrapper;
@@ -19,6 +19,7 @@
     text-shadow: 4px 4px 4px $color-dark;
     position: relative;
     z-index: 3;
+    font-weight: 400;
 }
 
 #about {
@@ -53,9 +54,11 @@
     border: solid 3px $color-earth-grey;
     box-shadow: inset 0 0 10px 6px $color-dark;
     width: 94%;
-    margin-top: 50px;
+    margin-top: 90px;
     padding: 24px 16px 10px;
     p {
+        font-size: 1rem;
+        line-height: 1.5;
         &:first-of-type::first-letter {
             display: block;
             float: left;

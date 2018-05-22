@@ -6,6 +6,7 @@
         padding: 20px 0;
     }
     width: 96%;
+    max-height: 635px;
 }
 
 .banner {
@@ -16,6 +17,14 @@
     min-height: 100vh;
     display: flex;
     border-bottom: $color-earth-grey 2px solid;
+}
+
+.banner-first,
+.banner-h1,
+.banner-last {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-weight: 400;
 }
 
 h1.banner-h1 {

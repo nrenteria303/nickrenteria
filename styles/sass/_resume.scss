@@ -27,10 +27,21 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    h3 {
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0 0 8px;
+    }
     ul {
         padding-left: 20px;
         list-style-type: none;
         max-width: 400px;
+        font-family: $font-main;
+        margin-top: 0;
+
+        li {
+            font-size: 1.1rem;
+        }
 
         li:nth-child(2n)::before {
             content: "►"; 

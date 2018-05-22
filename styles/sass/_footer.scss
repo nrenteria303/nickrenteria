@@ -16,17 +16,22 @@ footer {
         margin-bottom: 0;
     }
     h3 {
+        font-size: 1.75rem;
         @media (max-width: $break-xs) {
             font-size: 1.4rem;
         }
     }
     h1 {
+        font-size: 2.5rem;
         @media (max-width: $break-xs) {
             font-size: 2rem;
         }
     }
     a {
         color: $color-blue;
+        font-family: $font-title;
+        text-decoration: none;
+        font-weight: normal;
         &:hover {
             color: $color-green;
             text-decoration: none;
