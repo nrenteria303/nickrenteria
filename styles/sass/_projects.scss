@@ -42,6 +42,10 @@
         width: 340px;
     }
 
+    @media (max-width: $break-xxs) {
+        width: 276px;
+    }
+
     &:hover {
         transform: rotateY(-240deg) translateX(-44px);
         -webkit-transform: rotateY(-240deg) translateX(-44px);
@@ -63,6 +67,9 @@
     @media (max-width: $break-xs) {
         height: 202.14px;
     }
+    @media (max-width: $break-xxs) {
+        height: 164.09px;
+    }
 }
 
 .prism-front {
@@ -70,6 +77,9 @@
 
     @media (max-width: $break-xs) {
         @include triangle-prism-front(340px);
+    }   
+    @media (max-width: $break-xxs) {
+        @include triangle-prism-front(276px);
     }   
 }
 
@@ -79,6 +89,9 @@
     @media (max-width: $break-xs) {
         @include triangle-prism-right(340px);
     }  
+    @media (max-width: $break-xxs) {
+        @include triangle-prism-right(276px);
+    }   
 }
 
 .prism-left {
@@ -94,6 +107,11 @@
         font-size: .96rem;
         padding: 16px 18px;
     }  
+    @media (max-width: $break-xxs) {
+        @include triangle-prism-left(276px);
+        font-size: .86rem;
+        padding: 8px 10px;
+    } 
     a {
         color: $color-blue;
         &:hover {
@@ -106,6 +124,11 @@
     text-align: center;
     margin-top: 320px;
     margin-bottom: 60px;
+
+    @media (max-width: $break-xxs) {
+        margin-top: 210px;
+    }
+
     h4 {
         font-weight: 400;
     }

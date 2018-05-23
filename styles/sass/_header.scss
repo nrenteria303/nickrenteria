@@ -13,10 +13,18 @@ header {
             font-size: 3rem;
             transition: .08s ease-out;
             font-weight: 400;
+            @media (max-width: $break-xxs) {
+                font-size: 2.25rem;
+            }
         }
         nav ul li a {
             color: $color-grey-xl;
-            &:first-child:hover {
+
+            @media (max-width: $break-xxs) {
+                font-size: 1.03rem;
+            }
+
+            &:hover {
                 color: $color-green;
             }
         }
@@ -30,6 +38,11 @@ header {
 }
 
 .header-inner {
+    @media (max-width: $break-xxs) {
+        max-width: 99%;
+        margin: auto auto;
+        padding: 0 6px;
+    }
     @include wrapper {
         display: flex;
         justify-content: space-between;
@@ -38,6 +51,7 @@ header {
 
 nav { 
     display: flex;
+    flex-wrap: wrap;
     ul {
         display: flex;
         justify-content: space-around;
@@ -52,6 +66,7 @@ nav {
                 font-weight: bold;
                 letter-spacing: 1px;
                 text-decoration: none;
+                font-size: 1.15rem;
                 color: #007bff;
                 &:hover {
                     font-weight: bold;
@@ -59,7 +74,9 @@ nav {
                     color: $color-green;
                     text-shadow: 1px 1px $color-dark;
                 }
-
+                @media (max-width: $break-xxs) {
+                    font-size: 1rem;
+                }
                 @media (min-width: $break-lg) {
                     font-size: 1.39rem;
                 }
@@ -70,8 +87,16 @@ nav {
             @media (max-width: $break-xs) {
                 margin-right: 12px;
             }
+            @media (max-width: $break-xxs) {
+                margin-right: 5px;
+            }
             @media (min-width: $break-lg) {
                 margin-right: 38px;
+            }
+        }
+        li:last-child {
+            @media (max-width: $break-xxs) {
+                margin-right: 4px;
             }
         }
     }
@@ -92,8 +117,13 @@ nav {
             color: $color-blue;
         }
     }
+
+    @media (max-width: 432px) {
+        font-size: 3.3rem;
+    }
     @media (max-width: $break-xxs) {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         order: -1;
+        margin-right: 2px;
     }
 }

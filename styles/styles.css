@@ -48,9 +48,15 @@ header {
       font-size: 3rem;
       transition: .08s ease-out;
       font-weight: 400; }
+      @media (max-width: 374px) {
+        header.is-fixed .logo {
+          font-size: 2.25rem; } }
     header.is-fixed nav ul li a {
       color: #d3dcdc; }
-      header.is-fixed nav ul li a:first-child:hover {
+      @media (max-width: 374px) {
+        header.is-fixed nav ul li a {
+          font-size: 1.03rem; } }
+      header.is-fixed nav ul li a:hover {
         color: #12d400; }
     header.is-fixed:hover .logo {
       text-shadow: 1px 1px 1px #d3dcdc; }
@@ -63,9 +69,15 @@ header {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto; }
+  @media (max-width: 374px) {
+    .header-inner {
+      max-width: 99%;
+      margin: auto auto;
+      padding: 0 6px; } }
 
 nav {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   nav ul {
     display: flex;
     justify-content: space-around;
@@ -80,12 +92,16 @@ nav {
         font-weight: bold;
         letter-spacing: 1px;
         text-decoration: none;
+        font-size: 1.15rem;
         color: #007bff; }
         nav ul li a:hover {
           font-weight: bold;
           text-decoration: underline overline;
           color: #12d400;
           text-shadow: 1px 1px #50514f; }
+        @media (max-width: 374px) {
+          nav ul li a {
+            font-size: 1rem; } }
         @media (min-width: 992px) {
           nav ul li a {
             font-size: 1.39rem; } }
@@ -94,9 +110,15 @@ nav {
       @media (max-width: 549px) {
         nav ul li:first-child {
           margin-right: 12px; } }
+      @media (max-width: 374px) {
+        nav ul li:first-child {
+          margin-right: 5px; } }
       @media (min-width: 992px) {
         nav ul li:first-child {
           margin-right: 38px; } }
+    @media (max-width: 374px) {
+      nav ul li:last-child {
+        margin-right: 4px; } }
 
 .logo {
   display: flex;
@@ -109,10 +131,14 @@ nav {
     color: #12d400; }
   .logo span:last-child {
     color: #0077b5; }
-  @media (max-width: 376px) {
+  @media (max-width: 432px) {
     .logo {
-      font-size: 3.5rem;
-      order: -1; } }
+      font-size: 3.3rem; } }
+  @media (max-width: 374px) {
+    .logo {
+      font-size: 2.5rem;
+      order: -1;
+      margin-right: 2px; } }
 
 .banner-inner {
   display: flex;
@@ -180,6 +206,9 @@ h4 {
   width: 100%;
   height: 160px;
   margin-top: 130px; }
+  @media (max-width: 549px) {
+    .heading {
+      margin-top: 100px; } }
   .heading h2 {
     width: 100%;
     max-width: 1024px;
@@ -190,6 +219,9 @@ h4 {
     @media (max-width: 549px) {
       .heading h2 {
         font-size: 3rem; } }
+    @media (max-width: 374px) {
+      .heading h2 {
+        font-size: 2.7rem; } }
 
 .heading-text {
   color: white;
@@ -197,6 +229,23 @@ h4 {
   position: relative;
   z-index: 3;
   font-weight: 400; }
+
+.fill {
+  background-color: #d3dcdc;
+  color: #1d1d1d;
+  width: 100%;
+  max-width: 1024px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  border: solid 3px #b1c1c0;
+  box-shadow: inset 0 0 10px 6px #50514f;
+  width: 94%;
+  margin-top: 90px;
+  padding: 24px 16px 10px; }
+  @media (max-width: 549px) {
+    .fill {
+      margin-top: 75px; } }
 
 #about {
   position: relative;
@@ -220,30 +269,17 @@ h4 {
   background: #12d400;
   mix-blend-mode: screen; }
 
-.fill {
-  background-color: #d3dcdc;
-  color: #1d1d1d;
-  width: 100%;
-  max-width: 1024px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  border: solid 3px #b1c1c0;
-  box-shadow: inset 0 0 10px 6px #50514f;
-  width: 94%;
-  margin-top: 90px;
-  padding: 24px 16px 10px; }
-  .fill p {
-    font-size: 1rem;
-    line-height: 1.5; }
-    .fill p:first-of-type::first-letter {
-      display: block;
-      float: left;
-      line-height: .54;
-      margin-right: 5px;
-      margin-top: 10px;
-      font-size: 4rem;
-      font-family: 'Times New Roman', Times, serif; }
+.fill p {
+  font-size: 1.07rem;
+  line-height: 1.5; }
+  .fill p:first-of-type::first-letter {
+    display: block;
+    float: left;
+    line-height: .5;
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif; }
 
 #resume {
   position: relative;
@@ -335,6 +371,9 @@ h4 {
   @media (max-width: 549px) {
     .prism {
       width: 340px; } }
+  @media (max-width: 374px) {
+    .prism {
+      width: 276px; } }
   .prism:hover {
     transform: rotateY(-240deg) translateX(-44px);
     -webkit-transform: rotateY(-240deg) translateX(-44px); }
@@ -357,6 +396,13 @@ h4 {
     .prism-right img,
     .prism-left {
       height: 202.14px; } }
+  @media (max-width: 374px) {
+    .prism-front,
+    .prism-front img,
+    .prism-right,
+    .prism-right img,
+    .prism-left {
+      height: 164.09px; } }
 
 .prism-front {
   transform: translateZ(99.59292px);
@@ -365,6 +411,10 @@ h4 {
     .prism-front {
       transform: translateZ(73.61216px);
       -webkit-transform: translateZ(73.61216px); } }
+  @media (max-width: 374px) {
+    .prism-front {
+      transform: translateZ(59.75575px);
+      -webkit-transform: translateZ(59.75575px); } }
 
 .prism-right {
   transform: translate3d(115px, 0, -99.59292px) rotateY(120deg);
@@ -373,6 +423,10 @@ h4 {
     .prism-right {
       transform: translate3d(85px, 0, -73.61216px) rotateY(120deg);
       -webkit-transform: translate3d(85px, 0, -73.61216px) rotateY(120deg); } }
+  @media (max-width: 374px) {
+    .prism-right {
+      transform: translate3d(69px, 0, -59.75575px) rotateY(120deg);
+      -webkit-transform: translate3d(69px, 0, -59.75575px) rotateY(120deg); } }
 
 .prism-left {
   transform: translate3d(-115px, 0, -99.59292px) rotateY(-120deg);
@@ -388,6 +442,12 @@ h4 {
       -webkit-transform: translate3d(-85px, 0, -73.61216px) rotateY(-120deg);
       font-size: .96rem;
       padding: 16px 18px; } }
+  @media (max-width: 374px) {
+    .prism-left {
+      transform: translate3d(-69px, 0, -59.75575px) rotateY(-120deg);
+      -webkit-transform: translate3d(-69px, 0, -59.75575px) rotateY(-120deg);
+      font-size: .86rem;
+      padding: 8px 10px; } }
   .prism-left a {
     color: #0077b5; }
     .prism-left a:hover {
@@ -397,6 +457,9 @@ h4 {
   text-align: center;
   margin-top: 320px;
   margin-bottom: 60px; }
+  @media (max-width: 374px) {
+    .coming-soon {
+      margin-top: 210px; } }
   .coming-soon h4 {
     font-weight: 400; }
 
