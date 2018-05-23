@@ -42,6 +42,8 @@ header {
         max-width: 99%;
         margin: auto auto;
         padding: 0 6px;
+        display: flex;
+        justify-content: space-around;
     }
     @include wrapper {
         display: flex;
@@ -52,6 +54,12 @@ header {
 nav { 
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $break-xxs) {
+        width: 40%;
+        justify-content: space-evenly;
+    }
+
     ul {
         display: flex;
         justify-content: space-around;
@@ -119,7 +127,7 @@ nav {
     }
 
     @media (max-width: 432px) {
-        font-size: 3.3rem;
+        font-size: 3.9rem;
     }
     @media (max-width: $break-xxs) {
         font-size: 2.5rem;

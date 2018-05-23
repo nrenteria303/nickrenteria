@@ -73,11 +73,17 @@ header {
     .header-inner {
       max-width: 99%;
       margin: auto auto;
-      padding: 0 6px; } }
+      padding: 0 6px;
+      display: flex;
+      justify-content: space-around; } }
 
 nav {
   display: flex;
   flex-wrap: wrap; }
+  @media (max-width: 374px) {
+    nav {
+      width: 40%;
+      justify-content: space-evenly; } }
   nav ul {
     display: flex;
     justify-content: space-around;
@@ -133,7 +139,7 @@ nav {
     color: #0077b5; }
   @media (max-width: 432px) {
     .logo {
-      font-size: 3.3rem; } }
+      font-size: 3.9rem; } }
   @media (max-width: 374px) {
     .logo {
       font-size: 2.5rem;
@@ -177,6 +183,9 @@ h1.banner-h1 {
   @media (max-width: 549px) {
     h1.banner-h1 {
       font-size: 3rem; } }
+  @media (max-width: 374px) {
+    h1.banner-h1 {
+      font-size: 2.7rem; } }
   @media (min-width: 1098px) {
     h1.banner-h1 {
       font-size: 5rem; } }
@@ -187,15 +196,24 @@ h4 {
   @media (max-width: 549px) {
     h4 {
       font-size: 1.3rem; } }
+  @media (max-width: 374px) {
+    h4 {
+      font-size: 1.15rem; } }
   @media (min-width: 1098px) {
     h4 {
       font-size: 1.85rem; } }
+  @media (min-width: 550px) {
+    h4 {
+      font-size: 1.5rem; } }
 
 .banner-last {
   margin-left: 173px; }
   @media (max-width: 549px) {
     .banner-last {
       margin-left: 110px; } }
+  @media (max-width: 374px) {
+    .banner-last {
+      margin-left: 94px; } }
   @media (min-width: 1098px) {
     .banner-last {
       margin-left: 220px; } }
@@ -275,7 +293,7 @@ h4 {
   .fill p:first-of-type::first-letter {
     display: block;
     float: left;
-    line-height: .5;
+    line-height: .45;
     margin-right: 5px;
     margin-top: 10px;
     font-size: 4rem;
