@@ -23,10 +23,38 @@
     mix-blend-mode: screen;
 }
 
+#coding-stuff {
+    grid-area: cod;
+}
+#experience {
+    grid-area: exp;
+}
+#education {
+    grid-area: edu;
+}
+
 #resume-fill {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-areas: 
+        "cod exp edu";
+
+    @media (max-width: $break-md) {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "cod exp"
+            "cod edu";
+    }
+    @media (max-width: $break-sm) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cod"
+        "exp" 
+        "edu";
+    }
+
     h3 {
         font-size: 1.75rem;
         font-weight: 400;
@@ -41,6 +69,14 @@
 
         li {
             font-size: 1.1rem;
+            a {
+                color: $color-blue;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                    color: $color-green;
+                }
+            }
         }
 
         li:nth-child(2n)::before {

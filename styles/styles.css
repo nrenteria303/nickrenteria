@@ -321,10 +321,29 @@ h4 {
   background: #0077b5;
   mix-blend-mode: screen; }
 
+#coding-stuff {
+  grid-area: cod; }
+
+#experience {
+  grid-area: exp; }
+
+#education {
+  grid-area: edu; }
+
 #resume-fill {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-template-areas: "cod exp edu"; }
+  @media (max-width: 875px) {
+    #resume-fill {
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: 50% 50%;
+      grid-template-areas: "cod exp" "cod edu"; } }
+  @media (max-width: 550px) {
+    #resume-fill {
+      grid-template-columns: 1fr;
+      grid-template-areas: "cod" "exp"  "edu"; } }
   #resume-fill h3 {
     font-size: 1.75rem;
     font-weight: 400;
@@ -337,6 +356,12 @@ h4 {
     margin-top: 0; }
     #resume-fill ul li {
       font-size: 1.1rem; }
+      #resume-fill ul li a {
+        color: #0077b5;
+        text-decoration: none; }
+        #resume-fill ul li a:hover {
+          text-decoration: underline;
+          color: #12d400; }
     #resume-fill ul li:nth-child(2n)::before {
       content: "►";
       color: #12d400;
