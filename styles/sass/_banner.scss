@@ -54,11 +54,11 @@ h4 {
     @media (max-width: $break-xxs) {
         font-size: 1.15rem;
     }
-    @media (min-width: $break-xl) {
-        font-size: 1.85rem;
-    }
     @media (min-width: $break-sm) {
         font-size: 1.5rem;
+    }
+    @media (min-width: $break-xl) {
+        font-size: 1.85rem;
     }
 }
 
