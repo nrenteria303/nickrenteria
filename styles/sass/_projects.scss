@@ -23,7 +23,7 @@
 }
 
 #project-fill {
-    perspective: 1200px;
+    perspective: 1500px;
     display: flex;
     flex-direction: column;
     margin-top: 60px;
@@ -47,8 +47,8 @@
     }
 
     &:hover {
-        transform: rotateY(-240deg) translateX(-44px);
-        -webkit-transform: rotateY(-240deg) translateX(-44px);
+        transform: rotateY(-240deg) translateX(-54px);
+        -webkit-transform: rotateY(-240deg) translateX(-54px);
     }
 }
 
@@ -120,12 +120,20 @@
     }
 }
 
+#prism-2 {
+    margin-top: 320px;
+
+    @media (max-width: $break-xs) {
+        margin-top: 220px;
+    }
+}
+
 .coming-soon {
     text-align: center;
     margin-top: 320px;
     margin-bottom: 60px;
 
-    @media (max-width: $break-xxs) {
+    @media (max-width: $break-xs) {
         margin-top: 210px;
     }
 

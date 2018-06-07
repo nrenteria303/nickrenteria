@@ -398,7 +398,7 @@ h4 {
   mix-blend-mode: screen; }
 
 #project-fill {
-  perspective: 1200px;
+  perspective: 1500px;
   display: flex;
   flex-direction: column;
   margin-top: 60px;
@@ -418,8 +418,8 @@ h4 {
     .prism {
       width: 276px; } }
   .prism:hover {
-    transform: rotateY(-240deg) translateX(-44px);
-    -webkit-transform: rotateY(-240deg) translateX(-44px); }
+    transform: rotateY(-240deg) translateX(-54px);
+    -webkit-transform: rotateY(-240deg) translateX(-54px); }
 
 .prism-front,
 .prism-front img,
@@ -496,11 +496,17 @@ h4 {
     .prism-left a:hover {
       color: #12d400; }
 
+#prism-2 {
+  margin-top: 320px; }
+  @media (max-width: 549px) {
+    #prism-2 {
+      margin-top: 220px; } }
+
 .coming-soon {
   text-align: center;
   margin-top: 320px;
   margin-bottom: 60px; }
-  @media (max-width: 374px) {
+  @media (max-width: 549px) {
     .coming-soon {
       margin-top: 210px; } }
   .coming-soon h4 {
