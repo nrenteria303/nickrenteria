@@ -15,6 +15,9 @@
 }
 
 #top-navigation .cart-info .stats { margin-right: 5px; }
+#site-title {
+    font-size: 1.4em;
+}
 
 /* Products */
 #products .item img { background-color: #000; }
