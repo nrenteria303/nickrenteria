@@ -103,7 +103,7 @@ new Vue({
         },
 
         checkout: function() {
-            if (confirm('Are you sure you are ready to purchase these items?')) {
+            if (confirm('Are you sure you are ready to checkout?')) {
                 this.cart.items.forEach(function(item) {
                     item.product.inStock += item.quantity;
                 });
@@ -123,10 +123,19 @@ new Vue({
 
             return total;
         },
+        
+        bigMoneyDiscount: function() {
+            if (this.cartTotal > 3000) {
+                return (this.cartTotal * .1);
+            } else {
+                return 0;
+            }
+        },
 
         taxAmount: function() {
-            return (this.cartTotal * .08);
-        }
+            return ((this.cartTotal - this.bigMoneyDiscount) * .08);
+        },
+
     },
 
     filters: {
