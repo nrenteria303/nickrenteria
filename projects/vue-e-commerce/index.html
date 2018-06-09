@@ -22,6 +22,13 @@
                 </div>
             </nav>
 
+            <div id="offer" class="alert alert-info" role="alert">
+                <strong>Special offer: </strong>Get an extra <strong>10%</strong> off all orders of $3,000 or more!
+                <button @click="closeOffer" type="button" class="close" data-dismiss="alert" aria-label="Close" title="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
             <div v-if="!isShowingCart" id="products" class="row list-group">
                 <div v-for="product in products" class="item col-xs-4">
                     <div class="thumbnail">
@@ -81,7 +88,7 @@
 
                         <tr v-if="cartTotal > 3000">
                             <td class="text-right" colspan="2">
-                                <strong>10% Big Money Discount</strong>
+                                <strong>Big Money Discount</strong>
                             </td>
 
                             <td>({{ bigMoneyDiscount | currency }})</td>

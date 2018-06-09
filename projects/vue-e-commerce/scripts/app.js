@@ -110,6 +110,10 @@ new Vue({
 
                 this.cart.items = [];
             }
+        },
+
+        closeOffer: function() {
+            document.getElementById('offer').style.display = 'none';
         }
     },
 

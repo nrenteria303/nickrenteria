@@ -13,7 +13,6 @@
 #top-navigation .cart-info {
     width: 100%;
 }
-
 #top-navigation .cart-info .stats { margin-right: 5px; }
 #site-title {
     font-size: 1.4em;
@@ -26,15 +25,6 @@
 #products .item .number-in-stock.few { color: #E0A14F; }
 #products .item .number-in-stock.none { color: #C45E5E; }
 
-@media (max-width: 1201px) {
-    #products {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    div.item.col-xs-4 {
+div.item.col-xs-4 {
         min-width: 320px;
     }
-
-}
