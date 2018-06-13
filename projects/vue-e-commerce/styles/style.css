@@ -1,3 +1,7 @@
+[v-cloak] {
+    display: none;
+}
+
 .flex { display:flex }
 .flex.flex-column { flex-direction: column; }
 .flex.flex-row { flex-direction: row; }
