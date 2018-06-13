@@ -34,17 +34,17 @@
                     <div class="thumbnail">
                         <img class="group list-group-image" src="http://placehold.it/400x250/000/fff">
                         <div class="caption" v-cloak>
-                            <h4 class="group inner list-group-item-heading">{{ product.name }}</h4>
-                            <p class="group inner list-group-item-text">{{ product.description }}</p>
+                            <h4 class="group inner list-group-item-heading" v-cloak>{{ product.name }}</h4>
+                            <p class="group inner list-group-item-text" v-cloak>{{ product.description }}</p>
                             <br>
 
                             <div class="row flex flex-row align-center">
                                 <div class="col-xs-4" v-cloak>
-                                    <p class="lead">{{ product.price | currency }}</p>
+                                    <p class="lead" v-cloak>{{ product.price | currency }}</p>
                                 </div>
 
                                 <div class="col-xs-8 flex flex-row align-center justify-right">
-                                    <div class="number-in-stock" :class="{ few: product.inStock < 10, none: product.inStock == 0 }">
+                                    <div class="number-in-stock" :class="{ few: product.inStock < 10, none: product.inStock == 0 }" v-cloak>
                                         {{ product.inStock }} in stock
                                     </div>
                                     <button class="btn btn-success" @click="addProductToCart(product)" :disabled="product.inStock == 0">Add to cart</button>
