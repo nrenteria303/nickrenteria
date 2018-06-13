@@ -74,12 +74,14 @@ let tenziNumber = 0;
 let newRound = true;
 
 
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_ Home Page +_+_+_+_+_+_+_+_+_
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 
 
 $header.on({
     mouseleave: function() {
-        var adultCount = 440;
+        let adultCount = 440;
         $adult.delay(adultCount).queue(function (asWhite) { 
             $(this).css('color', 'white'); 
             asWhite();
@@ -92,31 +94,33 @@ $header.on({
 });
 
 
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_ Character Page +_+_+_+_+_+_+_+_+_
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
+
 
 $clickForInfo.hide();
 
 $('.char_sort').click(function() {
     $teaserText.hide();
     $clickForInfo.show();
-    var $this = $(this);
+    let $this = $(this);
     $('.char_sort').removeClass('char_sort_clicked');
     $this.addClass('char_sort_clicked');
-	// var sort_id = $this.attr('id');
-	var sort_id = $this.text();
+	let sort_id = $this.text();
 
 	$.ajax({
 		url: "./characters.json",
 		dataType: "json",
 		method: "get",
 		success: function(response) {
-			var $container = $('.characters');
+			let $container = $('.characters');
 
 			$container.empty();
 			
 			for (let i = 0; i < response.length; i++) {
 				if ( response[i].subset === sort_id) {
-					var $characterHTML = '<div class="character_cont';
+					let $characterHTML = '<div class="character_cont';
                     $characterHTML += '" id="' + response[i].contId + '">';
                     $characterHTML += '<img class="character_img" id="' + response[i].imageId + '" src="' + response[i].imageSrc + '">';
                     $characterHTML += '<div class="character_bio">';
@@ -203,7 +207,11 @@ $('.char_sort').click(function() {
 //     $osi.hide();
 // });
 
+
+
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_ TENZI GAME +_+_+_+_+_+_+_+_+_
+// +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 
 
 $logTenzi.hide();
@@ -214,7 +222,7 @@ $infoIcn.click( function() {
 });
 
 function rollActive(sides) {
-    for (var i = 0; i < diceActive.length; i += 1 ) {
+    for (let i = 0; i < diceActive.length; i ++ ) {
         diceActive[i].text(Math.floor(Math.random() * sides ) + 1);
         switch (diceActive[i].text()) {
             case '1':
@@ -302,13 +310,13 @@ function rollActive(sides) {
 }
 
 function rmvSideBtnClick() {
-    var rmvBtnElement = $(".side_btn_click");
+    let rmvBtnElement = $(".side_btn_click");
     rmvBtnElement.removeClass("side_btn_click");
 }
 
 $4sided.click( function() { 
     if (isRollBtnClicked === true) {
-        alert("You cannot switch dice after you begin rolling. To start over, please refresh the page.");
+        alert("You cannot switch dice after you begin rolling. To start over, please clear the dice or refresh the page.");
     } else {
         rmvSideBtnClick();
         $(this).addClass("side_btn_click");
@@ -318,7 +326,7 @@ $4sided.click( function() {
 
 $6sided.click( function() {
     if (isRollBtnClicked === true) {
-        alert("You cannot switch dice after you begin rolling. To start over, please refresh the page");
+        alert("You cannot switch dice after you begin rolling. To start over, please clear the dice or refresh the page");
     } else {
         rmvSideBtnClick();
         $(this).addClass("side_btn_click");
@@ -328,7 +336,7 @@ $6sided.click( function() {
 
 $8sided.click( function() {
     if (isRollBtnClicked === true) {
-        alert("You cannot switch dice after you begin rolling. To start over, please refresh the page");
+        alert("You cannot switch dice after you begin rolling. To start over, please clear the dice or refresh the page");
     } else {
         rmvSideBtnClick();
         $(this).addClass("side_btn_click");
@@ -338,7 +346,7 @@ $8sided.click( function() {
 
 $12sided.click( function() {
     if (isRollBtnClicked === true) {
-        alert("You cannot switch dice after you begin rolling. To start over, please refresh the page.");
+        alert("You cannot switch dice after you begin rolling. To start over, please clear the dice or refresh the page.");
     } else {
         rmvSideBtnClick();
         $(this).addClass("side_btn_click");
@@ -348,7 +356,7 @@ $12sided.click( function() {
 
 $20sided.click( function() {
     if (isRollBtnClicked === true) {
-        alert("You cannot switch dice after you begin rolling. To start over, please refresh the page.");
+        alert("You cannot switch dice after you begin rolling. To start over, please clear the dice or refresh the page.");
     } else {
         rmvSideBtnClick();
         $(this).addClass("side_btn_click");
@@ -393,7 +401,7 @@ function clearDice() {
         diceActive.unshift(diceFrozen.shift());
     };
     $('.freeze_btn_frozen').removeClass('freeze_btn_frozen');
-    for ( var i = 0 ; i < diceActive.length + diceFrozen.length ; i += 1 ) {
+    for ( let i = 0 ; i < diceActive.length + diceFrozen.length ; i += 1 ) {
         diceActive[i].removeClass("colonel_gentleman_die brock_die dean_die hank_die monarch_die dr_venture_die henchman_21_die henchman_24_die dr_orpheus_die triana_die molotov_die phantom_limb_die underbheit_die jonas_sr_die jonas_jr_die captain_die killenger_die kano_die action_man_die dr_girlfriend_die");
         diceActive[i].html('');
     };

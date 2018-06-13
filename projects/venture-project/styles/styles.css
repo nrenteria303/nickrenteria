@@ -168,6 +168,10 @@ article:last-child {
     color: white;
 }
 
+#videos ul li a:hover {
+    color: lightblue;
+}
+
 h2 {
     color: white;
     text-align: center;
@@ -480,8 +484,7 @@ h2 {
 }
 
 .die_display_number {
-    color: white;
-    font-size: 4.4rem;
+    display: none;
 }
 
 .die_display_number_frozen {
