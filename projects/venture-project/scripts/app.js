@@ -1,83 +1,14 @@
 
-// +_+_+_+_+_+_+_+_+_ Variables +_+_+_+_+_+_+_+_+_
-
-const $header = $('.header');
-const $heading2 = $('#secondary-heading');
-
-const $teaserText = $('#character_preview_cont');
-const $clickForInfo = $('#click_for_info');
-const $characterImg = $('.character_img');
-const $characterCont = $('.character_cont');
-const $adult = $('#as_adult');
-const $swim = $('#as_swim');
-const $charBar = $('#char_bar');
-const $ventureFam = $('#venture_fam');
-const $osiAgents = $('#osi_agents');
-const $monarchClique = $('#monarch_clique');
-const $friends = $('#friends');
-const $ventures = $('.venture_family');
-const $osi = $('.osi');
-const $monarchy = $('.monarch_crew');
-const $ventureFriends = $('.venture_friend');
-
-let isStartTimeBtnClicked = false;
-let isRollBtnClicked = false;
-let sides = 6;
-const $infoIcn = $('#info-icn');
-const $rollDiceBtn = $('#roll_dice');
-const $4sided = $('#4_sides');
-const $6sided = $('#6_sides');
-const $8sided = $('#8_sides');
-const $12sided = $('#12_sides');
-const $20sided = $('#20_sides');
-const $startTimerBtn = $('#start_timer_btn');
-const $go = $('#go');
-let timeLeft = 100;
-const $timerDisplay = $('#timer_display');
-const $clearBtn = $('#clear_dice_boxes');
-const $diceBoxes = $('.die_display_box');
-const $dieNumber1 = $('#die_display_number_1');
-const $freeze1 = $('#freeze_1');
-const $dieNumber2 = $('#die_display_number_2');
-const $freeze2 = $('#freeze_2');
-const $dieNumber3 = $('#die_display_number_3');
-const $freeze3 = $('#freeze_3');
-const $dieNumber4 = $('#die_display_number_4');
-const $freeze4 = $('#freeze_4');
-const $dieNumber5 = $('#die_display_number_5');
-const $freeze5 = $('#freeze_5');
-const $dieNumber6 = $('#die_display_number_6');
-const $freeze6 = $('#freeze_6');
-const $dieNumber7 = $('#die_display_number_7');
-const $freeze7 = $('#freeze_7');
-const $dieNumber8 = $('#die_display_number_8');
-const $freeze8 = $('#freeze_8');
-const $dieNumber9 = $('#die_display_number_9');
-const $freeze9 = $('#freeze_9');
-const $dieNumber10 = $('#die_display_number_10');
-const $freeze10 = $('#freeze_10');
-let diceActive = [  $dieNumber1, 
-                    $dieNumber2, 
-                    $dieNumber3, 
-                    $dieNumber4, 
-                    $dieNumber5, 
-                    $dieNumber6, 
-                    $dieNumber7, 
-                    $dieNumber8, 
-                    $dieNumber9, 
-                    $dieNumber10];
-let diceFrozen = [];
-const $tenziWin = $('#declare_tenzi');
-const $logTenzi = $('#log_tenzi');
-const $runningScore = $('#running_score');
-let tenziNumber = 0;
-let newRound = true;
-
-
 // +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_ Home Page +_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 
+
+// +_+_+_+_+_+_+_+_+_ Variables +_+_+_+_+_+_+_+_+_
+const $header = $('.header');
+const $heading2 = $('#secondary-heading');
+const $adult = $('#as_adult');
+const $swim = $('#as_swim');
 
 $header.on({
     mouseleave: function() {
@@ -98,6 +29,20 @@ $header.on({
 // +_+_+_+_+_+_+_+_+_ Character Page +_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 
+// +_+_+_+_+_+_+_+_+_ Variables +_+_+_+_+_+_+_+_+_
+const $teaserText = $('#character_preview_cont');
+const $clickForInfo = $('#click_for_info');
+const $characterImg = $('.character_img');
+const $characterCont = $('.character_cont');
+const $charBar = $('#char_bar');
+const $ventureFam = $('#venture_fam');
+const $osiAgents = $('#osi_agents');
+const $monarchClique = $('#monarch_clique');
+const $friends = $('#friends');
+const $ventures = $('.venture_family');
+const $osi = $('.osi');
+const $monarchy = $('.monarch_crew');
+const $ventureFriends = $('.venture_friend');
 
 $clickForInfo.hide();
 
@@ -167,51 +112,105 @@ $('.char_sort').click(function() {
 
 // BELOW IS THE WAY I DID THIS WITHOUT AJAX
 
-// $characterBio.hide();
-// $spoiledBox.hide();
+        // $characterBio.hide();
+        // $spoiledBox.hide();
 
-// $characterImg.click(function() {
-//     $(this).next().fadeIn(700);
-// });
+        // $characterImg.click(function() {
+        //     $(this).next().fadeIn(700);
+        // });
 
-// $spoilerBox.click(function() {
-//     $(this).hide();
-//     $(this).next().fadeIn(300);
-// });
+        // $spoilerBox.click(function() {
+        //     $(this).hide();
+        //     $(this).next().fadeIn(300);
+        // });
 
-// $ventureFam.on("click", function () {
-//     $ventures.show();
-//     $osi.hide();
-//     $monarchy.hide();
-//     $ventureFriends.hide();
-// });
+        // $ventureFam.on("click", function () {
+        //     $ventures.show();
+        //     $osi.hide();
+        //     $monarchy.hide();
+        //     $ventureFriends.hide();
+        // });
 
-// $osiAgents.on("click", function () {
-//     $osi.show();
-//     $ventures.hide();
-//     $monarchy.hide();
-//     $ventureFriends.hide();
-// });
+        // $osiAgents.on("click", function () {
+        //     $osi.show();
+        //     $ventures.hide();
+        //     $monarchy.hide();
+        //     $ventureFriends.hide();
+        // });
 
-// $monarchClique.on("click", function () {
-//     $monarchy.show();
-//     $ventures.hide();
-//     $osi.hide();
-//     $ventureFriends.hide();
-// });
+        // $monarchClique.on("click", function () {
+        //     $monarchy.show();
+        //     $ventures.hide();
+        //     $osi.hide();
+        //     $ventureFriends.hide();
+        // });
 
-// $friends.on("click", function () {
-//     $ventureFriends.show();
-//     $ventures.hide();
-//     $monarchy.hide();
-//     $osi.hide();
-// });
+        // $friends.on("click", function () {
+        //     $ventureFriends.show();
+        //     $ventures.hide();
+        //     $monarchy.hide();
+        //     $osi.hide();
+        // });
 
 
 
 // +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_ TENZI GAME +_+_+_+_+_+_+_+_+_
 // +_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
+
+// +_+_+_+_+_+_+_+_+_ Variables +_+_+_+_+_+_+_+_+_
+let isStartTimeBtnClicked = false;
+let isRollBtnClicked = false;
+let sides = 6;
+const $infoIcn = $('#info-icn');
+const $rollDiceBtn = $('#roll_dice');
+const $4sided = $('#4_sides');
+const $6sided = $('#6_sides');
+const $8sided = $('#8_sides');
+const $12sided = $('#12_sides');
+const $20sided = $('#20_sides');
+const $startTimerBtn = $('#start_timer_btn');
+const $go = $('#go');
+let timeLeft = 100;
+const $timerDisplay = $('#timer_display');
+const $clearBtn = $('#clear_dice_boxes');
+const $diceBoxes = $('.die_display_box');
+const $dieNumber1 = $('#die_display_number_1');
+const $freeze1 = $('#freeze_1');
+const $dieNumber2 = $('#die_display_number_2');
+const $freeze2 = $('#freeze_2');
+const $dieNumber3 = $('#die_display_number_3');
+const $freeze3 = $('#freeze_3');
+const $dieNumber4 = $('#die_display_number_4');
+const $freeze4 = $('#freeze_4');
+const $dieNumber5 = $('#die_display_number_5');
+const $freeze5 = $('#freeze_5');
+const $dieNumber6 = $('#die_display_number_6');
+const $freeze6 = $('#freeze_6');
+const $dieNumber7 = $('#die_display_number_7');
+const $freeze7 = $('#freeze_7');
+const $dieNumber8 = $('#die_display_number_8');
+const $freeze8 = $('#freeze_8');
+const $dieNumber9 = $('#die_display_number_9');
+const $freeze9 = $('#freeze_9');
+const $dieNumber10 = $('#die_display_number_10');
+const $freeze10 = $('#freeze_10');
+let diceActive = [  $dieNumber1, 
+                    $dieNumber2, 
+                    $dieNumber3, 
+                    $dieNumber4, 
+                    $dieNumber5, 
+                    $dieNumber6, 
+                    $dieNumber7, 
+                    $dieNumber8, 
+                    $dieNumber9, 
+                    $dieNumber10];
+let diceFrozen = [];
+const $tenziWin = $('#declare_tenzi');
+const $logTenzi = $('#log_tenzi');
+const $runningScore = $('#running_score');
+let tenziNumber = 0;
+let newRound = true;
 
 
 $logTenzi.hide();
