@@ -12,12 +12,12 @@ const $swim = $('#as_swim');
 
 $header.on({
     mouseleave: function() {
-        let adultCount = 440;
+        let adultCount = 470;
         $adult.delay(adultCount).queue(function (asWhite) { 
             $(this).css('color', 'white'); 
             asWhite();
             });
-        $swim.delay(adultCount + 1188).queue(function (asWhite) { 
+        $swim.delay(adultCount + 1140).queue(function (asWhite) { 
             $(this).css('color', 'white'); 
             asWhite();
         });

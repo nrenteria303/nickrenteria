@@ -645,8 +645,9 @@ footer {
     justify-content: center; 
     background-color: rgb(116, 19, 19);
     margin-top: 50px;
-    border-top: solid rgb(65, 65, 65) 2px;
+    border-top: solid black 2px;
     box-shadow: 0 -3px 12px black;
+    background: linear-gradient(3deg, black -280%, rgb(116, 19, 19) 77%, white 360%);
 }
 
 footer p {
