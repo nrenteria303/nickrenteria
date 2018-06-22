@@ -10,6 +10,7 @@ const $heading2 = $('#secondary-heading');
 const $adult = $('#as_adult');
 const $swim = $('#as_swim');
 
+
 $header.on({
     mouseleave: function() {
         let adultCount = 470;
@@ -43,6 +44,7 @@ const $ventures = $('.venture_family');
 const $osi = $('.osi');
 const $monarchy = $('.monarch_crew');
 const $ventureFriends = $('.venture_friend');
+
 
 $clickForInfo.hide();
 
@@ -78,7 +80,7 @@ $('.char_sort').click(function() {
                     
                     if ( response[i].spoiler === true ) {
                         $characterHTML += '<div class="spoiler_box"><h3 class="spoiler_text">Reveal Spoiler</h3></div>';
-                        $characterHTML += '<div class="spoiled_box"><h3 class="spoiled_text">' + response[i].spoilerText + '</h3></div></div>';
+                        $characterHTML += '<div class="spoiled_box"><h3 class="spoiled_text">' + response[i].spoilerText + '</h3></div></div>'; // closing spoiler & top line div tag
                     }
 
                     $characterHTML += '<p class="character_desc">' + response[i].description + '</p>';

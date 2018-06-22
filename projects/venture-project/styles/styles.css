@@ -364,6 +364,15 @@ h2 {
     width: 327px;
 }
 
+#vue_link_cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+#vue_link {
+    color: white;
+    text-align: center;
+}
 
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* _-_-_-_-_-_-_-_-_-_ Tenzi Page  Styles _-_-_-_-_-_-_-_-_-_-_- */
