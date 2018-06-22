@@ -7,6 +7,7 @@ const characterList = [
 		imageSrc: "images/dr_venture.jpg",
 		subset: "Venture Family",
 		spoiler: false,
+		bioRevealed: false,
 		description: "Dr. Thaddeus S. Venture, formerly known as Rusty Venture and later as TS, most often known as Dr. Venture or simply Doc, is the son of the late, great Dr. Jonas Venture Senior, a world-renowned super scientist and adventurer. As a child, Doc was perhaps the most famous and admired boy-advanturer of all time. As an adult, he is most known as a petty, obnoxious, pill-popping failure of a super scientist and father. His childhood moniker, 'Rusty Venture,' eventually becomes the name of a series of lurid sex acts, much to his dismay."
 	},
 	{
@@ -17,6 +18,7 @@ const characterList = [
 		imageSrc: "images/hank.jpg",
 		subset: "Venture Family",
 		spoiler: false,
+		bioRevealed: false,
 		description: "Henry Allen Venture, or Hank as he prefers to be called, is the oldest of the Venture twins, as well as the more rebellious of the two. He, like his father before him, hates the jet-setting and dangerous life of a de facto boy adventurer, and often expresses this frustration via sass mouth typically directed at Dr. Venture. He idolizes his bodyguard, Brock, and takes every chance he can get to hang around with and attempt to impress him. Hank is also the more girl-crazy of the Venture boys, developing a crush for the compound's Mail Delivery Woman at an early age."
 	},
 	{
@@ -27,6 +29,7 @@ const characterList = [
 		imageSrc: "images/dean.jpg",
 		subset: "Venture Family",
 		spoiler: false,
+		bioRevealed: false,
 		description: "Dean Venture, the slightly younger Venture boy, is the far more sensitive, polite, and academically inclined of the two. Dean has a long-term crush on Triana, the daughter of his necromancer neighbor, Dr. Orpheus; he pines after her for years and his intense love for her even allows the magic of Dr. Orpheus to rescue the Venture family a time or two. Dr. Venture often tries to pigeonhole Dean into following in his footsteps and entering the super science game. He goes along begrudgingly, either not wanting to disappoint his father or being too much of a candy-ass to rebel like his brother Hank."
 	},
 	{
@@ -36,6 +39,7 @@ const characterList = [
 		imageSrc: "images/brock.jpg",
 		subset: "OSI Agents",
 		spoiler: false,
+		bioRevealed: false,
 		description: "Brock Sampson is perhaps the most mythic character in the Venture Bros. universe. Brock joined the army after being thrown out of college and eventually made it into the Office of Secret Intellignce, or OSI. There he eventually earned notoriety and even celebrity status in the organization for his strength, brutality, combat expertise, and incredible effectiveness at his job as a government spy. As the bodyguard to the Venture family, Brock kills any and every threat to the family that comes along (except of course Guild-sanctioned arches, though only for bureaucratic reasons). Brock is the epitome of Robert Plant-esque hypermasculinity and raw sexual energy."
 	},
 	{
@@ -45,6 +49,7 @@ const characterList = [
 		imageSrc: "images/h21.jpg",
 		subset: "Monarch Crew",
 		spoiler: false,
+		bioRevealed: false,
 		description: "Henchman 21, or more often known simply as 21, is one half of the villainous Monarch's most reliable henching duo, somehow. He was kidnapped by the Monarch's henchmen team when he was 13 years old and has been henching for the Monarch ever since. Both he and his best friend, Henchman 24, are both unabashed nerds. They often engage in heated debates over pop culture trivia and fan speculation, such as whether or not the Smurfs are mammals. He is often the butt of light-hearted jokes by 24 about his weight."
 	},
 	{
@@ -56,6 +61,7 @@ const characterList = [
 		spoiler: true,
 		spoilerRevealed: false,
 		spoilerText: "Deceased",
+		bioRevealed: false,
 		description: "Henchman 24, or just 24, is the other half of the Monarch's most reliable henching duo. He is just as nerdy as 21, and just as quick to do all he can to avoid the drudgery and danger involved in being a henchman. He, like 21, is not a particularly skilled or intelligent henchman, but more uses his extensive knowledge of superhero cliches to avoid death. In the words of 21 he looks like, 'Seinfeld with a unibrow,' and sounds like 'Ray Romano' according to the Monarch. At one point his primary mode of transportation, aside from the Monarch's giant flying cacoon, is a crappy Nissan Stanza he borrowed from his dad."
 	},
 	{
@@ -67,6 +73,7 @@ const characterList = [
 		spoiler: true,
 		spoilerRevealed: false,
 		spoilerText: "Dr. Venture's Illegitimate Son",
+		bioRevealed: false,
 		description: "Dermott meets the Venture clan during the Rusy Venture Day Camp for Boy Adventurers. He makes a quick enemy out of Brock after he mocks the martial arts expo Brock puts on for the kids. He then befriends Hank and later harasses Triana Orpheus, earning him an ensuing surprise ass kicking at the hands of Dean, much to the enjoyment of Brock. Dermott can frequently be heard saying vulgar things and boasting about his alleged record of combat prowess and manliness. He eventually forms the band Shallow Gravy with Hank and H.E.L.P.eR."
 	},
 	{
@@ -78,6 +85,7 @@ const characterList = [
 		spoiler: true,
 		spoilerRevealed: false,
 		spoilerText: "Not Really Bowie & Possibly Deceased",
+		bioRevealed: false,
 		description: "David Bowie is first mentioned in Season 1 as the original owner of Roy Brisby's long-time companda, Ling Ling. He then makes his first appearance in the two-part Season 2 finale as The Sovereign, the highest ranking member of the Guild of Calamitous Intent; he gives Dr. Girlfriend away at her wedding to the Monarch. The Sovereign is a powerful shapeshifter, and can take the form of anything from a pack of cigarettes to a bald eagle to 'Two-Ton' 21. He survives the Battle of Cremation Creek despite being betrayed by Phantom Limb and Iggy Pop."
 	}
 ]
@@ -100,6 +108,9 @@ const characterApp = new Vue({
 			}
 			event.target.classList.add('char_sort_clicked');
 		},
+		// revealBio: function(characer) {
+		// 	character.bioRevealed = true;
+		// },
 		revealSpoiler: function(character) {
 			character.spoilerRevealed = true;
 		}

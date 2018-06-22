@@ -364,15 +364,26 @@ h2 {
     width: 327px;
 }
 
-#vue_link_cont {
+#ajax_link_cont {
     display: flex;
     justify-content: space-around;
 }
 
-#vue_link {
+#ajax_link {
     color: white;
     text-align: center;
 }
+
+
+.bio-fade-enter-active {
+    transition: all .4s ease-in;
+}
+
+.bio-fade-enter {
+    opacity: 0;
+}
+
+
 
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 /* _-_-_-_-_-_-_-_-_-_ Tenzi Page  Styles _-_-_-_-_-_-_-_-_-_-_- */

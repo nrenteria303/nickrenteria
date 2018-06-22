@@ -4,7 +4,7 @@
   <head>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="styles/styles.css">
-      <title>Characters | Vue Version</title>
+      <title>Venture Characters | VueJS</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
   
   </head>
@@ -14,7 +14,7 @@
       <header>
         <div id="header-wrapper">
           <h1 id="main-heading">VENTURE BROS.</h1>
-          <nav><h3 id="secondary-heading"><a href="index.html">Home</a> | <a href="char.html">Characters</a> | <a href="v_tenzi.html">Venture Tenzi</a></h3></nav>
+          <nav><h3 id="secondary-heading"><a href="index.html">Home</a> | <a href="char_vue.html">Characters</a> | <a href="v_tenzi.html">Venture Tenzi</a></h3></nav>
         </div>
       </header>
 
@@ -33,22 +33,24 @@
           </div>
 
 
-          <!-- <h2 v-show="sortTagClicked" id="click_for_info">[ click an image for more info ]</h2> -->
+          <h2 v-show="sortTagClicked" id="click_for_info">[ click an image for more info ]</h2>
 
           <div v-for="character in characters" v-show="character.subset == sortSubset" class="character_cont" :id="character.contId">
-            <img class="character_img" :src="character.imageSrc" alt="">
-            <div class="character_bio">
-              <div class="character_top_line">
-                <h3 class="character_name">{{character.name}}</h3>
-                <div v-if="character.spoiler" class="spoiler_box">
-                  <h3 @click="revealSpoiler(character)" v-if="!character.spoilerRevealed" class="spoiler_text">Reveal Spoiler</h3>
+            <img @click="character.bioRevealed = true" class="character_img" :src="character.imageSrc" alt="">
+            <transition name="bio-fade">
+              <div v-show="character.bioRevealed" class="character_bio">
+                <div class="character_top_line">
+                  <h3 class="character_name">{{character.name}}</h3>
+                  <div v-if="character.spoiler" class="spoiler_box">
+                    <h3 @click="revealSpoiler(character)" v-if="!character.spoilerRevealed" class="spoiler_text">Reveal Spoiler</h3>
+                  </div>
+                  <div v-if="character.spoilerRevealed" class="spoiled_box">
+                    <h3 class="spoiled_text">{{character.spoilerText}}</h3>
+                  </div>
                 </div>
-                <div v-if="character.spoilerRevealed" class="spoiled_box">
-                  <h3 class="spoiled_text">{{character.spoilerText}}</h3>
-                </div>
+                <p class="character_desc">{{character.description}}</p>
               </div>
-              <p class="character_desc">{{character.description}}</p>
-            </div>
+            </transition>
           </div>
           <div v-show="!sortTagClicked" id="character_preview_cont">
             <h1 id="character_preview_ob">[</h1>
@@ -61,7 +63,11 @@
 
         </div><!-- ~%~%~%~%~%~% End characters Vue Instance ~%~%~%~%~%~%~%~%~%~%~%~%~% -->
 
-      </main>      
+      </main>     
+      
+      <div id="ajax_link_cont">
+        <a href="./char_ajax.html" id="ajax_link">Click here to view the AJAX version of this page.</a>
+      </div>
 
       <footer>
         <p>&copy;2018</p>

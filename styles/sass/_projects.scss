@@ -100,16 +100,20 @@
     color: $color-dark-xd;
     padding: 20px 22px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     @media (max-width: $break-xs) {
         @include triangle-prism-left(340px);
-        font-size: .96rem;
+        font-size: .86rem;
         padding: 16px 18px;
+
     }  
     @media (max-width: $break-xxs) {
         @include triangle-prism-left(276px);
-        font-size: .86rem;
+        font-size: .78rem;
         padding: 8px 10px;
     } 
     a {
