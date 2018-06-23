@@ -108,9 +108,6 @@ const characterApp = new Vue({
 			}
 			event.target.classList.add('char_sort_clicked');
 		},
-		// revealBio: function(characer) {
-		// 	character.bioRevealed = true;
-		// },
 		revealSpoiler: function(character) {
 			character.spoilerRevealed = true;
 		}

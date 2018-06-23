@@ -124,6 +124,7 @@ main {
 
 #news {
     width: 60%;
+    perspective: 1200px;
 }
 
 #news h2 {
@@ -134,6 +135,13 @@ main {
 
 article {
     border-bottom: solid white 1px;
+    transition: all .2s ease-in-out;
+    transform-style: preserve-3d; 
+}
+
+article:hover {
+    transform: translateZ(40px);
+    background-color: #222222;
 }
 
 article:nth-child(n + 1) {
