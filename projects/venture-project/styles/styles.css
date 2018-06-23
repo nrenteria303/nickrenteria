@@ -141,7 +141,8 @@ article {
 
 article:hover {
     transform: translateZ(40px);
-    background-color: #222222;
+    background-color: #222;
+    box-shadow: 0 0 12px 8px #222;
 }
 
 article:nth-child(n + 1) {
