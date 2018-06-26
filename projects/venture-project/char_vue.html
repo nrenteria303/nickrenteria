@@ -42,7 +42,7 @@
                 <div class="character_top_line">
                   <h3 class="character_name">{{character.name}}</h3>
                   <div v-if="character.spoiler" class="spoiler_box">
-                    <h3 @click="revealSpoiler(character)" v-if="!character.spoilerRevealed" class="spoiler_text">Reveal Spoiler</h3>
+                    <h3 @click="character.spoilerRevealed = true" v-if="!character.spoilerRevealed" class="spoiler_text">Reveal Spoiler</h3>
                   </div>
                   <div v-if="character.spoilerRevealed" class="spoiled_box">
                     <h3 class="spoiled_text">{{character.spoilerText}}</h3>

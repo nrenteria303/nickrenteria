@@ -121,23 +121,16 @@ const characterApp = new Vue({
 			}
 			event.target.classList.add('char_sort_clicked');
 		},
-		revealSpoiler: function(character) {
-			character.spoilerRevealed = true;
-		},
 		increaseImageIndex: function(character) {
 			if (character.images[character.imageIndex + 1]) {
 				character.imageIndex ++;
-			} else {
-				character.imageIndex = character.imageIndex;
-			}
+			} 
 		},
 		decreaseImageIndex: function(character) {
 			if (character.images[character.imageIndex - 1]) {
 				character.imageIndex --;
-			} else {
-				character.imageIndex = character.imageIndex;
-			}
-		}
+			} 
+		},
 	},
 
 })
