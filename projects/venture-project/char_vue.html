@@ -22,7 +22,7 @@
         
         <h1 id="char_title">Meet the Characters</h1>
 
-          <div id="characters"> <!-- Start *characters* Vue Instance ~%~%~%~%~%~%~%~%~%~% -->
+        <div id="characters"> <!-- Start *characters* Vue Instance ~%~%~%~%~%~%~%~%~%~% -->
 
 
           <div id="char_bar">
@@ -33,10 +33,10 @@
           </div>
 
 
-          <h2 v-show="sortTagClicked" id="click_for_info">[ click an image for more info ]</h2>
+          <h2 v-cloak v-show="sortTagClicked" id="click_for_info">[ click an image for more info ]</h2>
 
-          <div v-for="character in characters" v-show="character.subset == sortSubset" class="character_cont" :id="character.contId">
-            <img @click="character.bioRevealed = true" class="character_img" :src="character.imageSrc" alt="">
+          <div v-cloak v-for="character in characters" v-show="character.subset == sortSubset" class="character_cont" :id="character.contId">
+            <img @click="character.bioRevealed = true" class="character_img" :id="character.imageId" :src="character.images[character.imageIndex]" alt="">
             <transition name="bio-fade">
               <div v-show="character.bioRevealed" class="character_bio">
                 <div class="character_top_line">
@@ -49,6 +49,10 @@
                   </div>
                 </div>
                 <p class="character_desc">{{character.description}}</p>
+                <div class="evolution_link_cont">
+                  <a class="evolution_link" v-show="character.images[character.imageIndex - 1]" @click.prevent="decreaseImageIndex(character)" href="#">&#8656; Last Phase</a>
+                  <a class="evolution_link" v-show="character.images[character.imageIndex + 1]" @click.prevent="increaseImageIndex(character)" href="#">Next Phase &#8658;</a>
+                </div>
               </div>
             </transition>
           </div>

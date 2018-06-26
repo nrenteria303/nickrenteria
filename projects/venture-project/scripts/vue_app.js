@@ -4,7 +4,8 @@ const characterList = [
 		sortId: "venture_fam",
 		contId: "dr_venture_cont",
 		imageId: "dr_venture_img",
-		imageSrc: "images/dr_venture.jpg",
+		images: ["images/dr_venture.jpg"],
+		imageIndex: 0,
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -15,7 +16,8 @@ const characterList = [
 		sortId: "venture_fam",
 		contId: "hank_cont",
 		imageID: "hank_img",
-		imageSrc: "images/hank.jpg",
+		images: ["images/hank.jpg", "images/hank_2.jpg", "images/hank_3.jpg"],
+		imageIndex: 0,
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -26,7 +28,8 @@ const characterList = [
 		sortId: "venture_fam",
 		contId: "dean_cont",
 		imageId: "dean_img",
-		imageSrc: "images/dean.jpg",
+		images: ["images/dean.jpg", "images/dean_2.jpg", "images/dean_3.jpg"],
+		imageIndex: 0,
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -36,7 +39,9 @@ const characterList = [
 		name: "Brock Samson",
 		contId: "brock_cont",
 		sortId: "osi_agents",
-		imageSrc: "images/brock.jpg",
+		imageId: "brock_img",
+		images: ["images/brock.jpg"],
+		imageIndex: 0,
 		subset: "OSI Agents",
 		spoiler: false,
 		bioRevealed: false,
@@ -46,7 +51,9 @@ const characterList = [
 		name: "Henchman 21",
 		contId: "h21_cont",
 		sortId: "monarch_crew",
-		imageSrc: "images/h21.jpg",
+		imageId: "h21_img",
+		images: ["images/h21.jpg", "images/h21_2.jpg"],
+		imageIndex: 0,
 		subset: "Monarch Crew",
 		spoiler: false,
 		bioRevealed: false,
@@ -56,7 +63,9 @@ const characterList = [
 		name: "Henchman 24",
 		contId: "h24_cont",
 		sortId: "monarch_crew",
-		imageSrc: "images/h24.jpg",
+		imageId: "h24_img",
+		images: ["images/h24.jpg", "images/h24_2.jpg"],
+		imageIndex: 0,
 		subset: "Monarch Crew",
 		spoiler: true,
 		spoilerRevealed: false,
@@ -68,7 +77,9 @@ const characterList = [
 		name: "Dermott Fictel",
 		contId: "dermott_cont",
 		sortId: "friends",
-		imageSrc: "images/dermott.jpg",
+		imageId: "dermott_img",
+		images: ["images/dermott.jpg"],
+		imageIndex: 0,
 		subset: "'Friends'",
 		spoiler: true,
 		spoilerRevealed: false,
@@ -80,7 +91,9 @@ const characterList = [
 		name: "David Bowie (The Sovereign)",
 		contId: "sovereign",
 		sortId: "guild_members",
-		imageSrc: "images/the_sovereign.jpg",
+		imageId: "sovereign_img",
+		images: ["images/the_sovereign.jpg", "images/the_sovereign_2.jpg"],
+		imageIndex: 0,
 		subset: "Guild Members",
 		spoiler: true,
 		spoilerRevealed: false,
@@ -110,7 +123,22 @@ const characterApp = new Vue({
 		},
 		revealSpoiler: function(character) {
 			character.spoilerRevealed = true;
+		},
+		increaseImageIndex: function(character) {
+			if (character.images[character.imageIndex + 1]) {
+				character.imageIndex ++;
+			} else {
+				character.imageIndex = character.imageIndex;
+			}
+		},
+		decreaseImageIndex: function(character) {
+			if (character.images[character.imageIndex - 1]) {
+				character.imageIndex --;
+			} else {
+				character.imageIndex = character.imageIndex;
+			}
 		}
-	}
+	},
+
 })
 

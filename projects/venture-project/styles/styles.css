@@ -341,9 +341,9 @@ h2 {
     margin-bottom: 0;
 }
 
-#dr_venture_img {
+/* #dr_venture_img {
     width: 310px;
-}
+} */
 
 #hank_img {
     width: 265px;
@@ -361,9 +361,9 @@ h2 {
     margin: 22px opx 15px;
 }
 
-#h21_img {
+/* #h21_img {
     width: 335px;
-}
+} */
 
 #h24_img {
     width: 267px;
@@ -371,6 +371,16 @@ h2 {
 
 #dermott_img {
     width: 327px;
+}
+
+.evolution_link_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.evolution_link,
+.evolution_link:visited {
+    color: white;
 }
 
 #ajax_link_cont {
@@ -392,6 +402,9 @@ h2 {
     opacity: 0;
 }
 
+[v-cloak] {
+    display: none;
+}
 
 
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
