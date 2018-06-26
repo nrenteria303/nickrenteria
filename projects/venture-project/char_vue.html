@@ -50,7 +50,7 @@
                 </div>
                 <p class="character_desc">{{character.description}}</p>
                 <div class="evolution_link_cont">
-                  <a class="evolution_link" v-show="character.images[character.imageIndex - 1]" @click.prevent="decreaseImageIndex(character)" href="#">&#8656; Last Phase</a>
+                  <a class="evolution_link" v-show="character.images[character.imageIndex - 1]" @click.prevent="decreaseImageIndex(character)" href="#">&#8656; Previous Phase</a>
                   <a class="evolution_link" v-show="character.images[character.imageIndex + 1]" @click.prevent="increaseImageIndex(character)" href="#">Next Phase &#8658;</a>
                 </div>
               </div>
