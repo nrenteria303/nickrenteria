@@ -283,13 +283,26 @@ h2 {
     margin-top: 30px;
 }
 
-.character_img {
+#img_links_cont {
     margin: 0 auto;
+}
+
+.character_img {
     height: 310px;
 }
 
 .character_img:hover {
     cursor: pointer;
+}
+.evolution_link_cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+.evolution_link,
+.evolution_link:visited {
+    font-size: 14px;
+    color: white;
 }
 
 .character_name {
@@ -312,6 +325,7 @@ h2 {
 
 .character_top_line {
     display: flex;
+    justify-content: space-between;
 }
 
 .spoiler_box,
@@ -371,16 +385,6 @@ h2 {
 
 #dermott_img {
     width: 327px;
-}
-
-.evolution_link_cont {
-    display: flex;
-    justify-content: space-between;
-}
-
-.evolution_link,
-.evolution_link:visited {
-    color: white;
 }
 
 #ajax_link_cont {

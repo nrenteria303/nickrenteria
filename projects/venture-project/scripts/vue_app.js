@@ -133,5 +133,5 @@ const characterApp = new Vue({
 		},
 	},
 
-})
+});
 
