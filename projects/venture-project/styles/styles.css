@@ -296,13 +296,20 @@ h2 {
 }
 .evolution_link_cont {
     display: flex;
-    justify-content: space-around;
 }
 
 .evolution_link,
 .evolution_link:visited {
     font-size: 14px;
     color: white;
+}
+
+.evolution_link:first-of-type {
+    margin-right: auto;
+}
+
+.evolution_link:last-of-type {
+    margin-left: auto;
 }
 
 .character_name {
@@ -381,10 +388,6 @@ h2 {
 
 #h24_img {
     width: 267px;
-}
-
-#dermott_img {
-    width: 327px;
 }
 
 #ajax_link_cont {
