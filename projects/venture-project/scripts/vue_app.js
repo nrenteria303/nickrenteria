@@ -118,6 +118,7 @@ const characterApp = new Vue({
 		characters: characterList,
 		sortSubset: '',
 		sortTagClicked: false,
+		isPhaseLinkClicked: false,
 	},
 	
 	methods: {
@@ -130,9 +131,14 @@ const characterApp = new Vue({
 			event.target.classList.add('char_sort_clicked');
 		},
 		increaseImageIndex: function(character) {
-			if (character.images[character.imageIndex + 1]) {
-				character.imageIndex ++;
-			} 
+			if (this.isPhaseLinkClicked === false) {
+				this.isPhaseLinkClicked = true;
+				alert("WARNING: Increasing character phases could lead to spoilers.");
+			} else {
+				if (character.images[character.imageIndex + 1]) {
+					character.imageIndex ++;
+				} 
+			}
 		},
 		decreaseImageIndex: function(character) {
 			if (character.images[character.imageIndex - 1]) {
