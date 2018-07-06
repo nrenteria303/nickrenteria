@@ -6,7 +6,8 @@ const characterList = [
 		imageId: "dr_venture_img",
 		images: ["images/dr_venture.jpg", "images/dr_venture_2.jpg"],
 		imageIndex: 0,
-		altText: ["Dr. Rusty Venture, scared and lactating.", "Dr. Rusty Venture in the Ambassador."],
+		altText: ["Dr. Rusty Venture, scared and lactating.", 
+				  "Dr. Rusty Venture in the Ambassador."],
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -19,7 +20,9 @@ const characterList = [
 		imageID: "hank_img",
 		images: ["images/hank.jpg", "images/hank_2.jpg", "images/hank_3.jpg"],
 		imageIndex: 0,
-		altText: ["Hank Venture in his kerchief and the ol' high and tight.", "Hank Venture in Brock's jacket with the shaggy hair.", "Hank Venture with his New York Justin Bieber look."],
+		altText: ["Hank Venture in his kerchief and the ol' high and tight.", 
+				  "Hank Venture in Brock's jacket with the shaggy hair.", 
+				  "Hank Venture with his New York Justin Bieber look."],
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -32,7 +35,9 @@ const characterList = [
 		imageId: "dean_img",
 		images: ["images/dean.jpg", "images/dean_2.jpg", "images/dean_3.jpg"],
 		imageIndex: 0,
-		altText: ["Dean Venture in his sweater vest.", "Dean Venture with his little mustache.", "Dean Venture in his moody goth phase."],
+		altText: ["Dean Venture in his sweater vest.",
+				  "Dean Venture with his little mustache.",
+				  "Dean Venture in his moody goth phase."],
 		subset: "Venture Family",
 		spoiler: false,
 		bioRevealed: false,
@@ -45,7 +50,10 @@ const characterList = [
 		imageId: "brock_img",
 		images: ["images/brock.jpg", "images/brock_2.jpg", "images/brock_3.jpg", "images/brock_4.jpg"],
 		imageIndex: 0,
-		altText: ["Brock Samson in his trademark black polo.", "Chubby, unafiliated Brock.", "S.P.H.I.N.X. Brock.", "O.S.I. Brock, once again."],
+		altText: ["Brock Samson in his trademark black polo.",
+				  "Chubby, unafiliated Brock.",
+				  "S.P.H.I.N.X. Brock.",
+				  "O.S.I. Brock, once again."],
 		subset: "OSI Agents",
 		spoiler: false,
 		bioRevealed: false,
@@ -58,7 +66,8 @@ const characterList = [
 		imageId: "h21_img",
 		images: ["images/h21.jpg", "images/h21_2.jpg"],
 		imageIndex: 0,
-		altText: ["Henchman 21 with the light saber from \"Tag Sale, You're It!\"", "Beefy Henchman 21, known as Two-Ton 21 by his fellow henchmen."],
+		altText: ["Henchman 21 with the light saber from \"Tag Sale, You're It!\"",
+				  "Beefy Henchman 21, known as Two-Ton 21 by his fellow henchmen."],
 		subset: "Monarch Crew",
 		spoiler: false,
 		bioRevealed: false,
@@ -71,7 +80,8 @@ const characterList = [
 		imageId: "h24_img",
 		images: ["images/h24.jpg", "images/h24_2.jpg"],
 		imageIndex: 0,
-		altText: ["Henchman 24, likely seen sassing Henchman 21.", "Henchman 24's skull."],
+		altText: ["Henchman 24, likely seen sassing Henchman 21.",
+				  "Henchman 24's skull."],
 		subset: "Monarch Crew",
 		spoiler: true,
 		spoilerRevealed: false,
@@ -132,8 +142,11 @@ const characterApp = new Vue({
 		},
 		increaseImageIndex: function(character) {
 			if (this.isPhaseLinkClicked === false) {
-				this.isPhaseLinkClicked = true;
-				alert("WARNING: Increasing character phases could lead to spoilers.");
+				let phaseConfirm = confirm("WARNING: Increasing character phases could lead to spoilers. Continue?");
+				if (phaseConfirm == true)  {
+					this.isPhaseLinkClicked = true;
+					character.imageIndex ++;
+				}
 			} else {
 				if (character.images[character.imageIndex + 1]) {
 					character.imageIndex ++;
