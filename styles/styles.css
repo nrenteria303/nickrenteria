@@ -398,7 +398,7 @@ h4 {
   mix-blend-mode: screen; }
 
 #project-fill {
-  perspective: 2200px;
+  perspective: 1000px;
   display: flex;
   flex-direction: column;
   margin-bottom: 200px;
@@ -407,18 +407,37 @@ h4 {
 
 .prism {
   width: 460px;
-  margin: 160px auto;
-  transition: transform 2.2s cubic-bezier(0.44, -0.15, 0.25, 0.55);
+  margin: 140px auto;
   transform-style: preserve-3d; }
-  @media (max-width: 549px) {
+  @media (max-width: 875px) {
     .prism {
-      width: 340px; } }
+      width: 340px;
+      margin: 100px auto 20px; } }
+  @media (max-width: 550px) {
+    .prism {
+      margin: 90px auto; } }
   @media (max-width: 374px) {
     .prism {
       width: 276px; } }
-  .prism:hover {
-    transform: rotateY(-240deg) translateX(-54px);
-    -webkit-transform: rotateY(-240deg) translateX(-54px); }
+  .prism:hover .prism-front {
+    transform: translate3d(-180px, -10px, 0); }
+  .prism:hover .prism-left {
+    transform: translate3d(180px, 10px, 0); }
+  @media (max-width: 875px) {
+    .prism:hover .prism-front {
+      transform: translate3d(-130px, -10px, 0); }
+    .prism:hover .prism-left {
+      transform: translate3d(130px, 10px, 0); } }
+  @media (max-width: 549px) {
+    .prism:hover .prism-front {
+      transform: translate3d(-10px, -80px, 0); }
+    .prism:hover .prism-left {
+      transform: translate3d(10px, 100px, 0); } }
+  @media (max-width: 374px) {
+    .prism:hover .prism-front {
+      transform: translate3d(-7px, -65px, 0); }
+    .prism:hover .prism-left {
+      transform: translate3d(7px, 90px, 0); } }
 
 .prism-front,
 .prism-front img,
@@ -429,9 +448,8 @@ h4 {
   height: 273.48px;
   display: block;
   position: absolute;
-  backface-visibility: hidden;
   border: solid 1px #b1c1c0; }
-  @media (max-width: 549px) {
+  @media (max-width: 875px) {
     .prism-front,
     .prism-front img,
     .prism-right,
@@ -447,54 +465,42 @@ h4 {
       height: 164.09px; } }
 
 .prism-front {
-  transform: translateZ(99.59292px);
-  -webkit-transform: translateZ(99.59292px); }
-  @media (max-width: 549px) {
-    .prism-front {
-      transform: translateZ(73.61216px);
-      -webkit-transform: translateZ(73.61216px); } }
-  @media (max-width: 374px) {
-    .prism-front {
-      transform: translateZ(59.75575px);
-      -webkit-transform: translateZ(59.75575px); } }
+  z-index: 3;
+  transition: .6s ease-in-out transform; }
 
 .prism-right {
-  transform: translate3d(115px, 0, -99.59292px) rotateY(120deg);
-  -webkit-transform: translate3d(115px, 0, -99.59292px) rotateY(120deg); }
-  @media (max-width: 549px) {
-    .prism-right {
-      transform: translate3d(85px, 0, -73.61216px) rotateY(120deg);
-      -webkit-transform: translate3d(85px, 0, -73.61216px) rotateY(120deg); } }
-  @media (max-width: 374px) {
-    .prism-right {
-      transform: translate3d(69px, 0, -59.75575px) rotateY(120deg);
-      -webkit-transform: translate3d(69px, 0, -59.75575px) rotateY(120deg); } }
+  z-index: 2; }
 
 .prism-left {
-  transform: translate3d(-115px, 0, -99.59292px) rotateY(-120deg);
-  -webkit-transform: translate3d(-115px, 0, -99.59292px) rotateY(-120deg);
+  z-index: 1;
+  transition: transform .6s ease-in-out;
   background: #d3dcdc;
   color: #1d1d1d;
   padding: 20px 22px;
   text-align: center;
   font-size: 1.15rem;
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
   justify-content: space-around; }
-  @media (max-width: 549px) {
+  .prism-left .prism-left-text {
+    width: 77%;
+    display: block; }
+    @media (max-width: 550px) {
+      .prism-left .prism-left-text {
+        width: 100%;
+        margin-top: 4px; } }
+  @media (max-width: 875px) {
     .prism-left {
-      transform: translate3d(-85px, 0, -73.61216px) rotateY(-120deg);
-      -webkit-transform: translate3d(-85px, 0, -73.61216px) rotateY(-120deg);
       font-size: .86rem;
       padding: 16px 18px; } }
   @media (max-width: 374px) {
     .prism-left {
-      transform: translate3d(-69px, 0, -59.75575px) rotateY(-120deg);
-      -webkit-transform: translate3d(-69px, 0, -59.75575px) rotateY(-120deg);
       font-size: .78rem;
       padding: 8px 10px; } }
   .prism-left a {
-    color: #0077b5; }
+    color: #0077b5;
+    text-align: center; }
     .prism-left a:hover {
       color: #12d400; }
 
