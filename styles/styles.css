@@ -339,11 +339,14 @@ h4 {
     #resume-fill {
       grid-template-columns: 2fr 3fr;
       grid-template-rows: 50% 50%;
-      grid-template-areas: "cod exp" "cod edu"; } }
+      grid-template-areas: "cod exp"
+ "cod edu"; } }
   @media (max-width: 550px) {
     #resume-fill {
       grid-template-columns: 1fr;
-      grid-template-areas: "cod" "exp"  "edu"; } }
+      grid-template-areas: "cod"
+ "exp" 
+ "edu"; } }
   #resume-fill h3 {
     font-size: 1.75rem;
     font-weight: 400;
@@ -421,29 +424,29 @@ h4 {
       width: 276px; } }
   .prism:hover .prism-front {
     transform: translate3d(-180px, -10px, 0); }
-  .prism:hover .prism-left {
+  .prism:hover .prism-back {
     transform: translate3d(180px, 10px, 0); }
   @media (max-width: 875px) {
     .prism:hover .prism-front {
       transform: translate3d(-130px, -10px, 0); }
-    .prism:hover .prism-left {
+    .prism:hover .prism-back {
       transform: translate3d(130px, 10px, 0); } }
   @media (max-width: 549px) {
     .prism:hover .prism-front {
       transform: translate3d(-10px, -80px, 0); }
-    .prism:hover .prism-left {
+    .prism:hover .prism-back {
       transform: translate3d(10px, 100px, 0); } }
   @media (max-width: 374px) {
     .prism:hover .prism-front {
       transform: translate3d(-7px, -65px, 0); }
-    .prism:hover .prism-left {
+    .prism:hover .prism-back {
       transform: translate3d(7px, 90px, 0); } }
 
 .prism-front,
 .prism-front img,
 .prism-right,
 .prism-right img,
-.prism-left {
+.prism-back {
   width: 100%;
   height: 273.48px;
   display: block;
@@ -454,14 +457,14 @@ h4 {
     .prism-front img,
     .prism-right,
     .prism-right img,
-    .prism-left {
+    .prism-back {
       height: 202.14px; } }
   @media (max-width: 374px) {
     .prism-front,
     .prism-front img,
     .prism-right,
     .prism-right img,
-    .prism-left {
+    .prism-back {
       height: 164.09px; } }
 
 .prism-front {
@@ -471,7 +474,7 @@ h4 {
 .prism-right {
   z-index: 2; }
 
-.prism-left {
+.prism-back {
   z-index: 1;
   transition: transform .6s ease-in-out;
   background: #d3dcdc;
@@ -483,25 +486,25 @@ h4 {
   align-items: flex-end;
   flex-direction: column;
   justify-content: space-around; }
-  .prism-left .prism-left-text {
+  .prism-back .prism-back-text {
     width: 77%;
     display: block; }
     @media (max-width: 550px) {
-      .prism-left .prism-left-text {
+      .prism-back .prism-back-text {
         width: 100%;
         margin-top: 4px; } }
   @media (max-width: 875px) {
-    .prism-left {
+    .prism-back {
       font-size: .86rem;
       padding: 16px 18px; } }
   @media (max-width: 374px) {
-    .prism-left {
+    .prism-back {
       font-size: .78rem;
       padding: 8px 10px; } }
-  .prism-left a {
+  .prism-back a {
     color: #0077b5;
     text-align: center; }
-    .prism-left a:hover {
+    .prism-back a:hover {
       color: #12d400; }
 
 #prism-2 {
