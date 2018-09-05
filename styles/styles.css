@@ -339,14 +339,11 @@ h4 {
     #resume-fill {
       grid-template-columns: 2fr 3fr;
       grid-template-rows: 50% 50%;
-      grid-template-areas: "cod exp"
- "cod edu"; } }
+      grid-template-areas: "cod exp" "cod edu"; } }
   @media (max-width: 550px) {
     #resume-fill {
       grid-template-columns: 1fr;
-      grid-template-areas: "cod"
- "exp" 
- "edu"; } }
+      grid-template-areas: "cod" "exp"  "edu"; } }
   #resume-fill h3 {
     font-size: 1.75rem;
     font-weight: 400;

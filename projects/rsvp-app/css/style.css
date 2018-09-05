@@ -154,6 +154,20 @@ div > label {
   color: rgba(202, 87, 87, 0.9);
 }
 
+
+#clear-btn-cont {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px;
+}
+#clear-btn {
+  font-size: 1.1em;
+  padding: 6px 12px;
+  background-color: steelblue;
+  color: white;
+  border-radius: 6px;
+}
+
 /* ================================= 
   Media Queries
 ==================================== */

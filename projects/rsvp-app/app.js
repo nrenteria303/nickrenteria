@@ -10,6 +10,12 @@ const filterYesCheckBox = document.getElementById('filter-yes-checkbox');
 const filterNoLabel = document.getElementById('filter-no-label');
 const filterNoCheckBox = document.getElementById('filter-no-checkbox');
 
+const clearBtn = document.getElementById('clear-btn');
+
+let inviteeArray = [];
+let inviteeString= '';
+
+
 const lis = ul.children;
 
 function filterInvitees(response) {
@@ -20,6 +26,40 @@ function filterInvitees(response) {
         } else {
             li.style.display= 'none';
         }
+    }
+}
+
+function supportsLocalStorage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch(e) {
+        return false;
+    }
+}
+
+function getRecentInvitees() {
+    var invitees = localStorage.getItem('recentInvitees');
+    if (invitees && inviteeString !== '' && invitees !== inviteeString) {
+        return JSON.parse(inviteeString);
+    } else if (invitees) {
+        return JSON.parse(invitees);
+    } else {
+        return[];
+    }
+}
+
+function saveInviteeString(str) {
+    // var invitees = getRecentInvitees();
+    if (inviteeArray.indexOf(str) > -1) {
+        alert('This name is already in your invitee list.');
+        return false;
+    } else if (!str) {
+        return false;
+    } else {
+        inviteeArray.push(str);
+        // invitees.push(inviteeArray);
+        localStorage.setItem('recentInvitees', JSON.stringify(inviteeArray));
+        return true;
     }
 }
 
@@ -75,17 +115,53 @@ function createLi(text) {
     return li;
 }
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (input.value == '' || input.value == ' ') {
-        alert('Please enter an invitee name');
-    } else {
-        const text = input.value;
-        input.value = '';
-        const li = createLi(text);
-        ul.appendChild(li);
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     if (input.value == '' || input.value == ' ') {
+//         alert('Please enter an invitee name');
+//     } else {
+//         const text = input.value;
+//         input.value = '';
+//         const li = createLi(text);
+//         ul.appendChild(li);
+
+//         var inviteeString = input.value;
+//         if (saveInviteeString(inviteeString)) {
+//             const li = createLi(inviteeString);
+//             ul.appendChild(li);
+//         }
+//     }
+// });
+
+window.onload = function() {
+    if (supportsLocalStorage) {
+
+        // Initilize display list
+        var recentInvitees = getRecentInvitees();
+        recentInvitees.forEach(function(inviteeStr) {
+            inviteeArray.push(inviteeStr);
+            const li = createLi(inviteeStr);
+            ul.appendChild(li);
+        });
+
+        // Set event handlers
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (input.value == '' || input.value == ' ') {
+                alert('Please enter an invitee name');
+            } else {
+                const text = input.value;
+                input.value = '';
+        
+                if (saveInviteeString(text)) {
+                    const li = createLi(text);
+                    ul.appendChild(li);
+                }
+            }
+        });
+
     }
-});
+}
 
 ul.addEventListener('change', (e) => {
     const checkbox = e.target;
@@ -106,15 +182,33 @@ ul.addEventListener('change', (e) => {
     }
 });
 
+// utilize this when checking box on windowload
+// lis[0].children[2].lastChild.checked = false
+
 ul.addEventListener('click', (e) => {
     const button = e.target;
     if (button.tagName === 'BUTTON') {
         const li = button.parentNode;
+        const name = li.firstChild.textContent;
         const ul = li.parentNode;
         const action = button.textContent;
         const nameActions = {
             remove: () => {
                 ul.removeChild(li);
+                inviteeArray.splice(inviteeArray.indexOf(name), 1);
+                if (inviteeArray.length > 2) {
+                    inviteeString = '["' + inviteeArray[0] + '",'
+                    for (let i = 1; i < (inviteeArray.length - 1); i++) {
+                        inviteeString += '"' + inviteeArray[i] + '",';
+                    }
+                    inviteeString += '"' + inviteeArray[inviteeArray.length - 1] + '"]';
+                } else if (inviteeArray.length > 1) {
+                    inviteeString = '["' + inviteeArray[0] + '", "' + inviteeArray[1] + '"]';
+                } else {
+                    inviteeString = '["' + inviteeArray[0] + '"]';
+                }
+                localStorage.setItem('recentInvitees', inviteeString);
+
             },
             edit: () => {
                 const span = li.firstElementChild;
@@ -135,6 +229,14 @@ ul.addEventListener('click', (e) => {
             }
         }
         nameActions[action](); // select and run action in button's name
+    }
+});
+
+clearBtn.addEventListener('click', (e) => {
+    let clearConfirm = confirm('Do you really want to erase this list of event invitees?');
+    if (clearConfirm) {
+        localStorage.clear();
+        location.reload();
     }
 });
 
