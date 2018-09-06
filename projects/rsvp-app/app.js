@@ -222,9 +222,12 @@ ul.addEventListener('click', (e) => {
             save: () => {
                 const input = li.firstElementChild;
                 const newSpan = document.createElement('span');
+                // let invitees = getRecentInvitees();
                 newSpan.textContent = input.value;
                 li.insertBefore(newSpan, input);
                 li.removeChild(input);
+                // invitees[0] = input.value;
+                // saveInviteeString(JSON.stringify(invitees));                
                 button.textContent = 'edit';
             }
         }
