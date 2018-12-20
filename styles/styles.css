@@ -343,7 +343,8 @@ h4 {
   @media (max-width: 550px) {
     #resume-fill {
       grid-template-columns: 1fr;
-      grid-template-areas: "cod" "exp"  "edu"; } }
+      grid-template-areas: "cod" "exp"  "edu";
+      grid-template-rows: 1fr; } }
   #resume-fill h3 {
     font-size: 1.75rem;
     font-weight: 400;
