@@ -111,10 +111,10 @@
 
 .front-face {
     @media (min-width: $break-md) {
-        @include triangle-prism-front(300px);
+        @include triangle-proj-tile-front(300px);
         @include container-gradient(280px);
     }
-    @include triangle-prism-front(240px);
+    @include triangle-proj-tile-front(240px);
     @include container-gradient(224px);
     background-color: $color-pri;
     color: white;
@@ -134,15 +134,15 @@
 
 .right-face {
     @media (min-width: $break-md) {
-        @include triangle-prism-right(300px);    
+        @include triangle-proj-tile-right(300px);    
     }
-    @include triangle-prism-right(240px);}
+    @include triangle-proj-tile-right(240px);}
 
 .left-face {
     @media (min-width: $break-md) {
-        @include triangle-prism-left(300px);
+        @include triangle-proj-tile-left(300px);
     }
-    @include triangle-prism-left(240px);
+    @include triangle-proj-tile-left(240px);
     background-color: $color-sec;
     color: $color-pri;
     text-align: center;
