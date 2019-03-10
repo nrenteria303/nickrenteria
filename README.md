@@ -1,2 +1,2 @@
 # nickrenteria
-Personal Web Development Website
+Web Dev Portfolio Website
