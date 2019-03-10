@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Monda|Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">     
+    <title>Videos & Such</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  </head>
+  
+  <body>
+
+    <header>
+      <div id="header_wrap">
+        <div id="header_logo"> 
+          <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
+        </div>
+        <nav id="nav">
+          <div class="nav_item" id="fav_drop_cont">
+            <a id="favs" href="#">Favorites</a>
+            <div id="nav_drop_cont" class="nav_drop_cont_hide">
+                <div class="nav_drop" id="nav_drop_fav">
+                  <p>Scary</p>
+                  <p>Funny</p>
+                  <p>Animation</p>
+                  <p>Tearjerkers</p>
+                  <p>Kids Stuff</p>
+                  <p>Dark &amp; Twisted</p>
+                  <p>Teen Dramas</p>
+                  <p>Soap Operas</p>
+                  <p>Fantasy</p>
+                  <p>Action</p>
+                  <p>Adventure</p>
+                  <p>Robots</p>
+                </div> 
+              </div>
+          </div>
+          <a class="nav_item" href="#">Staff Picks</a>
+          <a class="nav_item" href="#">Contact</a>
+          <a class="nav_item" href="#">Account</a>
+        </nav>
+        <i class="fas fa-bars" id="menu_bars"></i>
+      </div>
+    </header>
+
+      <main id="main">
+
+        <div id="top_movies">
+          <h2 class="top_movies_heading">Most Popular</h2>
+          <div id="top_movies_inner">
+            <img src="images/PH_800x500.jpg" alt="placeholder image" id="top_movie_1"> 
+            <div id="top_movies_addtl">
+              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side">
+            </div>
+          </div>
+        </div>
+
+        <div id="app">
+          <div v-for="(line, index) in movieLines" class="movie_line">
+            <div class="movie_line_topper">
+              <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
+              <h1 class="movie_line_tag">{{ line.lineTitle }}</h1>
+              <i v-on:click="incrementIndex(index)" class="nav_arrow fas fa-chevron-circle-right"></i>
+            </div>
+  
+            <div v-bind:style="{backgroundPosition: setScrollPct(index) + '% 0%'}" class="scroll_bar"></div>
+
+            <div v-bind:style="{transform: 'rotateY(' + setAngle(index) + 'deg)'}" class="carousel">
+              <div v-for="carousel in line.movieCarouselFaces" class="carousel_face">
+                <div class="movie_line_imgs">
+                  <div v-for="movie in carousel" class="movie_line_trans_cont">
+                    <div class="movie_line_img_cont">
+                      <img :src="movie.imgSrc" alt="placeholder image">
+                      <h3 class="movie_line_title">{{ movie.title }}</h3>
+                      <p class="movie_line_description">{{ movie.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    
+    <footer>
+      <div id="footer_wrapper">
+        <div id="footer_column_1">
+          <h3><a href='#'>FAQ</a></h3>
+          <h3><a href='#'>About</a></h3>
+          <h3><a href='#'>Careers</a></h3>
+          <h3><a href='#'>Terms of Use</a></h3>
+          <h3><a href='#'>Privacy Policy</a></h3>
+        </div>
+        <div id="footer_column_2">
+          <div id="_footer_contact_info">
+            <h3>Contact</h3>
+            <p>Phone: (555) 555-5555</p>
+            <p>Tech Questions: <a href="#">it@videoplus.com</a></p>
+            <p>Account Questions: <a href="#">accounts@videoplus.com</a></p>
+          </div>
+          <div id="footer_contact_address">
+            <p>Address:</p>
+            <p>VideoPLUS Workspace</p>
+            <p> 123 Tech Center Street</p>
+            <p>Silicon Valley, CA 20000</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="scripts/app.js"></script>
+  </body>
+
+</html>
