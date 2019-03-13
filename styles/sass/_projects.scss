@@ -32,12 +32,11 @@
 
 .proj-tile {
     perspective: 1000px;
-    width: 490px;
-    height: 320px;
+    width: 460px;
+    height: 275px;
     margin: 80px auto 20px;
     transform-style: preserve-3d;
     position: relative;
-    // display: flex;
     justify-content: space-around;
 
     &:first-child {
@@ -46,7 +45,7 @@
 
     @media (max-width: $break-md) {
         width: 340px;
-        height: 210px;
+        height: 200px;
     }
 
     &:hover {
@@ -98,14 +97,13 @@
     padding: 20px 22px;
     text-align: center;
     font-size: 1.15rem;
-    // display: flex;
     align-items: flex-end;
     flex-direction: column;
     justify-content: space-around;
 
     @media (max-width: $break-md) {
         font-size: .98rem;
-        padding: 16px 18px;
+        padding: 6px 8px;
     }  
     
     a {
