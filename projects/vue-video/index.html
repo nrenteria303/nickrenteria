@@ -11,15 +11,20 @@
   </head>
   
   <body>
+    <div id="app">
 
     <header>
       <div id="header_wrap">
         <div id="header_logo"> 
           <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
         </div>
-        <nav id="nav">
+        <nav v-show="mobileMenuShowing" id="nav">
           <div class="nav_item" id="fav_drop_cont">
-            <a id="favs" href="#">Favorites</a>
+            <a v-on:click="showFavs" 
+                id="fav_popup_btn" 
+                href="#">
+                Favorites
+            </a>
             <div id="nav_drop_cont" class="nav_drop_cont_hide">
                 <div class="nav_drop" id="nav_drop_fav">
                   <p>Scary</p>
@@ -41,7 +46,16 @@
           <a class="nav_item" href="#">Contact</a>
           <a class="nav_item" href="#">Account</a>
         </nav>
-        <i class="fas fa-bars" id="menu_bars"></i>
+        <i v-if="!mobileMenuShowing"
+            v-on:click="toggleMobileMenu" 
+            class="fas fa-bars" 
+            id="menu_bars">
+        </i>
+        <i v-else
+            v-on:click="toggleMobileMenu" 
+            class="fas fa-times"
+            id="menu_x">
+        </i>
       </div>
     </header>
 
@@ -60,7 +74,6 @@
           </div>
         </div>
 
-        <div id="app">
           <div v-for="(line, index) in movieLines" class="movie_line">
             <div class="movie_line_topper">
               <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
@@ -73,18 +86,53 @@
             <div v-bind:style="{transform: 'rotateY(' + setAngle(index) + 'deg)'}" class="carousel">
               <div v-for="carousel in line.movieCarouselFaces" class="carousel_face">
                 <div class="movie_line_imgs">
-                  <div v-for="movie in carousel" class="movie_line_trans_cont">
+                  <div v-for="(movie, favIndex) in carousel" class="movie_line_trans_cont">
                     <div class="movie_line_img_cont">
                       <img :src="movie.imgSrc" alt="placeholder image">
                       <h3 class="movie_line_title">{{ movie.title }}</h3>
-                      <p class="movie_line_description">{{ movie.description }}</p>
+                      <div class="description_cont">
+                        <p class="movie_line_description">{{ movie.description }}</p>
+                        <div class="add_remove_cont">
+                          <i v-if="favs.indexOf(movie.title) == -1" 
+                              v-on:click="addFav(movie.title)" 
+                              class="fas fa-plus"
+                              title="add to favorites">
+                          </i>
+                          <i v-else
+                              v-on:click="removeFav(favs.indexOf(movie.title))" 
+                              class="fas fa-minus"
+                              title="remove from favorites">
+                          </i>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
+          <div v-show="popupShowing" id="fav_popup">
+            <i v-on:click="hideFavs" id="popup_x_out" class="fas fa-times"></i>
+            <div id="fav_popup_inner">
+              <h1>Favorites</h1>
+              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the plus sign below a movie's description to add it!</h3>
+              <div id="fav_movie_cont">
+                <h4 v-for="(fav, favIndex) in favs" 
+                    class="fav_movie">
+                    {{ fav }}
+                    <i class="fas fa-play-circle" 
+                      title="play">
+                    </i>
+                    <i v-on:click="removeFav(favs.indexOf(fav))"
+                      class="fas fa-minus-circle"
+                      title="remove from favorites">
+                      
+                    </i>
+                </h4>
+              </div>
+            </div>
+          </div>
 
       </main>
     
@@ -113,9 +161,12 @@
         </div>
       </div>
     </footer>
-  <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->
-  <!-- development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </div>
+
+  <!-- production version, optimized for size and speed -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
   <script src="scripts/app.js"></script>
   </body>
 
