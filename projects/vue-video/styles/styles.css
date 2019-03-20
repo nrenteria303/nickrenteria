@@ -15,6 +15,9 @@ body {
 html, body {
   overflow-x: hidden; }
 
+[v-cloak] {
+  display: none; }
+
 header {
   background-image: linear-gradient(178deg, white -10%, #c9c9c9);
   margin: 0 auto;
@@ -250,7 +253,7 @@ header {
       height: 1210px; } }
   @media (max-width: 444px) {
     .movie_line {
-      height: 1400px; } }
+      height: 1270px; } }
   @media (max-width: 360px) {
     .movie_line {
       height: 1200px; } }
@@ -302,8 +305,6 @@ header {
           width: 83vw; } }
       .movie_line .movie_line_imgs .movie_line_trans_cont:hover {
         z-index: 10; }
-        .movie_line .movie_line_imgs .movie_line_trans_cont:hover .add_remove_cont {
-          cursor: pointer; }
       .movie_line .movie_line_imgs .movie_line_trans_cont .movie_line_img_cont {
         transition: transform .2s ease-in;
         transform-origin: bottom left;
@@ -325,6 +326,21 @@ header {
           margin: 2px auto;
           font-size: 1.15em;
           color: black; }
+        .movie_line .movie_line_imgs .movie_line_trans_cont .movie_line_img_cont .add_remove_btn {
+          text-align: center;
+          border-radius: 10px;
+          font-weight: bold;
+          padding: 3px;
+          cursor: pointer;
+          color: #494949;
+          background-color: #ebebeb;
+          margin-bottom: 6px;
+          border: 5px outset darkgrey; }
+          .movie_line .movie_line_imgs .movie_line_trans_cont .movie_line_img_cont .add_remove_btn:hover {
+            color: #ebebeb;
+            background-color: #494949; }
+          .movie_line .movie_line_imgs .movie_line_trans_cont .movie_line_img_cont .add_remove_btn:active {
+            border: 5px inset darkgrey; }
         .movie_line .movie_line_imgs .movie_line_trans_cont .movie_line_img_cont:hover {
           background-color: #0e0078;
           border: 2px solid black;
@@ -377,7 +393,7 @@ footer {
   bottom: 0;
   background-image: linear-gradient(182deg, white -10%, #b9b9b9);
   max-width: 100vw;
-  margin-top: 140px;
+  margin-top: 160px;
   padding: 20px;
   border-top: 2px solid black;
   z-index: 100; }
@@ -416,7 +432,8 @@ footer {
   top: 4vh;
   left: 2vw;
   z-index: 1000;
-  box-shadow: 0 0 30px 2vw darkgrey; }
+  box-shadow: 0 0 30px 2vw darkgrey;
+  overflow-y: scroll; }
   #fav_popup #popup_x_out {
     position: absolute;
     top: 3%;

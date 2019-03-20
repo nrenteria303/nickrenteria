@@ -18,9 +18,9 @@
         <div id="header_logo"> 
           <h1>VideoPLUS <i class="fas fa-tv"></i></h1>
         </div>
-        <nav v-show="mobileMenuShowing" id="nav">
+        <nav onload="window.innerWidth < 500 ? mobileMenuShowing = false : mobileMenuShowing = true" v-show="mobileMenuShowing" id="nav">
           <div class="nav_item" id="fav_drop_cont">
-            <a v-on:click="showFavs" 
+            <a v-on:click.prevent="showFavs" 
                 id="fav_popup_btn" 
                 href="#">
                 Favorites
@@ -42,9 +42,9 @@
                 </div> 
               </div>
           </div>
-          <a class="nav_item" href="#">Staff Picks</a>
-          <a class="nav_item" href="#">Contact</a>
-          <a class="nav_item" href="#">Account</a>
+          <a v-on:click.prevent class="nav_item" href="#">Staff Picks</a>
+          <a v-on:click.prevent class="nav_item" href="#">Contact</a>
+          <a v-on:click.prevent class="nav_item" href="#">Account</a>
         </nav>
         <i v-if="!mobileMenuShowing"
             v-on:click="toggleMobileMenu" 
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-          <div v-for="(line, index) in movieLines" class="movie_line">
+          <div v-cloak v-for="(line, index) in movieLines" class="movie_line">
             <div class="movie_line_topper">
               <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
               <h1 class="movie_line_tag">{{ line.lineTitle }}</h1>
@@ -93,16 +93,18 @@
                       <div class="description_cont">
                         <p class="movie_line_description">{{ movie.description }}</p>
                         <div class="add_remove_cont">
-                          <i v-if="favs.indexOf(movie.title) == -1" 
-                              v-on:click="addFav(movie.title)" 
-                              class="fas fa-plus"
-                              title="add to favorites">
-                          </i>
-                          <i v-else
-                              v-on:click="removeFav(favs.indexOf(movie.title))" 
-                              class="fas fa-minus"
-                              title="remove from favorites">
-                          </i>
+                          <button class="add_remove_btn"
+                                  v-if="favs.indexOf(movie.title) == -1" 
+                                  v-on:click="addFav(movie.title)">
+                            <i class="fas fa-plus"></i> 
+                            Add to Favs
+                          </button>
+                          <button class="add_remove_btn"
+                                  v-else
+                                  v-on:click="removeFav(favs.indexOf(movie.title))">
+                            <i class="fas fa-minus"></i> 
+                            Remove from Favs
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -112,11 +114,11 @@
             </div>
           </div>
 
-          <div v-show="popupShowing" id="fav_popup">
+          <div v-cloak v-show="popupShowing" id="fav_popup">
             <i v-on:click="hideFavs" id="popup_x_out" class="fas fa-times"></i>
             <div id="fav_popup_inner">
               <h1>Favorites</h1>
-              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the plus sign below a movie's description to add it!</h3>
+              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
               <div id="fav_movie_cont">
                 <h4 v-for="(fav, favIndex) in favs" 
                     class="fav_movie">
@@ -164,8 +166,11 @@
 
     </div>
 
-  <!-- production version, optimized for size and speed -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- development version -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- production version -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 
   <script src="scripts/app.js"></script>
   </body>

@@ -988,6 +988,11 @@ var app = new Vue({
         mobileMenuShowing: true,
         favs: [],
     },
+    mounted: function() {
+        if (window.innerWidth < 628) {
+            this.mobileMenuShowing = false;
+        }
+    },
     methods: {
         toggleMobileMenu: function() {
             if (this.mobileMenuShowing) {
