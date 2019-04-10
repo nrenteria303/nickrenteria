@@ -241,7 +241,7 @@ header {
 
 .movie_line {
   margin: 125px auto 0;
-  height: 320px;
+  height: 420px;
   max-width: 97%; }
   .movie_line:hover .movie_line_tag {
     text-shadow: white 2px -2px 5px; }
