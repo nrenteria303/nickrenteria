@@ -3,8 +3,9 @@
     background-image: url('../../images/pen-numbers.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 68%;
-    border-top: solid 4px $color-blue;
+    background-position: 50% 72%;
+    border-top: solid 8px $color-blue;
+    border-bottom: solid 8px $color-blue;
 }
 
 #about:before {
@@ -23,7 +24,7 @@
 }
 
 .fill p {
-    font-size: 1.07rem;
+    font-size: 1.15rem;
     line-height: 1.5;
     &:first-of-type::first-letter {
         display: block;
@@ -33,6 +34,18 @@
         margin-top: 10px;
         font-size: 4rem;
         font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+.fill img {
+    height: 260px;
+    border: 4px solid $color-blue;
+    border-radius: 50%;
+    float: left;
+    margin: 6px 20px 6px 0;
+
+    @media (max-width: $break-sm) {
+        height: 180px;
     }
 }
 

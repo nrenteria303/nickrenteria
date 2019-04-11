@@ -5,7 +5,7 @@ html {
 
 body,
 html {
-  background: #1d1d1d;
+  background: #272827;
   color: #b1c1c0;
   box-sizing: border-box; }
   body *,
@@ -43,7 +43,7 @@ header {
   header.is-fixed {
     border-bottom: 2px solid #b1c1c0;
     transition: .25s ease-out;
-    background-image: radial-gradient(at bottom, #d3dcdc -160%, #50514f 34%, #50514f 40%, #1d1d1d 116%); }
+    background-image: radial-gradient(at bottom, #d3dcdc -160%, #50514f 34%, #50514f 40%, #272827 116%); }
     header.is-fixed .logo {
       font-size: 3rem;
       transition: .08s ease-out;
@@ -71,11 +71,7 @@ header {
   margin: 0 auto; }
   @media (max-width: 374px) {
     .header-inner {
-      max-width: 99%;
-      margin: auto auto;
-      padding: 0 6px;
-      display: flex;
-      justify-content: space-around; } }
+      padding-left: 0; } }
 
 nav {
   display: flex;
@@ -99,7 +95,7 @@ nav {
         letter-spacing: 1px;
         text-decoration: none;
         font-size: 1.15rem;
-        color: #007bff; }
+        color: #d3dcdc; }
         nav ul li a:hover {
           font-weight: bold;
           text-decoration: underline overline;
@@ -107,7 +103,7 @@ nav {
           text-shadow: 1px 1px #50514f; }
         @media (max-width: 374px) {
           nav ul li a {
-            font-size: 1rem; } }
+            font-size: .83rem; } }
         @media (min-width: 992px) {
           nav ul li a {
             font-size: 1.39rem; } }
@@ -143,90 +139,92 @@ nav {
   @media (max-width: 374px) {
     .logo {
       font-size: 2.5rem;
-      order: -1;
       margin-right: 2px; } }
 
-.banner-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 0;
-  width: 100%;
-  max-width: 1024px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  width: 96%;
-  max-height: 635px; }
-
 .banner {
-  background-image: url("../../../images/denver-union-station.jpg");
+  background-image: url("../../../images/mtn-sky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
-  min-height: 100vh;
-  display: flex;
-  border-bottom: #b1c1c0 2px solid; }
+  background-position: 0 60%;
+  min-height: 100vh; }
+  @media (max-width: 550px) {
+    .banner {
+      background-position: 50% 100%; } }
+
+.banner-inner {
+  width: 400px;
+  margin: 14% 0 0;
+  position: relative;
+  left: 17%;
+  color: #d3dcdc;
+  background-color: rgba(0, 52, 79, 0.36);
+  box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.36); }
+  @media (max-width: 875px) {
+    .banner-inner {
+      width: 400px;
+      margin: 30% 0 0;
+      left: 8%; } }
+  @media (max-width: 549px) {
+    .banner-inner {
+      margin: 13% 0 0;
+      width: 300px; } }
+  @media (max-width: 374px) {
+    .banner-inner {
+      max-width: 275px; } }
+  @media (min-width: 1098px) {
+    .banner-inner {
+      width: 504px; } }
 
 .banner-first,
 .banner-h1,
 .banner-last {
   margin-top: 0;
   margin-bottom: 2px;
-  font-weight: 400; }
+  font-weight: 400;
+  text-shadow: 2px 2px #313231; }
+  @media (max-width: 549px) {
+    .banner-first,
+    .banner-h1,
+    .banner-last {
+      font-size: 1.3rem; } }
+  @media (max-width: 374px) {
+    .banner-first,
+    .banner-h1,
+    .banner-last {
+      font-size: 1.15rem; } }
+  @media (min-width: 550px) {
+    .banner-first,
+    .banner-h1,
+    .banner-last {
+      font-size: 1.5rem; } }
+  @media (min-width: 1098px) {
+    .banner-first,
+    .banner-h1,
+    .banner-last {
+      font-size: 1.85rem; } }
 
-h1.banner-h1 {
+.banner-h1 {
   font-size: 4rem;
-  color: #d3dcdc;
   text-shadow: 4px 4px 2px #313231;
   text-decoration: underline overline; }
   @media (max-width: 549px) {
-    h1.banner-h1 {
+    .banner-h1 {
       font-size: 3rem; } }
   @media (max-width: 374px) {
-    h1.banner-h1 {
+    .banner-h1 {
       font-size: 2.7rem; } }
   @media (min-width: 1098px) {
-    h1.banner-h1 {
+    .banner-h1 {
       font-size: 5rem; } }
 
-h4 {
-  color: #d3dcdc;
-  text-shadow: 2px 2px #313231; }
-  @media (max-width: 549px) {
-    h4 {
-      font-size: 1.3rem; } }
-  @media (max-width: 374px) {
-    h4 {
-      font-size: 1.15rem; } }
-  @media (min-width: 550px) {
-    h4 {
-      font-size: 1.5rem; } }
-  @media (min-width: 1098px) {
-    h4 {
-      font-size: 1.85rem; } }
-
 .banner-last {
-  margin-left: 173px; }
-  @media (max-width: 549px) {
-    .banner-last {
-      margin-left: 110px; } }
-  @media (max-width: 374px) {
-    .banner-last {
-      margin-left: 94px; } }
-  @media (min-width: 1098px) {
-    .banner-last {
-      margin-left: 220px; } }
+  text-align: right; }
 
 .heading {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 160px;
-  margin-top: 130px; }
-  @media (max-width: 549px) {
-    .heading {
-      margin-top: 100px; } }
+  height: 200px; }
   .heading h2 {
     width: 100%;
     max-width: 1024px;
@@ -250,7 +248,7 @@ h4 {
 
 .fill {
   background-color: #d3dcdc;
-  color: #1d1d1d;
+  color: #272827;
   width: 100%;
   max-width: 1024px;
   padding-left: 15px;
@@ -259,7 +257,7 @@ h4 {
   border: solid 3px #b1c1c0;
   box-shadow: inset 0 0 10px 6px #50514f;
   width: 94%;
-  margin-top: 90px;
+  margin: 90px auto 130px;
   padding: 24px 16px 10px; }
   @media (max-width: 549px) {
     .fill {
@@ -270,8 +268,9 @@ h4 {
   background-image: url("../../images/pen-numbers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 68%;
-  border-top: solid 4px #0077b5; }
+  background-position: 50% 72%;
+  border-top: solid 8px #0077b5;
+  border-bottom: solid 8px #0077b5; }
 
 #about:before {
   position: absolute;
@@ -288,7 +287,7 @@ h4 {
   mix-blend-mode: screen; }
 
 .fill p {
-  font-size: 1.07rem;
+  font-size: 1.15rem;
   line-height: 1.5; }
   .fill p:first-of-type::first-letter {
     display: block;
@@ -299,13 +298,24 @@ h4 {
     font-size: 4rem;
     font-family: 'Times New Roman', Times, serif; }
 
+.fill img {
+  height: 260px;
+  border: 4px solid #0077b5;
+  border-radius: 50%;
+  float: left;
+  margin: 6px 20px 6px 0; }
+  @media (max-width: 550px) {
+    .fill img {
+      height: 180px; } }
+
 #resume {
   position: relative;
   background-image: url("../../images/work-stuff.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 40%;
-  border-top: solid 4px #12d400; }
+  border-top: solid 8px #12d400;
+  border-bottom: solid 8px #12d400; }
 
 #resume:before {
   position: absolute;
@@ -338,7 +348,7 @@ h4 {
   @media (max-width: 875px) {
     #resume-fill {
       grid-template-columns: 2fr 3fr;
-      grid-template-rows: 47% 53%;
+      grid-template-rows: 40% 60%;
       grid-template-areas: "cod exp" "cod edu"; } }
   @media (max-width: 550px) {
     #resume-fill {
@@ -382,7 +392,8 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 75%;
-  border-top: solid 4px #0077b5; }
+  border-top: solid 8px #0077b5;
+  border-bottom: solid 8px #0077b5; }
 
 #projects:before {
   position: absolute;
@@ -455,7 +466,7 @@ h4 {
   -moz-transform: rotateY(180deg);
   transition: transform .55s ease-out;
   background: #d3dcdc;
-  color: #1d1d1d;
+  color: #272827;
   padding: 20px 22px;
   text-align: center;
   font-size: 1.15rem;
@@ -475,12 +486,12 @@ h4 {
 .coming-soon {
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 1.4em; }
   @media (max-width: 549px) {
     .coming-soon {
-      margin-top: 210px; } }
-  .coming-soon h4 {
-    font-weight: 400; }
+      margin-top: 100px; } }
 
 footer {
   position: fixed;
@@ -488,7 +499,7 @@ footer {
   width: 100%;
   z-index: -1;
   background: #d3dcdc;
-  color: #1d1d1d;
+  color: #272827;
   margin-top: 120px;
   height: 200px;
   display: flex;

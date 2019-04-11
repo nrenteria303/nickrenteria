@@ -4,7 +4,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 40%;
-    border-top: solid 4px $color-green;
+    border-top: solid 8px $color-green;
+    border-bottom: solid 8px $color-green;
 }
 
 #resume:before {
@@ -41,7 +42,7 @@
 
     @media (max-width: $break-md) {
         grid-template-columns: 2fr 3fr;
-        grid-template-rows: 47% 53%;
+        grid-template-rows: 40% 60%;
         grid-template-areas: 
             "cod exp"
             "cod edu";

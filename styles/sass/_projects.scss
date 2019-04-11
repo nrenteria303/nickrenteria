@@ -4,7 +4,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 75%;
-    border-top: solid 4px $color-blue;
+    border-top: solid 8px $color-blue;
+    border-bottom: solid 8px $color-blue;
 }
 
 #projects:before {
@@ -119,12 +120,10 @@
     text-align: center;
     margin-top: 80px;
     margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 1.4em;
 
     @media (max-width: $break-xs) {
-        margin-top: 210px;
-    }
-
-    h4 {
-        font-weight: 400;
+        margin-top: 100px;
     }
 }

@@ -1,22 +1,39 @@
-.banner-inner {
-    @include wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px 0;
-    }
-    width: 96%;
-    max-height: 635px;
-}
-
 .banner {
-    background-image: url('../../../images/denver-union-station.jpg');
+    background-image: url('../../../images/mtn-sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 0 60%;
     min-height: 100vh;
-    display: flex;
-    border-bottom: $color-earth-grey 2px solid;
+
+    @media (max-width: $break-sm) {
+        background-position: 50% 100%;
+    }
+}
+
+.banner-inner {
+    width: 400px;
+    margin: 14% 0 0;
+    position: relative;
+    left: 17%;
+    color: $color-grey-xl;
+    background-color: rgba($color: darken($color-blue, 20%), $alpha: .36);
+    box-shadow: 0 0 20px 20px rgba($color: darken($color-blue, 20%), $alpha: .36);
+
+    @media (max-width: $break-md) {
+        width: 400px;
+        margin: 30% 0 0;
+        left: 8%;
+    }
+    @media (max-width: $break-xs) {
+        margin: 13% 0 0;
+        width: 300px;
+    }
+    @media (max-width: $break-xxs) {
+        max-width: 275px;
+    }
+    @media (min-width: $break-xl) {
+        width: 504px;
+    }
 }
 
 .banner-first,
@@ -25,27 +42,6 @@
     margin-top: 0;
     margin-bottom: 2px;
     font-weight: 400;
-}
-
-h1.banner-h1 {
-    font-size: 4rem;
-    color: $color-grey-xl;
-    text-shadow: 4px 4px 2px darken($color-dark, 12%);
-    text-decoration: underline overline;
-
-    @media (max-width: $break-xs) {
-        font-size: 3rem;
-    }
-    @media (max-width: $break-xxs) {
-        font-size: 2.7rem;
-    }
-    @media (min-width: $break-xl) {
-        font-size: 5rem;
-    }
-}
-
-h4 {
-    color: $color-grey-xl;
     text-shadow: 2px 2px darken($color-dark, 12%);
     
     @media (max-width: $break-xs) {
@@ -62,15 +58,22 @@ h4 {
     }
 }
 
-.banner-last {
-    margin-left: 173px;
+.banner-h1 {
+    font-size: 4rem;
+    text-shadow: 4px 4px 2px darken($color-dark, 12%);
+    text-decoration: underline overline;
+
     @media (max-width: $break-xs) {
-        margin-left: 110px;
+        font-size: 3rem;
     }
     @media (max-width: $break-xxs) {
-        margin-left: 94px;
+        font-size: 2.7rem;
     }
     @media (min-width: $break-xl) {
-        margin-left: 220px;
+        font-size: 5rem;
     }
+}
+
+.banner-last {
+    text-align: right;
 }

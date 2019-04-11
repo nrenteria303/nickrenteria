@@ -2,7 +2,6 @@
 // Front Page ==============================
 // =========================================
 
-
 $(document).ready(function() {
     adjustBody();
     $(window).on('resize orientationchange', adjustBody);

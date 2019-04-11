@@ -39,11 +39,7 @@ header {
 
 .header-inner {
     @media (max-width: $break-xxs) {
-        max-width: 99%;
-        margin: auto auto;
-        padding: 0 6px;
-        display: flex;
-        justify-content: space-around;
+        padding-left: 0;
     }
     @include wrapper {
         display: flex;
@@ -75,7 +71,7 @@ nav {
                 letter-spacing: 1px;
                 text-decoration: none;
                 font-size: 1.15rem;
-                color: #007bff;
+                color: $color-grey-xl;
                 &:hover {
                     font-weight: bold;
                     text-decoration: underline overline;
@@ -83,7 +79,7 @@ nav {
                     text-shadow: 1px 1px $color-dark;
                 }
                 @media (max-width: $break-xxs) {
-                    font-size: 1rem;
+                    font-size: .83rem;
                 }
                 @media (min-width: $break-lg) {
                     font-size: 1.39rem;
@@ -131,7 +127,6 @@ nav {
     }
     @media (max-width: $break-xxs) {
         font-size: 2.5rem;
-        order: -1;
         margin-right: 2px;
     }
 }
