@@ -39,6 +39,7 @@
     transform-style: preserve-3d;
     position: relative;
     justify-content: space-around;
+    box-shadow: 0 0 0 white;
 
     &:first-child {
         margin-top: 120px;
@@ -50,6 +51,9 @@
     }
 
     &:hover {
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0);
+        transition: box-shadow .4s ease-out;
+        transition-delay: .47s;
 
         .proj-tile-front {
             transform: rotateY(180deg);
@@ -84,14 +88,14 @@
 }
 
 .proj-tile-front {
-    transition: .55s ease-out transform; 
+    transition: .5s ease-out transform; 
 }
 
 .proj-tile-back {    
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-    transition: transform .55s ease-out;
+    transition: transform .5s ease-out;
 
     background: $color-grey-xl;
     color: $color-dark-xd;

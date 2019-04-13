@@ -157,8 +157,8 @@ nav {
   position: relative;
   left: 17%;
   color: #d3dcdc;
-  background-color: rgba(0, 52, 79, 0.36);
-  box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.36); }
+  background-color: rgba(0, 52, 79, 0.28);
+  box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.28); }
   @media (max-width: 875px) {
     .banner-inner {
       width: 400px;
@@ -224,7 +224,8 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 200px; }
+  height: 200px;
+  box-shadow: 0 0 0 2px white; }
   .heading h2 {
     width: 100%;
     max-width: 1024px;
@@ -265,9 +266,9 @@ nav {
 
 #about {
   position: relative;
-  background-image: url("../../images/pen-numbers.jpg");
+  background-image: url("../../images/abs-math.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 124%;
   background-position: 50% 72%;
   border-top: solid 8px #0077b5;
   border-bottom: solid 8px #0077b5; }
@@ -423,22 +424,27 @@ nav {
   margin: 80px auto 20px;
   transform-style: preserve-3d;
   position: relative;
-  justify-content: space-around; }
+  justify-content: space-around;
+  box-shadow: 0 0 0 white; }
   .proj-tile:first-child {
     margin-top: 120px; }
   @media (max-width: 875px) {
     .proj-tile {
       width: 340px;
       height: 200px; } }
-  .proj-tile:hover .proj-tile-front {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg); }
-  .proj-tile:hover .proj-tile-back {
-    transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    z-index: 10; }
+  .proj-tile:hover {
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0);
+    transition: box-shadow .4s ease-out;
+    transition-delay: .47s; }
+    .proj-tile:hover .proj-tile-front {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg); }
+    .proj-tile:hover .proj-tile-back {
+      transform: rotateY(360deg);
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      z-index: 10; }
 
 .proj-tile-front,
 .proj-tile-front img,
@@ -458,13 +464,13 @@ nav {
       width: 340px; } }
 
 .proj-tile-front {
-  transition: .55s ease-out transform; }
+  transition: .5s ease-out transform; }
 
 .proj-tile-back {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
-  transition: transform .55s ease-out;
+  transition: transform .5s ease-out;
   background: #d3dcdc;
   color: #272827;
   padding: 20px 22px;

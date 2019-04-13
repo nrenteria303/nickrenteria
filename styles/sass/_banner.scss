@@ -16,8 +16,8 @@
     position: relative;
     left: 17%;
     color: $color-grey-xl;
-    background-color: rgba($color: darken($color-blue, 20%), $alpha: .36);
-    box-shadow: 0 0 20px 20px rgba($color: darken($color-blue, 20%), $alpha: .36);
+    background-color: rgba($color: darken($color-blue, 20%), $alpha: .28);
+    box-shadow: 0 0 20px 20px rgba($color: darken($color-blue, 20%), $alpha: .28);
 
     @media (max-width: $break-md) {
         width: 400px;
