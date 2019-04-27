@@ -151,28 +151,29 @@ nav {
     .banner {
       background-position: 50% 100%; } }
 
-.banner-inner {
+#banner-inner {
   width: 400px;
   margin: 14% 0 0;
   position: relative;
-  left: 17%;
+  left: -500px;
   color: #d3dcdc;
   background-color: rgba(0, 52, 79, 0.28);
-  box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.28); }
+  box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.28);
+  transition: 1.1s left ease-out; }
   @media (max-width: 875px) {
-    .banner-inner {
+    #banner-inner {
       width: 400px;
       margin: 30% 0 0;
-      left: 8%; } }
+      left: -400px; } }
   @media (max-width: 549px) {
-    .banner-inner {
+    #banner-inner {
       margin: 13% 0 0;
       width: 300px; } }
   @media (max-width: 374px) {
-    .banner-inner {
+    #banner-inner {
       max-width: 275px; } }
   @media (min-width: 1098px) {
-    .banner-inner {
+    #banner-inner {
       width: 504px; } }
 
 .banner-first,
