@@ -1,16 +1,15 @@
-// =========================================
-// Front Page ==============================
-// =========================================
+const nameTag = document.getElementById('banner-inner');
+function tagSlide() {
+    nameTag.style.left = '15%';
+}
 
-$(document).ready(function() {
-    adjustBody();
-    $(window).on('resize orientationchange', adjustBody);
+adjustBody();
+$(window).on('resize orientationchange', adjustBody);
 
-    function adjustBody() {
-        var headHeight = $('header').outerHeight();
-        $('.banner').css('padding-top', headHeight);
-    }
-});
+function adjustBody() {
+    var headHeight = $('header').outerHeight();
+    $('.banner').css('padding-top', headHeight);
+}
 
 $(window).scroll(function() {
     if ($(window).scrollTop() > 20) {
@@ -20,12 +19,8 @@ $(window).scroll(function() {
         $('header').removeClass('is-fixed');
     }
 });
-
-$(document).ready(function() {
    
-    $('#contact-link').click(function(){
-        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-        return false;
-    });
+$('#contact-link').click(function(){
+    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+    return false;
 });
-
