@@ -2,10 +2,14 @@
     position: relative;
     background-image: url('../../images/abs-math.jpg');
     background-repeat: no-repeat;
-    background-size: 124%;
+    background-size: cover;
     background-position: 50% 72%;
     border-top: solid 8px $color-blue;
     border-bottom: solid 8px $color-blue;
+
+    @media (max-width: $break-md) {
+        background-size: 260%;
+    }
 }
 
 #about:before {

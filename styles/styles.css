@@ -226,7 +226,8 @@ nav {
   align-items: center;
   width: 100%;
   height: 200px;
-  box-shadow: 0 0 0 2px white; }
+  box-shadow: 0 0 0 2px white;
+  background-attachment: fixed; }
   .heading h2 {
     width: 100%;
     max-width: 1024px;
@@ -269,10 +270,13 @@ nav {
   position: relative;
   background-image: url("../../images/abs-math.jpg");
   background-repeat: no-repeat;
-  background-size: 124%;
+  background-size: cover;
   background-position: 50% 72%;
   border-top: solid 8px #0077b5;
   border-bottom: solid 8px #0077b5; }
+  @media (max-width: 875px) {
+    #about {
+      background-size: 260%; } }
 
 #about:before {
   position: absolute;
