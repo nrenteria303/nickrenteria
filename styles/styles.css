@@ -277,6 +277,9 @@ nav {
   @media (max-width: 875px) {
     #about {
       background-size: 260%; } }
+  @media (max-width: 549px) {
+    #about {
+      background-size: 300%; } }
 
 #about:before {
   position: absolute;

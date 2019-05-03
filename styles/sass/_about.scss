@@ -10,6 +10,10 @@
     @media (max-width: $break-md) {
         background-size: 260%;
     }
+
+    @media (max-width: $break-xs) {
+        background-size: 300%;
+    }
 }
 
 #about:before {

@@ -1,0 +1,130 @@
+html, body {
+  background-color: #f6fff3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", sans-serif; }
+
+p, li, a {
+  font-family: "Noto Serif", serif; }
+
+#header-top {
+  display: flex;
+  justify-content: space-between;
+  background-image: radial-gradient(ellipse at bottom, #175676 -30%, #104F55 50%, #32746D 130%);
+  height: 78px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  color: #f6fff3; }
+  #header-top #main-heading,
+  #header-top i {
+    align-self: center;
+    margin: 0 22px; }
+  #header-top #main-heading {
+    line-height: 1;
+    text-align: center; }
+  #header-top i {
+    font-size: 32px; }
+  #header-top #menu_bars {
+    height: 36px;
+    width: 42px;
+    align-self: center;
+    margin: 0 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; }
+    #header-top #menu_bars .menu_bar {
+      width: 100%;
+      height: 6px;
+      background-color: #f6fff3;
+      border-radius: 3px;
+      transition: all .3s ease-out; }
+  #header-top .right_x {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 40%; }
+  #header-top .left_x {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 40%; }
+
+nav {
+  position: fixed;
+  top: 78px;
+  left: -200px;
+  height: calc(100vh - 78px);
+  width: 200px;
+  background-color: #104F55;
+  z-index: 100;
+  border-top: solid 1px #f6fff3;
+  transition: left .4s ease-out; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center; }
+    nav ul li {
+      font-weight: 700;
+      border-bottom: solid 1px #f6fff3; }
+      nav ul li a {
+        color: #f6fff3;
+        text-decoration: none;
+        display: block;
+        padding: 15px 0; }
+        nav ul li a:first-child {
+          padding: 20px 0 15px; }
+
+#banner {
+  background-image: url("../imgs/house-main-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 110%;
+  background-position: 44%;
+  height: 100vh;
+  border-bottom: 5px solid #175676; }
+  #banner:before {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .6;
+    background-image: linear-gradient(to top, transparent, 0, transparent 70%, #ffff28 83%);
+    mix-blend-mode: screen; }
+
+footer {
+  background-image: radial-gradient(ellipse at top, #175676 -50%, #104F55 20%, #32746D 100%);
+  height: 200px; }
+
+#front_page_main {
+  color: #104F55; }
+  #front_page_main .front_desc {
+    margin: 50px 0 80px;
+    padding-bottom: 40px;
+    border-bottom: 4px dashed #175676; }
+    #front_page_main .front_desc:last-child {
+      border-bottom: none;
+      margin-bottom: 40px; }
+    #front_page_main .front_desc i {
+      font-size: 150px;
+      margin: 0 8px 4px;
+      color: #32746D; }
+    #front_page_main .front_desc:nth-child(2n+1) > i {
+      float: left; }
+    #front_page_main .front_desc:nth-child(2n) > i {
+      float: right; }
+    #front_page_main .front_desc h3 {
+      margin: 0 6px;
+      font-family: "Noto Serif"; }
+    #front_page_main .front_desc a {
+      font-family: "Fira Sans";
+      text-decoration: underline;
+      color: #175676; }
