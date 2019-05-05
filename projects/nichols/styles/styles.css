@@ -107,7 +107,7 @@ nav {
           padding: 20px 0 15px; }
 
 #banner {
-  background-image: url("../../imgs/house-main-sm.jpg");
+  background-image: url("../imgs/house-main-sm.jpg");
   background-repeat: no-repeat;
   background-size: auto 110%;
   background-position: 44%;
@@ -116,7 +116,7 @@ nav {
   position: relative; }
   @media (min-width: 1120px) {
     #banner {
-      background-image: url("../../imgs/house-main-lg.jpg");
+      background-image: url("../imgs/house-main-lg.jpg");
       background-size: cover;
       background-position: 0 80%;
       width: calc(100vw - 215px);
