@@ -2,6 +2,7 @@ var firstNum = 0;
 var secondNum = 0;
 var numberBtns = document.querySelectorAll('.num');
 var oprClicked = false;
+var hasBeenNegated = false;
 var activeOpr;
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const screen = document.getElementById('screen');
@@ -13,13 +14,16 @@ const equals = document.getElementById('equ');
 screen.innerHTML = firstNum;
 
 negate.addEventListener('click', function() {
-    if (!oprClicked) {
+    if (!oprClicked && !hasBeenNegated) {
         firstNum *= -1;
         screen.innerHTML = firstNum;
-    } else {
+    } else if (!hasBeenNegated) {
         secondNum *= -1;
         screen.innerHTML = secondNum;
     }
+    console.log(firstNum);
+    console.log(secondNum);
+    hasBeenNegated = true;
     return;
 });
 
@@ -52,43 +56,47 @@ function numberTrigger(key) {
 function oprClickHelp(opr) {
     if (!oprClicked) {
         oprClicked = true;
+        hasBeenNegated = false;
         secondNum = 0;
         activeOpr = opr;
     } else {
         total();
+        hasBeenNegated = false;
         secondNum = 0;
         oprClicked = true;
         activeOpr = opr;
     }
-
 }
 
 function total() {
     firstNum = parseFloat(firstNum);
         switch (activeOpr) {
         case add:
-        firstNum += parseFloat(secondNum);
-        break;
+            firstNum += parseFloat(secondNum);
+            break;
         case sub:
-        firstNum -= parseFloat(secondNum);
-        break;  
+            firstNum -= parseFloat(secondNum);
+            break;  
         case mul:
-        firstNum *= parseFloat(secondNum);
-        break;
+            firstNum *= parseFloat(secondNum);
+            break;
         case div:
-        firstNum /= parseFloat(secondNum);
-        break;
+            firstNum /= parseFloat(secondNum);
+            break;
         default:
             return;
     }
     oprClicked = false;
     screen.innerHTML = firstNum;
+    console.log(firstNum);
+    console.log(secondNum);
 }
 
 function clearOut() {
     firstNum = 0;
     secondNum = 0;
     oprClicked = false;
+    hasBeenNegated = false;
     activeOpr = '';
     screen.innerHTML = firstNum;
 }
