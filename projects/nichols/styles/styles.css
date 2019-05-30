@@ -408,33 +408,25 @@ nav {
     background-image: url("../imgs/banner-1.jpg");
     background-size: auto 100vh;
     background-position: 30% 90%; }
-  17% {
+  22% {
     background-image: url("../imgs/banner-1.jpg");
     background-size: auto 100vh;
     background-position: 60% 90%; }
-  20% {
+  25% {
     background-image: url("../imgs/banner-2.jpg");
     background-position: 60% 70%; }
-  37% {
+  47% {
     background-image: url("../imgs/banner-2.jpg");
     background-position: 40% 70%; }
-  40% {
-    background-image: url("../imgs/banner-3.jpg");
-    background-size: auto 100vh;
-    background-position: 30% 80%; }
-  57% {
-    background-image: url("../imgs/banner-3.jpg");
-    background-size: auto 100vh;
-    background-position: 60% 80%; }
-  60% {
+  50% {
     background-image: url("../imgs/banner-4.jpg");
     background-size: auto 100vh;
     background-position: 60% 20%; }
-  77% {
+  73% {
     background-image: url("../imgs/banner-4.jpg");
     background-size: auto 100vh;
     background-position: 30% 60%; }
-  80% {
+  75% {
     background-image: url("../imgs/banner-5.jpg");
     background-size: auto 120%;
     background-position: 60% 40%; }
@@ -447,40 +439,32 @@ nav {
   0% {
     background-image: url("../imgs/banner-1.jpg");
     background-size: auto 110%;
-    background-position: 40% 70%; }
-  17% {
+    background-position: 60% 30%; }
+  23% {
     background-image: url("../imgs/banner-1.jpg");
     background-size: auto 110%;
     background-position: 60% 30%; }
-  20% {
-    background-image: url("../imgs/banner-2.jpg");
-    background-size: auto 110%;
-    background-position: 70% 70%; }
-  37% {
+  25% {
     background-image: url("../imgs/banner-2.jpg");
     background-size: auto 110%;
     background-position: 30% 70%; }
-  40% {
-    background-image: url("../imgs/banner-3.jpg");
+  48% {
+    background-image: url("../imgs/banner-2.jpg");
     background-size: auto 110%;
-    background-position: 44% 80%; }
-  57% {
-    background-image: url("../imgs/banner-3.jpg");
+    background-position: 30% 70%; }
+  50% {
+    background-image: url("../imgs/banner-4.jpg");
     background-size: auto 110%;
     background-position: 44% 40%; }
-  60% {
+  73% {
     background-image: url("../imgs/banner-4.jpg");
     background-size: auto 110%;
-    background-position: 70% 60%; }
-  77% {
-    background-image: url("../imgs/banner-4.jpg");
-    background-size: auto 110%;
-    background-position: 30% 60%; }
-  80% {
+    background-position: 44% 40%; }
+  75% {
     background-image: url("../imgs/banner-5.jpg");
     background-size: auto 120%;
-    background-position: 44% 90%; }
-  97% {
+    background-position: 44% 40%; }
+  98% {
     background-image: url("../imgs/banner-5.jpg");
     background-size: auto 120%;
     background-position: 44% 40%; } }
@@ -698,11 +682,19 @@ footer {
     #services_wrapper {
       width: calc(100vw - 200px);
       margin-left: auto; } }
+  #services_wrapper h1 {
+    margin: 95px 0 10px 10px;
+    font-size: 3.5rem; }
+    @media (min-width: 1120px) {
+      #services_wrapper h1 {
+        text-align: center;
+        font-size: 5rem;
+        margin: 20px auto 10px; } }
   #services_wrapper #slideshow_cont {
     width: 100%;
     max-width: 800px;
     position: relative;
-    margin: 78px auto 2px; }
+    margin: 20px auto 2px; }
     @media (min-width: 720px) {
       #services_wrapper #slideshow_cont {
         width: 700px;
@@ -765,10 +757,10 @@ footer {
       text-align: center; }
       #services_wrapper #slideshow_cont .caption P {
         margin: 6px 0;
-        font-size: 1.1rem; }
+        font-size: 1rem; }
   #services_wrapper .dot_cont {
     width: auto;
-    margin: auto;
+    margin: 0 auto 26px;
     text-align: center; }
     #services_wrapper .dot_cont .dot {
       cursor: pointer;
@@ -789,8 +781,6 @@ footer {
       #services_wrapper #services_section {
         max-width: 930px;
         margin: 30px auto 60px; } }
-    #services_wrapper #services_section h1 {
-      font-size: 2.8rem; }
     #services_wrapper #services_section p {
       font-size: 1.1rem; }
   @media (min-width: 720px) {
