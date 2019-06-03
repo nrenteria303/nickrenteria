@@ -13,7 +13,7 @@ const mul = document.getElementById('mul');
 const div = document.getElementById('div');
 const pow = document.getElementById('pow');
 const inv = document.getElementById('inv');
-const sqt = document.getElementById('sqt');
+const xrt = document.getElementById('xrt');
 const cbt = document.getElementById('cbt');
 const equals = document.getElementById('equ');
 
@@ -34,7 +34,7 @@ negate.addEventListener('click', function() {
 
 function numberTrigger(key) {
     if (!oprClicked) {
-        if (firstNum === 0) { 
+        if (firstNum === 0 || firstNum == 'Infinity') { 
             firstNum = key;
         } else {
             if (key === '.' && firstNum.includes('.')) {
@@ -45,7 +45,7 @@ function numberTrigger(key) {
         }
         screen.innerHTML = firstNum;
     } else {
-        if (secondNum === 0) {
+        if (secondNum === 0 || secondNum == 'Infinity') {
             secondNum = key;
         } else {
             if (key === '.' && secondNum.includes('.')) {
@@ -95,11 +95,8 @@ function total() {
         case inv:
             firstNum = 1 / firstNum;
             break;
-        case sqt:
-            firstNum = Math.sqrt(firstNum);
-            break;
-        case cbt:
-            firstNum = Math.cbrt(firstNum);
+        case xrt:
+            firstNum = Math.pow(firstNum, (1 / secondNum));
             break;
     }
     oprClicked = false;
@@ -162,17 +159,6 @@ sub.addEventListener('click', function() {oprClickHelp(sub);});
 mul.addEventListener('click', function() {oprClickHelp(mul);});
 div.addEventListener('click', function() {oprClickHelp(div);});
 pow.addEventListener('click', function() {oprClickHelp(pow);});
-inv.addEventListener('click', function() {
-    oprClickHelp(inv);
-    total();
-});
-sqt.addEventListener('click', function() {
-    oprClickHelp(sqt);
-    total();
-});
-cbt.addEventListener('click', function() {
-    oprClickHelp(cbt);
-    total();
-});
+inv.addEventListener('click', function() {oprClickHelp(inv); total();});
+xrt.addEventListener('click', function() {oprClickHelp(xrt);});
 equals.addEventListener('click', function() {total();});
-
