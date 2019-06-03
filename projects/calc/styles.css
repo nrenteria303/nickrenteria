@@ -23,16 +23,20 @@
     grid-row-gap: 4px;
   }
   
-  button {
+  .btn {
     padding: 14px 0;
     font-size: 1.3rem;
     border-radius: 8px;
     background-image: linear-gradient(10deg, steelblue -110%, white 70%);
     font-weight: bold;
+    text-align: center;
+    border: solid 1px lightgray;
+    font-family: sans-serif;
   }
   
-  button:active {
-      background-image: linear-gradient(10deg, white, lightblue 200%);
+  .btn:active {
+    border: solid 1px black;
+    background-image: linear-gradient(10deg, white, lightblue 200%);
   }
   
   #clear {

@@ -2,28 +2,33 @@ var firstNum = 0;
 var secondNum = 0;
 var numberBtns = document.querySelectorAll('.num');
 var oprClicked = false;
-var hasBeenNegated = false;
 var activeOpr;
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const screen = document.getElementById('screen');
 const clear = document.getElementById('clear');
 const negate = document.getElementById('neg');
 const add = document.getElementById('add');
+const sub = document.getElementById('sub');
+const mul = document.getElementById('mul');
+const div = document.getElementById('div');
+const pow = document.getElementById('pow');
+const inv = document.getElementById('inv');
+const sqt = document.getElementById('sqt');
+const cbt = document.getElementById('cbt');
 const equals = document.getElementById('equ');
 
 screen.innerHTML = firstNum;
 
 negate.addEventListener('click', function() {
-    if (!oprClicked && !hasBeenNegated) {
+    if (!oprClicked) {
         firstNum *= -1;
         screen.innerHTML = firstNum;
-    } else if (!hasBeenNegated) {
+    } else {
         secondNum *= -1;
         screen.innerHTML = secondNum;
     }
     console.log(firstNum);
     console.log(secondNum);
-    hasBeenNegated = true;
     return;
 });
 
@@ -33,7 +38,7 @@ function numberTrigger(key) {
             firstNum = key;
         } else {
             if (key === '.' && firstNum.includes('.')) {
-                return;
+                firstNum;
             } else {
                 firstNum += key;      
             }
@@ -44,7 +49,7 @@ function numberTrigger(key) {
             secondNum = key;
         } else {
             if (key === '.' && secondNum.includes('.')) {
-                return;
+                secondNum;
             } else {
                 secondNum += key;      
             }
@@ -56,13 +61,14 @@ function numberTrigger(key) {
 function oprClickHelp(opr) {
     if (!oprClicked) {
         oprClicked = true;
-        hasBeenNegated = false;
         secondNum = 0;
         activeOpr = opr;
-    } else {
+    } else if (secondNum != 0) {
         total();
-        hasBeenNegated = false;
         secondNum = 0;
+        oprClicked = true;
+        activeOpr = opr;
+    } else {
         oprClicked = true;
         activeOpr = opr;
     }
@@ -70,7 +76,7 @@ function oprClickHelp(opr) {
 
 function total() {
     firstNum = parseFloat(firstNum);
-        switch (activeOpr) {
+    switch (activeOpr) {
         case add:
             firstNum += parseFloat(secondNum);
             break;
@@ -83,8 +89,18 @@ function total() {
         case div:
             firstNum /= parseFloat(secondNum);
             break;
-        default:
-            return;
+        case pow:
+            firstNum = Math.pow(firstNum, parseFloat(secondNum));
+            break;
+        case inv:
+            firstNum = 1 / firstNum;
+            break;
+        case sqt:
+            firstNum = Math.sqrt(firstNum);
+            break;
+        case cbt:
+            firstNum = Math.cbrt(firstNum);
+            break;
     }
     oprClicked = false;
     screen.innerHTML = firstNum;
@@ -110,9 +126,12 @@ for (var i = 0; i < numberBtns.length; i++) {
 document.addEventListener('keydown', function(e) {
     if (numbers.includes(e.key)) {
 		numberTrigger(e.key);
-    } else if (e.key == 'Enter') {
+    } 
+    else if (e.key === 'Enter') {
+        e.preventDefault();
         total();
-    } else if (e.key == 'Backspace') {
+    } 
+    else if (e.key === 'Backspace') {
         clearOut();
     } else {
         switch (e.key) {
@@ -142,5 +161,18 @@ add.addEventListener('click', function() {oprClickHelp(add);});
 sub.addEventListener('click', function() {oprClickHelp(sub);});
 mul.addEventListener('click', function() {oprClickHelp(mul);});
 div.addEventListener('click', function() {oprClickHelp(div);});
+pow.addEventListener('click', function() {oprClickHelp(pow);});
+inv.addEventListener('click', function() {
+    oprClickHelp(inv);
+    total();
+});
+sqt.addEventListener('click', function() {
+    oprClickHelp(sqt);
+    total();
+});
+cbt.addEventListener('click', function() {
+    oprClickHelp(cbt);
+    total();
+});
 equals.addEventListener('click', function() {total();});
 
