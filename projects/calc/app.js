@@ -3,7 +3,8 @@ var secondNum = 0;
 var numberBtns = document.querySelectorAll('.num');
 var oprClicked = false;
 var activeOpr;
-var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+var historyText = 'No history yet.';
+var isHistoryShowing = false;
 const screen = document.getElementById('screen');
 const clear = document.getElementById('clear');
 const negate = document.getElementById('neg');
@@ -17,7 +18,14 @@ const xrt = document.getElementById('xrt');
 const cbt = document.getElementById('cbt');
 const equals = document.getElementById('equ');
 
+const histCont = document.getElementById('history-cont');
+const histTextDiv = document.getElementById('history-text');
+const histTag = document.getElementById('history-tag');
+const triangle = document.getElementById('triangle');
+
 screen.innerHTML = firstNum;
+
+histTextDiv.innerHTML = historyText;
 
 negate.addEventListener('click', function() {
     if (!oprClicked) {
@@ -76,33 +84,49 @@ function oprClickHelp(opr) {
 
 function total() {
     firstNum = parseFloat(firstNum);
+    if (historyText == 'No history yet.') {
+        historyText = firstNum;
+    } else if (activeOpr != xrt) {
+        historyText += '<br>' + firstNum;
+    }
     switch (activeOpr) {
         case add:
+            historyText += ' + ' + secondNum;
             firstNum += parseFloat(secondNum);
             break;
         case sub:
+            historyText += ' - ' + secondNum;
             firstNum -= parseFloat(secondNum);
             break;  
         case mul:
+            historyText += ' x ' + secondNum;
             firstNum *= parseFloat(secondNum);
             break;
         case div:
+            historyText += ' / ' + secondNum;
             firstNum /= parseFloat(secondNum);
             break;
         case pow:
+            historyText += ' ^ ' + secondNum;
             firstNum = Math.pow(firstNum, parseFloat(secondNum));
             break;
         case inv:
+            historyText += ' ^ -1 ';
             firstNum = 1 / firstNum;
             break;
         case xrt:
+            historyText += '<br>' + secondNum +  ' nth root of ' + firstNum;
             firstNum = Math.pow(firstNum, (1 / secondNum));
             break;
     }
+    if (firstNum.toString().includes('.00000000') || firstNum.toString().includes('.99999999')) {
+    	firstNum = Math.round(firstNum);
+    }
+    historyText += ' =<br>' + firstNum;
     oprClicked = false;
     screen.innerHTML = firstNum;
-    console.log(firstNum);
-    console.log(secondNum);
+    histTextDiv.innerHTML = historyText;
+    scrollDown();
 }
 
 function clearOut() {
@@ -114,6 +138,21 @@ function clearOut() {
     screen.innerHTML = firstNum;
 }
 
+function toggleHistory() {
+    isHistoryShowing = !isHistoryShowing;
+    if (isHistoryShowing) {
+        histCont.style.bottom = '-160px';
+        triangle.style.transform = 'rotate(180deg)';
+    } else {
+        histCont.style.bottom = '-2px';
+        triangle.style.transform = 'rotate(0deg)';
+    }
+}
+
+function scrollDown() {
+    histTextDiv.scrollTop = histTextDiv.scrollHeight;
+}
+
 for (var i = 0; i < numberBtns.length; i++) {
     numberBtns[i].addEventListener('click', function() {
         numberTrigger(this.innerHTML);
@@ -121,7 +160,7 @@ for (var i = 0; i < numberBtns.length; i++) {
 }
 
 document.addEventListener('keydown', function(e) {
-    if (numbers.includes(e.key)) {
+    if (Number.isInteger(parseFloat(e.key)) || e.key == '.') {
 		numberTrigger(e.key);
     } 
     else if (e.key === 'Enter') {
@@ -162,3 +201,5 @@ pow.addEventListener('click', function() {oprClickHelp(pow);});
 inv.addEventListener('click', function() {oprClickHelp(inv); total();});
 xrt.addEventListener('click', function() {oprClickHelp(xrt);});
 equals.addEventListener('click', function() {total();});
+
+histTag.addEventListener('click', function() {toggleHistory();});
