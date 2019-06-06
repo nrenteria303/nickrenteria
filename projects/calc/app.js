@@ -115,8 +115,16 @@ function total() {
             firstNum = 1 / firstNum;
             break;
         case xrt:
-            historyText += '<br>' + secondNum +  ' nth root of ' + firstNum;
-            firstNum = Math.pow(firstNum, (1 / secondNum));
+            if (secondNum.endsWith('1') && !secondNum.endsWith('11')) {
+                historyText += '<br>' + secondNum +  'st root of ' + firstNum;
+            } else if (secondNum.endsWith('2') && !secondNum.endsWith('12')) {
+                historyText += '<br>' + secondNum +  'nd root of ' + firstNum;
+            } else if (secondNum.endsWith('3') && !secondNum.endsWith('13')) {
+                historyText += '<br>' + secondNum +  'rd root of ' + firstNum;
+            } else {
+                historyText += '<br>' + secondNum +  'th root of ' + firstNum;
+            }
+            firstNum = Math.pow(firstNum, (1 / parseFloat(secondNum)));
             break;
     }
     if (firstNum.toString().includes('.00000000') || firstNum.toString().includes('.99999999')) {
