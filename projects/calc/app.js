@@ -115,6 +115,7 @@ function total() {
             firstNum = 1 / firstNum;
             break;
         case xrt:
+        // testing for which nth root we are taking
             if (secondNum.endsWith('1') && !secondNum.endsWith('11')) {
                 historyText += '<br>' + secondNum +  'st root of ' + firstNum;
             } else if (secondNum.endsWith('2') && !secondNum.endsWith('12')) {
@@ -124,11 +125,21 @@ function total() {
             } else {
                 historyText += '<br>' + secondNum +  'th root of ' + firstNum;
             }
-            firstNum = Math.pow(firstNum, (1 / parseFloat(secondNum)));
+        // testing for an odd root of negative number
+            if (firstNum.toString().startsWith('-') && Number.isInteger((secondNum - 1) / 2)) {
+                firstNum = firstNum.toString().slice(1);
+                firstNum = Math.pow(parseFloat(firstNum), (1 / parseFloat(secondNum)));
+                firstNum = '-' + firstNum.toString();
+            } else {
+                firstNum = Math.pow(firstNum, (1 / parseFloat(secondNum)));
+            }
             break;
     }
     if (firstNum.toString().includes('.00000000') || firstNum.toString().includes('.99999999')) {
     	firstNum = Math.round(firstNum);
+    }
+    if (isNaN(firstNum)) {
+        firstNum = 'Error';
     }
     historyText += ' =<br>' + firstNum;
     oprClicked = false;
@@ -168,7 +179,7 @@ for (var i = 0; i < numberBtns.length; i++) {
 }
 
 document.addEventListener('keydown', function(e) {
-    if (Number.isInteger(parseFloat(e.key)) || e.key == '.') {
+    if (Number.isInteger(parseFloat(e.key)) || e.key === '.') {
 		numberTrigger(e.key);
     } 
     else if (e.key === 'Enter') {
