@@ -433,7 +433,7 @@ footer {
   left: 2vw;
   z-index: 1000;
   box-shadow: 0 0 30px 2vw darkgrey;
-  overflow-y: scroll; }
+  overflow-y: auto; }
   #fav_popup #popup_x_out {
     position: absolute;
     top: 3%;
