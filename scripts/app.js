@@ -1,6 +1,6 @@
 const nameTag = document.getElementById('banner-inner');
 function tagSlide() {
-    nameTag.style.left = '15%';
+    nameTag.style.left = '10%';
 }
 
 adjustBody();

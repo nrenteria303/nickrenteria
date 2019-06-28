@@ -52,6 +52,9 @@
         width: 340px;
         height: 200px;
     }
+    @media (max-width: 339px) {
+        width: 312px;
+    }
 
     &:hover {
         box-shadow: 0 0 80px rgba(255, 255, 255, 0);
@@ -87,6 +90,9 @@
     @media (max-width: $break-md) {
         height: 200px;
         width: 340px;
+    }
+    @media (max-width: 339px) {
+        width: 312px;
     }
 }
 

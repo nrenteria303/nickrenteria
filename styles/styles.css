@@ -167,11 +167,9 @@ nav {
   background-color: rgba(0, 52, 79, 0.28);
   box-shadow: 0 0 20px 20px rgba(0, 52, 79, 0.28);
   transition: 1.1s left ease-out; }
-  @media (max-width: 875px) {
+  @media (max-height: 500px) {
     #banner-inner {
-      width: 400px;
-      margin: 30% 0 0;
-      left: -400px; } }
+      margin-top: 30px; } }
   @media (max-width: 549px) {
     #banner-inner {
       margin: 13% 0 0;
@@ -451,6 +449,9 @@ nav {
     .proj-tile {
       width: 340px;
       height: 200px; } }
+  @media (max-width: 339px) {
+    .proj-tile {
+      width: 312px; } }
   .proj-tile:hover {
     box-shadow: 0 0 80px rgba(255, 255, 255, 0);
     transition: box-shadow .4s ease-out;
@@ -481,6 +482,11 @@ nav {
     .proj-tile-back {
       height: 200px;
       width: 340px; } }
+  @media (max-width: 339px) {
+    .proj-tile-front,
+    .proj-tile-front img,
+    .proj-tile-back {
+      width: 312px; } }
 
 .proj-tile-front {
   transition: .5s ease-out transform; }
@@ -546,6 +552,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 100vw;
   z-index: -1;
   background: #d3dcdc;
   color: #272827;
