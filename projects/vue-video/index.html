@@ -4,8 +4,8 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Monda|Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">  
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico">     
     <title>Videos & Such</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -60,84 +60,90 @@
       </div>
     </header>
 
-      <main id="main">
+    <main id="main">
 
-        <div id="top_movies">
-          <h2 class="top_movies_heading">Most Popular</h2>
-          <div id="top_movies_inner">
-            <img src="images/PH_800x500.jpg" alt="placeholder image" id="top_movie_1"> 
-            <div id="top_movies_addtl">
-              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
-              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
-              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
-              <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side">
-            </div>
+      <div id="top_movies">
+        <h2 class="top_movies_heading">Most Popular</h2>
+        <div id="top_movies_inner">
+          <img src="images/PH_800x500.jpg" alt="placeholder image" id="top_movie_1"> 
+          <div id="top_movies_addtl">
+            <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+            <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+            <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side"> 
+            <img src="images/PH_200x125.jpg" alt="placeholder image" class="top_movie_side">
           </div>
         </div>
+      </div>
 
-          <div v-cloak v-for="(line, index) in movieLines" class="movie_line">
-            <div class="movie_line_topper">
-              <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
-              <h1 class="movie_line_tag">{{ line.lineTitle }}</h1>
-              <i v-on:click="incrementIndex(index)" class="nav_arrow fas fa-chevron-circle-right"></i>
-            </div>
-  
-            <div v-bind:style="{backgroundPosition: setScrollPct(index) + '% 0%'}" class="scroll_bar"></div>
+      <div v-cloak 
+            v-for="(line, index) in movieLines" 
+            class="movie_line">
+        <div class="movie_line_topper">
+          <i v-on:click="decrementIndex(index)" class="nav_arrow fas fa-chevron-circle-left"></i>
+          <h1 class="movie_line_tag">{{ line.lineTitle }}</h1>
+          <i v-on:click="incrementIndex(index)" class="nav_arrow fas fa-chevron-circle-right"></i>
+        </div>
 
-            <div v-bind:style="{transform: 'rotateY(' + setAngle(index) + 'deg)'}" class="carousel">
-              <div v-for="carousel in line.movieCarouselFaces" class="carousel_face">
-                <div class="movie_line_imgs">
-                  <div v-for="(movie, favIndex) in carousel" class="movie_line_trans_cont">
-                    <div class="movie_line_img_cont">
-                      <img :src="movie.imgSrc" alt="placeholder image">
-                      <h3 class="movie_line_title">{{ movie.title }}</h3>
-                      <div class="description_cont">
-                        <p class="movie_line_description">{{ movie.description }}</p>
-                        <div class="add_remove_cont">
-                          <button class="add_remove_btn"
-                                  v-if="favs.indexOf(movie.title) == -1" 
-                                  v-on:click="addFav(movie.title)">
-                            <i class="fas fa-plus"></i> 
-                            Add to Favs
-                          </button>
-                          <button class="add_remove_btn"
-                                  v-else
-                                  v-on:click="removeFav(favs.indexOf(movie.title))">
-                            <i class="fas fa-minus"></i> 
-                            Remove from Favs
-                          </button>
-                        </div>
-                      </div>
+        <div v-bind:style="{backgroundPosition: setScrollPct(index) + '% 0%'}" class="scroll_bar"></div>
+
+        <div v-bind:style="{transform: 'rotateY(' + setAngle(index) + 'deg)'}" class="carousel">
+          <div v-for="(carousel, cIndex) in line.movieCarouselFaces" class="carousel_face">
+            <div class="movie_line_imgs">
+              <div v-for="(movie, movIndex) in carousel" class="movie_line_trans_cont">
+                <div class="movie_line_img_cont">
+                  <img :src="movie.imgSrc" alt="placeholder image">
+                  <h3 class="movie_line_title">{{ movie.title }}</h3>
+                  <div class="description_cont">
+                    <p class="movie_line_description">{{ movie.description }}</p>
+                    <div class="add_remove_cont">
+                      <button class="add_remove_btn"
+                              v-if="favs.indexOf(movie.title) == -1" 
+                              v-on:click="addFav(movie.title)">
+                        <i class="fas fa-plus"></i> 
+                        Add to Favs
+                      </button>
+                      <button class="add_remove_btn"
+                              v-else
+                              v-on:click="removeFav(favs.indexOf(movie.title))">
+                        <i class="fas fa-minus"></i> 
+                        Remove from Favs
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div v-cloak v-show="popupShowing" id="fav_popup">
-            <i v-on:click="hideFavs" id="popup_x_out" class="fas fa-times"></i>
-            <div id="fav_popup_inner">
-              <h1>Favorites</h1>
-              <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
-              <div id="fav_movie_cont">
-                <h4 v-for="(fav, favIndex) in favs" 
-                    class="fav_movie">
-                    {{ fav }}
-                    <i class="fas fa-play-circle" 
-                      title="play">
-                    </i>
-                    <i v-on:click="removeFav(favs.indexOf(fav))"
-                      class="fas fa-minus-circle"
-                      title="remove from favorites">
-                      
-                    </i>
-                </h4>
-              </div>
-            </div>
+      <div v-cloak
+           v-show="popupShowing" 
+           id="fav_popup">
+        <i  v-on:click="hideFavs" 
+            id="popup_x_out" 
+            class="fas fa-times">
+        </i>
+        <div id="fav_popup_inner">
+          <h1>Favorites</h1>
+          <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
+          <div id="fav_movie_cont">
+            <h4 v-for="fav in favs" 
+                class="fav_movie">
+              {{ fav }}
+              <i class="fas fa-play-circle" 
+                title="play">
+              </i>
+              <i v-on:click="removeFav(favs.indexOf(fav))"
+                class="fas fa-minus-circle"
+                title="remove from favorites">
+              </i>
+            </h4>
           </div>
+        </div>
+      </div>
 
-      </main>
+    </main>
     
     <footer>
       <div id="footer_wrapper">

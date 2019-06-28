@@ -7,6 +7,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden; }
+  @media (max-width: 628px) {
+    body {
+      background-color: #8a8aff;
+      background-image: none;
+      background-attachment: none; } }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: 'Monda', cursive; }
   body p, body li, body a {
@@ -432,7 +437,6 @@ footer {
   top: 4vh;
   left: 2vw;
   z-index: 1000;
-  box-shadow: 0 0 30px 2vw darkgrey;
   overflow-y: auto; }
   #fav_popup #popup_x_out {
     position: absolute;
