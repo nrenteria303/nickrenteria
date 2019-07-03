@@ -515,9 +515,10 @@ nav {
       color: #12d400; }
 
 #js_pg .proj-tile-front {
-  background-image: linear-gradient(to bottom, steelblue 50%, lightgray 120%);
+  background-image: linear-gradient(to bottom, steelblue 0%, lightgray 150%);
   text-align: center;
-  color: black; }
+  color: black;
+  padding: 0 12px; }
   #js_pg .proj-tile-front h2 {
     font-family: monospace;
     font-size: 1.5rem; }

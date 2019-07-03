@@ -131,9 +131,10 @@
 
 #js_pg {
     .proj-tile-front {
-        background-image: linear-gradient(to bottom, steelblue 50%, lightgray 120%);
+        background-image: linear-gradient(to bottom, steelblue 0%, lightgray 150%);
         text-align: center;
         color: black;
+        padding: 0 12px;
 
         h2 {
             font-family: monospace;
