@@ -1,6 +1,5 @@
 @charset "UTF-8";
 html, body {
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -9,7 +8,7 @@ html, body {
       overflow-x: hidden; } }
 
 html {
-  background-image: linear-gradient(8deg, #104F55 -90%, #f6fff3 23%, #f3f3f3 90%, #175676 280%); }
+  background: url("../../imgs/img-noise.png"); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fira Sans", sans-serif; }
@@ -180,7 +179,7 @@ p, li, a {
       content: '';
       position: absolute;
       right: -5.5px;
-      top: 35.1px;
+      top: 35.7px;
       width: 41px;
       height: 2.4px;
       background-color: grey;
@@ -408,62 +407,53 @@ nav {
   margin-top: 78px;
   position: relative; }
 
-  @keyframes banner_slideshow {
-    0% {
-      background-image: url("../imgs/b_ranch_house_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 30% 50%; }
-    32% {
-      background-image: url("../imgs/b_ranch_house_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 60% 50%; }
-    33% {
-      background-image: url("../imgs/b_white_interior_xl.jpg");
-      background-position: 75% 0%; }
-    65% {
-      background-image: url("../imgs/b_white_interior_xl.jpg");
-      background-position: 40% 0%; }
-    66% {
-      background-image: url("../imgs/b_grey_building_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 50% 0%; }
-    99% {
-      background-image: url("../imgs/b_grey_building_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 10% 0%; } }
-  
-  @keyframes banner_slideshow-xl {
-    0% {
-      background-image: url("../imgs/b_ranch_house_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 60% 20%; }
-    32% {
-      background-image: url("../imgs/b_ranch_house_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 60% 20%; }
-    33% {
-      background-image: url("../imgs/b_white_interior_xl.jpg");
-      background-position: 75% 0%; }
-    65% {
-      background-image: url("../imgs/b_white_interior_xl.jpg");
-      background-position: 75% 0%; }
-    66% {
-      background-image: url("../imgs/b_grey_building_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 50% 0%; }
-    99% {
-      background-image: url("../imgs/b_grey_building_xl.jpg");
-      background-size: auto 100vh;
-      background-position: 50% 0%; } }
-    @media (min-width: 1120px) {
-      #banner {
-        animation: banner_slideshow-xl 15s ease-in-out infinite;
-        background-size: cover;
-        height: 100vh;
-        margin-top: 0;
-        background-position: 0 80%;
-        width: calc(100vw - 200px);
-        margin-left: auto; } }
+@keyframes banner_slideshow {
+  0% {
+    background-image: url("../imgs/b_ranch_house_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 30% 50%; }
+  32% {
+    background-image: url("../imgs/b_ranch_house_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 60% 50%; }
+  33% {
+    background-image: url("../imgs/b_white_interior_xl.jpg");
+    background-position: 75% 0%; }
+  65% {
+    background-image: url("../imgs/b_white_interior_xl.jpg");
+    background-position: 40% 0%; }
+  66% {
+    background-image: url("../imgs/b_grey_building_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 50% 0%; }
+  99% {
+    background-image: url("../imgs/b_grey_building_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 10% 0%; } }
+
+@keyframes banner_slideshow-xl {
+  0% {
+    background-image: url("../imgs/b_ranch_house_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 60% 20%; }
+  32% {
+    background-image: url("../imgs/b_ranch_house_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 60% 20%; }
+  33% {
+    background-image: url("../imgs/b_white_interior_xl.jpg");
+    background-position: 75% 0%; }
+  65% {
+    background-image: url("../imgs/b_white_interior_xl.jpg");
+    background-position: 75% 0%; }
+  66% {
+    background-image: url("../imgs/b_grey_building_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 50% 0%; }
+  99% {
+    background-image: url("../imgs/b_grey_building_xl.jpg");
+    background-size: auto 100vh;
+    background-position: 50% 0%; } }
   @media (min-width: 1120px) {
     #banner {
       animation: banner_slideshow-xl 15s ease-in-out infinite;
@@ -578,7 +568,9 @@ footer {
       margin: 40px auto 0; } }
   #desc_cont .front_desc {
     margin: 80px 0 40px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    perspective: 600px;
+    transform-style: preserve-3d; }
     @media (min-width: 1120px) {
       #desc_cont .front_desc {
         border: solid 4px #175676;
@@ -592,7 +584,7 @@ footer {
       transform: none; }
       @media (min-width: 1120px) {
         #desc_cont .front_desc:hover .icn_cont {
-          transform: scale(1.1); } }
+          transform: translateZ(38px); } }
     #desc_cont .front_desc:first-child:hover .icn_cont {
       box-shadow: none; }
       @media (min-width: 1120px) {
