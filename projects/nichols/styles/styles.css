@@ -448,7 +448,7 @@ nav {
     background-position: 50% 0%; } }
   @media (min-width: 1120px) {
     #banner {
-      animation: banner_slideshow-xl 10s ease-in-out infinite;
+      animation: banner_slideshow-xl 12s ease-in-out infinite;
       background-size: cover;
       height: 100vh;
       margin-top: 0;
@@ -564,16 +564,19 @@ footer {
     margin: 80px 0 40px;
     padding-bottom: 30px;
     perspective: 600px;
+    transition: border .2s ease-in;
     transform-style: preserve-3d; }
     @media (min-width: 1120px) {
       #desc_cont .front_desc {
-        border: solid 4px #175676;
+        border: solid 4px darkgrey;
         padding: 0px;
         width: 400px;
         background-color: #f3f3f3;
         display: flex;
         flex-direction: column;
         margin: 40px 9px; } }
+    #desc_cont .front_desc:hover {
+      border: solid 4px #175676; }
     #desc_cont .front_desc:hover .icn_cont {
       transform: none; }
       @media (min-width: 1120px) {
@@ -601,11 +604,9 @@ footer {
       #desc_cont .front_desc:nth-child(3) {
         box-shadow: 0 8px 8px grey; } }
     #desc_cont .front_desc:last-child {
-      border-bottom: none;
       margin-bottom: 40px; }
       @media (min-width: 1120px) {
         #desc_cont .front_desc:last-child {
-          border: solid 4px #175676;
           box-shadow: 8px 8px 8px grey; } }
     #desc_cont .front_desc h3 {
       margin: 0 6px;
@@ -909,15 +910,13 @@ footer {
       height: fit-content; } }
   #services_wrapper #img_spec_cont img {
     width: 100%;
-    border-top: solid 4px #175676;
-    border-bottom: solid 4px #175676; }
+    box-shadow: 0 0 12px 1px black; }
     @media (min-width: 720px) {
       #services_wrapper #img_spec_cont img {
         width: 46%;
         height: 30%;
         max-width: 600px;
-        float: right;
-        border: 4px #175676 solid; } }
+        float: right; } }
   #services_wrapper #img_spec_cont #specialties {
     width: auto;
     margin: 40px 0 50px; }
@@ -1028,11 +1027,12 @@ footer {
   width: 100vw;
   max-width: 800px;
   border-top: solid 4px #175676;
-  border-bottom: solid 4px #175676; }
+  border-bottom: solid 4px #175676;
+  box-shadow: 0 0 12px 1px black; }
   @media (min-width: 720px) {
     #testimonials_wrapper #t_img_bottom {
-      border: solid 9px #175676;
-      border-radius: 25px; } }
+      border: solid 4px #175676;
+      border-radius: 20px 0 20px 0; } }
 
 #testimonials_wrapper #t_cta {
   color: #104F55;
@@ -1087,13 +1087,9 @@ footer {
   #contact_main_inner img {
     width: 100vw;
     max-width: 540px;
-    border-top: 4px solid #175676;
-    border-bottom: 4px solid #175676;
     margin: 40px auto 30px;
-    display: block; }
-    @media (min-width: 540px) {
-      #contact_main_inner img {
-        border: solid 4px #175676; } }
+    display: block;
+    box-shadow: 0 0 12px 1px black; }
     @media (min-width: 1120px) {
       #contact_main_inner img {
         margin: 0 auto;
