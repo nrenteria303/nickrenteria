@@ -1,5 +1,4 @@
 html, body {
-  background-color: #f5f6ff;
   margin: 0;
   color: #3F0227; }
 
@@ -68,7 +67,7 @@ header {
   header #nav_content {
     position: fixed;
     width: 100vw;
-    height: 200px;
+    height: 280px;
     left: 0;
     right: 0;
     background-image: radial-gradient(at top center, #f5f6ff 55%, #084c87 360%);
@@ -96,7 +95,7 @@ header {
     border-left: 50vw solid #084c87;
     right: 0; }
   header .nav_content-hide {
-    top: -150px; }
+    top: -228px; }
   header .nav_content-show {
     top: 70px; }
   header .nav_content-a {
@@ -137,9 +136,9 @@ footer {
     text-align: center;
     margin-bottom: 0; }
   footer #footer_heading-main {
-    font-size: 2.7rem; }
+    font-size: 2.9rem; }
   footer #footer_heading-sec {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-top: -8px; }
   footer .footer_contact {
     display: flex;
@@ -221,12 +220,19 @@ footer {
   background-position: 10% 0%;
   width: 100vw;
   height: 290px;
-  position: relative;
-  top: 70px;
-  border-bottom: 3px solid #3F0227; }
+  position: fixed;
+  top: 58px;
+  z-index: -1; }
+
+#main_wrapper {
+  margin-top: 348px;
+  border-top: 3px solid #3F0227;
+  z-index: 10;
+  background-color: #f5f6ff;
+  padding-bottom: 40px; }
 
 #home_blocks {
-  margin: 120px auto 60px; }
+  margin: 0 auto; }
   #home_blocks .hidden {
     opacity: 0;
     bottom: -150px; }
@@ -235,7 +241,7 @@ footer {
     bottom: 0; }
 
 .home_block-content {
-  margin: 70px auto;
+  margin: 40px auto;
   padding: 12px 14px;
   width: 70vw;
   position: relative;
@@ -273,3 +279,38 @@ footer {
   background-image: url(../imgs/home_img_2_md.jpg);
   background-size: cover;
   background-position: 40% 0; }
+
+#about_main {
+  margin: 0 auto;
+  padding: 70px 0;
+  background-color: #f5f6ff; }
+  #about_main h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column; }
+  #about_main img {
+    width: 100vw;
+    box-shadow: 0 2px 14px black; }
+
+#about_quote {
+  background-image: linear-gradient(to top left, #f5f6ff -200%, #3F0227 50%);
+  border-top: #f5f6ff inset 4px;
+  border-bottom: #f5f6ff inset 4px;
+  box-shadow: 0 0 15px black;
+  padding: 25px;
+  text-align: justify;
+  margin: 40px auto 0; }
+  #about_quote::after {
+    content: ''; }
+  #about_quote q, #about_quote p {
+    color: #f5f6ff; }
+  #about_quote q {
+    font-family: "Parisienne", cursive;
+    font-size: 1.5rem; }
+
+#about_story {
+  padding: 0 16px; }
+  #about_story h2 {
+    font-size: 2.4rem; }
