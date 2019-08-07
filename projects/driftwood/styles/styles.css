@@ -22,11 +22,17 @@ header {
     height: 70px;
     display: flex;
     justify-content: space-around; }
+    @media (min-width: 1020px) {
+      header #header-fixed {
+        height: 90px; } }
   header #heading_logo {
     color: #417B5a;
     font-size: 2.2rem;
     margin: 0;
     align-self: center; }
+    @media (min-width: 1020px) {
+      header #heading_logo {
+        font-size: 2.9rem; } }
   header nav {
     align-self: center; }
   header #nav_bars-burger {
@@ -34,6 +40,9 @@ header {
     height: 36px;
     position: relative;
     cursor: pointer; }
+    @media (min-width: 1020px) {
+      header #nav_bars-burger {
+        display: none; } }
   header #burger-top,
   header #burger-middle,
   header #burger-bottom {
@@ -79,6 +88,22 @@ header {
     justify-content: space-around;
     z-index: 10;
     transition: top .34s ease-out; }
+    @media (min-width: 1020px) {
+      header #nav_content {
+        position: fixed;
+        background-image: none;
+        background-color: transparent;
+        top: 0;
+        border: none;
+        box-shadow: none;
+        flex-direction: row;
+        height: fit-content;
+        z-index: 100;
+        width: 480px;
+        margin: 20px 100px 0 auto; } }
+    @media (min-width: 1320px) {
+      header #nav_content {
+        margin-right: 300px; } }
   header #nav_content::after,
   header #nav_content::before {
     content: '';
@@ -88,6 +113,10 @@ header {
     bottom: -21px;
     border-top: 0 solid #3F0227;
     border-bottom: 15px solid transparent; }
+    @media (min-width: 1020px) {
+      header #nav_content::after,
+      header #nav_content::before {
+        display: none; } }
   header #nav_content::after {
     border-right: 50vw solid #084c87;
     left: 0; }
@@ -120,8 +149,7 @@ header {
   header #nav-hide {
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 275px);
-    top: 275px;
+    height: calc(100vh - 362px);
     bottom: 0;
     right: 0;
     z-index: 10;
@@ -136,7 +164,8 @@ footer {
     text-align: center;
     margin-bottom: 0; }
   footer #footer_heading-main {
-    font-size: 2.9rem; }
+    font-size: 2.9rem;
+    margin-top: 30px; }
   footer #footer_heading-sec {
     font-size: 1.15rem;
     margin-top: -8px; }
@@ -223,6 +252,14 @@ footer {
   position: fixed;
   top: 58px;
   z-index: -1; }
+  @media (min-width: 850px) {
+    #banner {
+      background-image: url(../imgs/display_main-lg.jpg);
+      background-position: 10% 10%;
+      height: 400px; } }
+  @media (min-width: 1020px) {
+    #banner {
+      top: 80px; } }
 
 #main_wrapper {
   margin-top: 348px;
@@ -230,6 +267,9 @@ footer {
   z-index: 10;
   background-color: #f5f6ff;
   padding-bottom: 40px; }
+  @media (min-width: 850px) {
+    #main_wrapper {
+      margin-top: 455px; } }
 
 #home_blocks {
   margin: 0 auto; }
@@ -249,6 +289,12 @@ footer {
   box-shadow: 0 0 18px #3F0227;
   background-image: linear-gradient(100deg, #f5f6ff 50%, #084c87 240%);
   transition: all 1s ease; }
+  @media (min-width: 850px) {
+    .home_block-content {
+      margin: 80px auto;
+      width: 300px;
+      height: fit-content;
+      align-self: center; } }
   .home_block-content::after {
     content: '';
     width: 100%;
@@ -263,12 +309,53 @@ footer {
     font-size: 2rem;
     text-align: center;
     margin: 8px; }
+    @media (min-width: 850px) {
+      .home_block-content h2 {
+        font-size: 2.35rem; } }
+    @media (min-width: 1020px) {
+      .home_block-content h2 {
+        font-size: 2.7rem; } }
+
+@media (min-width: 850px) {
+  #block-content-1 {
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    width: 700px; }
+    #block-content-1 h2 {
+      font-size: 3rem;
+      text-shadow: -4px 4px 8px #084c87; } }
+
+@media (min-width: 850px) {
+  #block-content-1::after {
+    background-image: none; } }
+
+@media (min-width: 850px) {
+  .blocks-imgs {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: space-around; } }
+
+@media (min-width: 1020px) {
+  .blocks-imgs {
+    max-width: 1000px;
+    margin: 0 auto 80px; } }
 
 .home_img {
   width: 100vw;
   height: 90vh;
   border-top: solid 3px #3F0227;
   border-bottom: solid 3px #3F0227; }
+  @media (min-width: 850px) {
+    .home_img {
+      width: 320px;
+      height: 450px;
+      margin: 0 auto;
+      border: solid 3px #3F0227; } }
+  @media (min-width: 1020px) {
+    .home_img {
+      width: 400px;
+      height: 600px; } }
 
 #home_img-1 {
   background-image: url(../imgs/home_project_1_md.jpg);
@@ -279,38 +366,61 @@ footer {
   background-image: url(../imgs/home_img_2_md.jpg);
   background-size: cover;
   background-position: 40% 0; }
+  @media (min-width: 850px) {
+    #home_img-2 {
+      order: 2; } }
 
 #about_main {
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 70px 0 50px;
   background-color: #f5f6ff; }
   #about_main h1 {
     text-align: center;
     font-size: 2.6rem;
     padding: 0 16px;
+    line-height: 1.2;
     display: flex;
     flex-direction: column; }
+    @media (min-width: 850px) {
+      #about_main h1 {
+        font-size: 3.4rem;
+        margin-top: 70px; } }
   #about_main img {
     width: 100vw;
+    max-width: 860px;
+    margin: 0 auto;
+    display: block;
     box-shadow: 0 2px 14px black; }
+    @media (min-width: 850px) {
+      #about_main img {
+        border: inset 5px #f5f6ff;
+        box-shadow: 0 0 20px 2px black; } }
 
 #about_quote {
-  background-image: linear-gradient(to top left, #f5f6ff -200%, #3F0227 50%);
-  border-top: #f5f6ff inset 4px;
-  border-bottom: #f5f6ff inset 4px;
-  box-shadow: 0 0 15px black;
   padding: 25px;
   text-align: justify;
-  margin: 40px auto 0; }
+  margin: 20px auto 0;
+  max-width: 640px; }
+  @media (min-width: 850px) {
+    #about_quote {
+      margin: 40px auto; } }
   #about_quote::after {
     content: ''; }
   #about_quote q, #about_quote p {
-    color: #f5f6ff; }
+    color: #3F0227; }
   #about_quote q {
     font-family: "Parisienne", cursive;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: 700; }
 
 #about_story {
-  padding: 0 16px; }
+  padding: 0 16px;
+  max-width: 700px;
+  margin: 0 auto; }
   #about_story h2 {
     font-size: 2.4rem; }
+    @media (min-width: 850px) {
+      #about_story h2 {
+        font-size: 2.8rem; } }
+  #about_story p {
+    line-height: 1.5; }
