@@ -24,7 +24,8 @@ header {
     justify-content: space-around; }
     @media (min-width: 1020px) {
       header #header-fixed {
-        height: 90px; } }
+        height: 90px;
+        box-shadow: none; } }
   header #heading_logo {
     color: #417B5a;
     font-size: 2.2rem;
@@ -273,12 +274,6 @@ footer {
 
 #home_blocks {
   margin: 0 auto; }
-  #home_blocks .hidden {
-    opacity: 0;
-    bottom: -150px; }
-  #home_blocks .showing {
-    opacity: 1;
-    bottom: 0; }
 
 .home_block-content {
   margin: 40px auto;
@@ -287,14 +282,23 @@ footer {
   position: relative;
   border: 4px inset #f5f6ff;
   box-shadow: 0 0 18px #3F0227;
-  background-image: linear-gradient(100deg, #f5f6ff 50%, #084c87 240%);
-  transition: all 1s ease; }
+  background-image: linear-gradient(100deg, #f5f6ff 50%, #084c87 240%); }
   @media (min-width: 850px) {
     .home_block-content {
       margin: 80px auto;
       width: 300px;
       height: fit-content;
       align-self: center; } }
+  @media (min-width: 1020px) {
+    .home_block-content {
+      height: 600px;
+      width: 600px;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+      box-shadow: none;
+      display: flex; } }
   .home_block-content::after {
     content: '';
     width: 100%;
@@ -314,21 +318,39 @@ footer {
         font-size: 2.35rem; } }
     @media (min-width: 1020px) {
       .home_block-content h2 {
-        font-size: 2.7rem; } }
+        font-size: 2.7rem;
+        align-self: center;
+        padding: 0 100px; } }
 
-@media (min-width: 850px) {
-  #block-content-1 {
-    border: none;
-    box-shadow: none;
-    background-image: none;
-    width: 700px; }
-    #block-content-1 h2 {
-      font-size: 3rem;
-      text-shadow: -4px 4px 8px #084c87; } }
+#block-content-1 {
+  transition: all 1s ease; }
+  @media (min-width: 850px) {
+    #block-content-1 {
+      border: none;
+      box-shadow: none;
+      background-image: none;
+      width: 700px; }
+      #block-content-1 h2 {
+        font-size: 3rem;
+        text-shadow: -4px 4px 8px #084c87; } }
+  @media (min-width: 1020px) {
+    #block-content-1 {
+      height: fit-content;
+      width: 600px;
+      margin: 70px auto 0; }
+      #block-content-1 h2 {
+        padding: 0; } }
+  @media (min-width: 850px) {
+    #block-content-1::after {
+      background-image: none; } }
 
-@media (min-width: 850px) {
-  #block-content-1::after {
-    background-image: none; } }
+.hidden {
+  opacity: 0;
+  bottom: -150px; }
+
+.showing {
+  opacity: 1;
+  bottom: 0; }
 
 @media (min-width: 850px) {
   .blocks-imgs {
@@ -339,7 +361,9 @@ footer {
 @media (min-width: 1020px) {
   .blocks-imgs {
     max-width: 1000px;
-    margin: 0 auto 80px; } }
+    margin: 80px auto 120px;
+    border: inset #f5f6ff 4px;
+    box-shadow: 0 0 20px 2px; } }
 
 .home_img {
   width: 100vw;
@@ -355,7 +379,8 @@ footer {
   @media (min-width: 1020px) {
     .home_img {
       width: 400px;
-      height: 600px; } }
+      height: 600px;
+      border: none; } }
 
 #home_img-1 {
   background-image: url(../imgs/home_project_1_md.jpg);
@@ -424,3 +449,56 @@ footer {
         font-size: 2.8rem; } }
   #about_story p {
     line-height: 1.5; }
+
+#gallery_main {
+  margin: 70px auto 0;
+  background-color: #f5f6ff;
+  width: 98.5vw;
+  overflow-x: hidden; }
+  #gallery_main h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20px; }
+  @media (min-width: 850px) {
+    #gallery_main h1 {
+      font-size: 4rem; } }
+
+#gallery_slideshow {
+  border-top: 4px solid #3F0227;
+  border-bottom: 4px solid #3F0227; }
+  #gallery_slideshow img {
+    width: 100vw;
+    margin: 0px auto;
+    display: block; }
+  @media (min-width: 850px) {
+    #gallery_slideshow {
+      display: flex;
+      overflow-x: visible;
+      margin: 40px 0 0;
+      border: none;
+      position: relative;
+      transition: .5s left ease; }
+      #gallery_slideshow img {
+        height: 540px;
+        margin: 0 40px; }
+      #gallery_slideshow .landscape {
+        width: 718px; }
+      #gallery_slideshow .portrait {
+        width: 405px; } }
+
+#arrow_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: -12px auto 0;
+  padding: 0 0 70px;
+  font-size: 5rem; }
+  #arrow_container .inactive {
+    color: #f5f6ff; }
+
+#left_arrow,
+#right_arrow {
+  cursor: pointer; }
+  #left_arrow:hover,
+  #right_arrow:hover {
+    transform: scale(1.1); }
