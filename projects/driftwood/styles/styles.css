@@ -151,7 +151,7 @@ header {
   header #nav-hide {
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 362px);
+    height: calc(100vh - 380px);
     bottom: 0;
     right: 0;
     z-index: 10;
@@ -439,9 +439,13 @@ footer {
   #about_quote q, #about_quote p {
     color: #3F0227; }
   #about_quote q {
-    font-family: "Allura", cursive;
-    font-size: 1.5rem;
-    font-weight: 700; }
+    font-family: "Alex Brush", cursive;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.1; }
+    @media (min-width: 1020px) {
+      #about_quote q {
+        font-size: 1.85rem; } }
 
 #about_story {
   padding: 0 16px;
@@ -521,12 +525,13 @@ footer {
 
 #contact_main {
   background-color: #f9faff;
-  min-height: calc(100vh - 220px);
+  min-height: calc(100vh - 320px);
   margin: 72px 0;
   text-align: center; }
   @media (min-width: 850px) {
     #contact_main {
-      margin: 92px auto 80px; } }
+      margin: 90px auto 0;
+      padding-bottom: 60px; } }
   #contact_main h1 {
     font-size: 3rem;
     padding-top: 12px; }
@@ -566,7 +571,7 @@ footer {
     mix-blend-mode: screen; }
   #contact_p-container p {
     color: #f9faff;
-    font-family: "Allura", cursive;
+    font-family: "Alex Brush", cursive;
     font-size: 2.4rem;
     font-weight: bold;
     padding-right: 12px;
