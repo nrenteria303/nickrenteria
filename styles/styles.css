@@ -362,7 +362,7 @@ nav {
   @media (max-width: 875px) {
     #resume-fill {
       grid-template-columns: 2fr 3fr;
-      grid-template-rows: 40% 60%;
+      grid-template-rows: 5fr 6fr;
       grid-template-areas: "cod exp" "cod edu"; } }
   @media (max-width: 550px) {
     #resume-fill {
