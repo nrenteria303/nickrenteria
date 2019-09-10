@@ -146,8 +146,17 @@ header {
       padding: 17px;
       box-sizing: border-box; }
       header .nav_content-a a:hover {
-        text-decoration: line-through;
         color: #417B5a; }
+    header .nav_content-a::after {
+      content: '';
+      width: 0;
+      height: 2.5px;
+      background-color: #417B5a;
+      position: absolute;
+      top: 47%;
+      transition: .2s all ease; }
+    header .nav_content-a:hover::after {
+      width: 25%; }
   header #nav-hide {
     position: fixed;
     width: 100vw;
