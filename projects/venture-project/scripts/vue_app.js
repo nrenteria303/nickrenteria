@@ -117,7 +117,34 @@ const characterList = [
 		spoilerRevealed: false,
 		spoilerText: "Not Really Bowie & Possibly Deceased",
 		bioRevealed: false,
-		description: "David Bowie is first mentioned in Season 1 as the original owner of Roy Brisby's long-time companda, Ling Ling. He then makes his first appearance in the two-part Season 2 finale as The Sovereign, the highest ranking member of the Guild of Calamitous Intent; he gives Dr. Girlfriend away at her wedding to the Monarch. The Sovereign is a powerful shapeshifter, and can take the form of anything from a pack of cigarettes to a bald eagle to 'Two-Ton' 21. He survives the Battle of Cremation Creek despite being betrayed by Phantom Limb and Iggy Pop."
+		description: "David Bowie is first mentioned in Season 1 as the original owner of Roy Brisby's long-time companda, Lee Lee. He then makes his first appearance in the two-part Season 2 finale as The Sovereign, the highest ranking member of the Guild of Calamitous Intent; he gives Dr. Girlfriend away at her wedding to the Monarch. The Sovereign is a powerful shapeshifter, and can take the form of anything from a pack of cigarettes to a bald eagle to 'Two-Ton' 21. He survives the Battle of Cremation Creek despite being betrayed by Phantom Limb and Iggy Pop."
+	},
+	{
+		name: "Dr. Byron Orpheus",
+		contId: "dr-o_cont",
+		sortId: "friends",
+		imageId: "dr-o_img",
+		images: ["images/dr_o_char.jpg"],
+		imageIndex: 0,
+		altText: ["Dr. Orpheus, master necromancer"],
+		subset: "'Friends'",
+		spoiler: false,
+		spoilerRevealed: false,
+		bioRevealed: false,
+		description: "Dr. Orpheus is the tenant of Dr. Venture Jr. along with his daughter Triana. Orpheus is a master necromancer who regularly uses his powers to save the Venture family from peril (though Dr. Venture remains ungrateful for such acts). He is one third of the mystical Order of the Triad along with the Alchemist and Jefferson Twilight. He sometimes speaks to his 'master', a shapeshifting, all-knowing being who lives through a portal in Triana's closet, for advice on various matters or necromancing and life in general."
+	},
+	{
+		name: "Colonel Hunter Gathers",
+		contId: "col-gathers_cont",
+		sortId: "osi_agents",
+		imageId: "col-gathers_img",
+		images: ["images/col-gathers_char.jpg", "images/col-gathers_dancer.jpg", "images/col-gathers_sphinx.jpg", "images/gen-gathers.jpg"],
+		imageIndex: 0,
+		altText: ["Col. Gathers in classic OSI garb", "Col. Gathers the dancer after gender reassignment", "Col. Gathers as head of re-formed S.P.H.I.N.X.", "General Gathers, head of the OSI"],
+		subset: "OSI Agents",
+		spoiler: false,
+		bioRevealed: false,
+		description: "Col. Gathers trained Brock Sampson when Brock first entered the OSI and turned him into the best agent the OSI ever saw. He was, in Brock's words, the closest thing he ever had to a father. Despite his size, Col. Gathers is a formidable physical warrior as well as a able strategist. He has a short temper and a foul mouth, but is passionate about stopping villians from running amok. Col. Gathers often speaks of feeling trapped in his male form, and how he longs to be biologically female (a desire he briefly indulges at one point but eventually gives up). He is often seen smoking a cigarette with a long, fashionable cigarette holder."
 	}
 ]
 

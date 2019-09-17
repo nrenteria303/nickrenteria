@@ -363,10 +363,6 @@ h2 {
     margin-bottom: 0;
 }
 
-/* #dr_venture_img {
-    width: 310px;
-} */
-
 #hank_img {
     width: 265px;
 }
@@ -383,12 +379,12 @@ h2 {
     margin: 22px opx 15px;
 }
 
-/* #h21_img {
-    width: 335px;
-} */
-
 #h24_img {
     width: 267px;
+}
+
+#col-gathers_img {
+    width: 240px;
 }
 
 #ajax_link_cont {
