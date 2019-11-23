@@ -8,7 +8,7 @@ html, body {
       overflow-x: hidden; } }
 
 html {
-  background: url("../../imgs/img-noise.png"); }
+  background: url("../imgs/img-noise.png"); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fira Sans", sans-serif; }
