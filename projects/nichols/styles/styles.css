@@ -8,7 +8,7 @@ html, body {
       overflow-x: hidden; } }
 
 html {
-  background: url("../imgs/img-noise.png"); }
+  background: url("../../imgs/img-noise.png"); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Fira Sans", sans-serif; }
@@ -796,8 +796,8 @@ footer {
       display: none; }
       @media (min-width: 720px) {
         #services_wrapper #slideshow_cont .slides {
-          width: fit-content;
-          position: relative; } }
+          width: 784px;
+          width: fit-content; } }
       #services_wrapper #slideshow_cont .slides img {
         width: 100vw;
         max-width: 780px;
@@ -822,7 +822,7 @@ footer {
             position: absolute;
             height: 100%;
             width: 116px;
-            right: -116px;
+            right: 0;
             display: flex;
             padding: 0 6px;
             box-sizing: border-box;
