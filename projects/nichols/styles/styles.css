@@ -685,8 +685,10 @@ footer {
         margin: 30px auto 60px; } }
     #about_wrapper #about_section h1 {
       font-size: 2.9rem;
+      width: 550px;
       width: fit-content;
       max-width: 66vw;
+      margin: 40px auto 50px;
       padding: 3px 8px;
       border-bottom: 8px solid;
       border-right: 2px solid;
@@ -717,6 +719,7 @@ footer {
     @media (min-width: 720px) {
       #services_wrapper #serv_main_heading {
         display: block;
+        width: 310px;
         width: fit-content;
         font-size: 5rem;
         margin: 90px auto 10px; } }
@@ -977,6 +980,7 @@ footer {
 #testimonials_wrapper #testimonials_heading {
   color: #104F55;
   margin: 92px auto 40px;
+  width: 695px;
   width: fit-content;
   max-width: 86vw;
   padding: 3px 8px;
@@ -1072,6 +1076,7 @@ footer {
       width: 87%; } }
   #contact_main_inner #contact_heading {
     font-size: 3.3rem;
+    width: 390px;
     width: fit-content;
     margin-left: 12px;
     padding: 3px 8px;
