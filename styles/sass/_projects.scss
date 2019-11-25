@@ -62,15 +62,11 @@
         transition-delay: .47s;
 
         .proj-tile-front {
-            transform: rotateY(180deg);
-            -webkit-transform: rotateY(180deg);
-            -moz-transform: rotateY(180deg);
+            @include transform(rotateY(180deg));
         }
 
         .proj-tile-back {
-            transform: rotateY(360deg);
-            -webkit-transform: rotateY(360deg);
-            -moz-transform: rotateY(360deg);
+            @include transform(rotateY(360deg));
             z-index: 10;
         }
     }
@@ -101,9 +97,7 @@
 }
 
 .proj-tile-back {    
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
+    @include transform(rotateY(180deg));
     transition: transform .5s ease-out;
 
     background: $color-grey-xl;

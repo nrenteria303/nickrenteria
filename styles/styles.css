@@ -3,6 +3,9 @@ html {
   font-size: 16px;
   overflow-x: hidden; }
 
+body {
+  margin: 0; }
+
 body,
 html {
   background: #272827;
@@ -29,9 +32,6 @@ p {
 
 a {
   font-family: "Yantramanav", sans-serif; }
-
-body {
-  margin: 0; }
 
 header {
   position: fixed;
@@ -459,11 +459,15 @@ nav {
     .proj-tile:hover .proj-tile-front {
       transform: rotateY(180deg);
       -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg); }
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg); }
     .proj-tile:hover .proj-tile-back {
       transform: rotateY(360deg);
       -webkit-transform: rotateY(360deg);
       -moz-transform: rotateY(360deg);
+      -ms-transform: rotateY(360deg);
+      -o-transform: rotateY(360deg);
       z-index: 10; }
 
 .proj-tile-front,
@@ -495,6 +499,8 @@ nav {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
   transition: transform .5s ease-out;
   background: #d3dcdc;
   color: #272827;
@@ -564,15 +570,18 @@ footer {
   background: #d3dcdc;
   color: #272827;
   margin-top: 120px;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-  @media (min-width: 875px) {
-    footer {
-      flex-direction: row;
-      align-items: center;
-      padding: 0 40px; } }
+  height: 280px; }
+  footer #footer_wrapper {
+    height: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    @media (min-width: 875px) {
+      footer #footer_wrapper {
+        flex-direction: row;
+        align-items: center; } }
   @media (min-width: 875px) {
     footer #contact_info {
       width: 320px; } }

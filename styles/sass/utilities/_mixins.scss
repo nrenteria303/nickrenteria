@@ -23,29 +23,12 @@
     border-left: 4px solid $color-blue;
 }
 
-// Projject Tile Faces Translate ========
-@mixin triangle-proj-tile-front($width) {
-    transform:  translateZ( ($width * 1.73205081) / 8 );
-    -webkit-transform:  translateZ( ($width * 1.73205081) / 8 );
+@mixin transform($transformation) {
+    transform: $transformation;
+    -webkit-transform: $transformation;
+    -moz-transform: $transformation;
+    -ms-transform: $transformation;
+    -o-transform: $transformation;
 }
 
-@mixin triangle-proj-tile-right($width) {
-    transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(120deg);
-    -webkit-transform:  translate3d( ($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(120deg);
-}
-
-@mixin triangle-proj-tile-left($width) {
-    transform:  translate3d( -($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(-120deg);
-    -webkit-transform:  translate3d( -($width / 4), 0, -(($width * 1.73205081) / 8) ) rotateY(-120deg);
-}
-
-// Div Container Gradient =========
-// @mixin container-gradient($height)  {
-//     background: radial-gradient($color-dark, $color-dark-xd);
-// }
-
-// @mixin container-gradient-inverse($height)  {
-//     background: linear-gradient((0.069771 * $height / 1px * 1deg + 2.1856 ), $color-sec 57%, $color-pri (-.071442 *$height / 1px * 1% + 229.5349));
-//     text-shadow: -6px 6px 18px white;
-// }
 

@@ -239,7 +239,6 @@ p, li, a {
           background-color: #f3f3f3; } }
 
 #C-cont {
-  display: inline-block;
   background: darkblue;
   position: relative;
   float: left; }
@@ -572,7 +571,10 @@ footer {
         flex-direction: column;
         margin: 40px 9px; } }
     #desc_cont .front_desc:hover {
-      border: solid 4px #175676; }
+      border: none; }
+      @media (min-width: 1120px) {
+        #desc_cont .front_desc:hover {
+          border: solid 4px #175676; } }
     #desc_cont .front_desc:hover .icn_cont {
       transform: none; }
       @media (min-width: 1120px) {
