@@ -1,0 +1,165 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FAFFF4;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Unica One", serif, cursive; }
+
+p, a, q, li, ul, ol {
+  font-family: "Abel", sans-serif; }
+
+nav {
+  align-self: center;
+  height: 36px;
+  width: 46px;
+  position: relative;
+  padding-right: 28px; }
+
+#nav__bars {
+  display: flex;
+  height: 100%;
+  width: 100%; }
+
+.nav__bar {
+  height: 2px;
+  width: 46px;
+  background-color: #FAFFF4;
+  position: absolute;
+  left: 0; }
+
+.burger--top {
+  top: 0; }
+
+.burger--top,
+.burger--bottom {
+  opacity: 1;
+  transition: opacity .3s ease; }
+
+.burger--middle-1,
+.burger--middle-2 {
+  top: 17px;
+  transition: all .3s ease;
+  transform: rotate(0deg); }
+
+.burger--bottom {
+  bottom: 0; }
+
+.x-1, .x-2 {
+  background-color: #DDDB3E; }
+
+.x-1 {
+  transform: rotate(45deg); }
+
+.x-2 {
+  transform: rotate(-45deg); }
+
+.disappear {
+  opacity: 0; }
+
+#nav__content,
+#nav__content--vertical {
+  height: calc(100vh - 72px); }
+
+#nav__content {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  right: 100vw;
+  background-image: radial-gradient(farthest-corner at 21% 11%, #281328 70%, white 200%);
+  padding: 40px 40px 40px 80px;
+  box-sizing: border-box;
+  transition: right .3s ease; }
+  #nav__content div {
+    font-size: 1.6rem;
+    margin-top: 30px; }
+    #nav__content div a {
+      color: #FAFFF4;
+      text-decoration: none; }
+
+#nav__content--vertical {
+  width: 4px;
+  background-color: #F0FFCE;
+  position: absolute;
+  top: -30px;
+  left: 60px; }
+
+header {
+  background-color: transparent;
+  width: 100vw; }
+
+#header__wrapper {
+  font-family: "Unica One", serif, cursive;
+  color: #FAFFF4;
+  font-size: 1.2rem;
+  height: 72px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  box-sizing: border-box; }
+
+#heading--main {
+  margin: 0;
+  padding: 0 28px;
+  align-self: center;
+  color: #FAFFF4;
+  font-size: 2.2rem;
+  transition: all .12s ease; }
+
+.header--fixed {
+  background-color: #281328;
+  border-bottom: 2px solid #F0FFCE; }
+  .header--fixed #heading--main {
+    font-size: 2rem;
+    color: #DDDB3E; }
+
+footer {
+  width: 100vw;
+  height: 140px;
+  background-color: #281328;
+  display: flex; }
+  footer h4 {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    color: #FAFFF4;
+    font-size: 1.5rem; }
+
+#banner {
+  background-image: url("../imgs/piano-overhead.jpg");
+  background-repeat: no-repeat;
+  background-size: 240%;
+  background-position: 44% top;
+  height: 47vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1; }
+  #banner::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to top, lightgrey 64%, #281328 96%);
+    opacity: 0.55;
+    mix-blend-mode: screen; }
+  #banner h2 {
+    position: relative;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    text-shadow: 2px 2px 12px white;
+    color: #281328; }
+    #banner h2:last-child {
+      top: 35%;
+      font-size: 1.1rem; }
+
+main {
+  margin-top: 300px; }
