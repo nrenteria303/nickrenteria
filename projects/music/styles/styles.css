@@ -71,9 +71,15 @@ nav {
   padding: 40px 40px 40px 80px;
   box-sizing: border-box;
   transition: right .3s ease; }
+  @media (max-height: 500px) {
+    #nav__content {
+      padding: 0 0 0 80px; } }
   #nav__content div {
     font-size: 1.6rem;
     margin-top: 30px; }
+    @media (max-height: 500px) {
+      #nav__content div {
+        margin-top: 10px; } }
     #nav__content div a {
       color: #FAFFF4;
       text-decoration: none; }
@@ -84,6 +90,9 @@ nav {
   position: absolute;
   top: -30px;
   left: 60px; }
+  @media (max-height: 500px) {
+    #nav__content--vertical {
+      top: -10px; } }
 
 header {
   background-color: transparent;
@@ -99,7 +108,8 @@ header {
   position: fixed;
   top: 0;
   justify-content: space-between;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 10; }
 
 #heading--main {
   margin: 0;
@@ -150,6 +160,9 @@ footer {
     background-image: linear-gradient(to top, lightgrey 64%, #281328 96%);
     opacity: 0.55;
     mix-blend-mode: screen; }
+  @media (max-height: 500px) {
+    #banner {
+      height: 100vh; } }
   #banner h2 {
     position: relative;
     top: 40%;
@@ -163,3 +176,39 @@ footer {
 
 main {
   margin-top: 300px; }
+  @media (max-height: 500px) {
+    main {
+      margin-top: 100vh; } }
+  main .block__home {
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 3px #281328;
+    flex-direction: column; }
+    main .block__home:nth-child(2n+1) {
+      background-color: #DDDB3E;
+      color: #281328; }
+    main .block__home:nth-child(2n) {
+      background-color: #281328;
+      color: #DDDB3E;
+      height: 45vh; }
+    main .block__home h1, main .block__home h2 {
+      align-self: center;
+      text-align: center;
+      width: 70%;
+      font-size: 2.35rem;
+      margin: 0 auto; }
+    main .block__home #link--home--top {
+      text-align: center;
+      display: flex;
+      align-self: center; }
+      main .block__home #link--home--top a {
+        font-size: 1.2rem;
+        text-shadow: 0 0 3px #281328;
+        margin-top: 0; }
+      main .block__home #link--home--top a, main .block__home #link--home--top #triangle--top {
+        color: #FAFFF4; }
+      main .block__home #link--home--top #triangle--top {
+        align-self: flex-end;
+        position: relative;
+        left: 8px; }
