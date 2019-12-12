@@ -12,8 +12,8 @@ p, a, q, li, ul, ol {
 
 nav {
   align-self: center;
-  height: 36px;
-  width: 46px;
+  height: 28px;
+  width: 36px;
   position: relative;
   padding-right: 28px; }
 
@@ -24,7 +24,7 @@ nav {
 
 .nav__bar {
   height: 2px;
-  width: 46px;
+  width: 36px;
   background-color: #FAFFF4;
   position: absolute;
   left: 0; }
@@ -39,7 +39,7 @@ nav {
 
 .burger--middle-1,
 .burger--middle-2 {
-  top: 17px;
+  top: 13px;
   transition: all .3s ease;
   transform: rotate(0deg); }
 
@@ -60,7 +60,7 @@ nav {
 
 #nav__content,
 #nav__content--vertical {
-  height: calc(100vh - 72px); }
+  height: calc(100vh - 65px); }
 
 #nav__content {
   width: 100vw;
@@ -102,7 +102,7 @@ header {
   font-family: "Unica One", serif, cursive;
   color: #FAFFF4;
   font-size: 1.2rem;
-  height: 72px;
+  height: 65px;
   width: 100%;
   display: flex;
   position: fixed;
@@ -143,6 +143,8 @@ footer {
   background-repeat: no-repeat;
   background-size: 240%;
   background-position: 44% top;
+  border-bottom: 2px solid #281328;
+  box-sizing: border-box;
   height: 47vh;
   width: 100vw;
   position: absolute;
@@ -175,40 +177,49 @@ footer {
       font-size: 1.1rem; }
 
 main {
-  margin-top: 300px; }
+  margin: 47vh auto 40px; }
   @media (max-height: 500px) {
     main {
       margin-top: 100vh; } }
   main .block__home {
-    height: 55vh;
     display: flex;
     justify-content: space-around;
-    border-top: solid 3px #281328;
     flex-direction: column; }
-    main .block__home:nth-child(2n+1) {
-      background-color: #DDDB3E;
-      color: #281328; }
-    main .block__home:nth-child(2n) {
-      background-color: #281328;
+    main .block__home:nth-of-type(2n+1) {
+      height: 53vh;
       color: #DDDB3E;
-      height: 45vh; }
+      text-shadow: 0 0 2px #281328; }
+    main .block__home:nth-of-type(2n) {
+      height: 48vh; }
     main .block__home h1, main .block__home h2 {
       align-self: center;
       text-align: center;
       width: 70%;
       font-size: 2.35rem;
       margin: 0 auto; }
-    main .block__home #link--home--top {
+    main .block__home .link--home {
       text-align: center;
       display: flex;
-      align-self: center; }
-      main .block__home #link--home--top a {
+      align-self: center;
+      margin-bottom: 12px; }
+      main .block__home .link--home a {
         font-size: 1.2rem;
-        text-shadow: 0 0 3px #281328;
+        text-shadow: none;
         margin-top: 0; }
-      main .block__home #link--home--top a, main .block__home #link--home--top #triangle--top {
-        color: #FAFFF4; }
-      main .block__home #link--home--top #triangle--top {
+      main .block__home .link--home a, main .block__home .link--home a:active, main .block__home .link--home #triangle--top {
+        color: #281328; }
+      main .block__home .link--home #triangle--top {
         align-self: flex-end;
         position: relative;
         left: 8px; }
+  main iframe {
+    width: 100vw;
+    max-width: 560px;
+    height: 57vw;
+    max-height: 315px;
+    margin: 0 auto;
+    display: block; }
+  main p {
+    font-size: 1.3rem;
+    padding: 8px;
+    margin: 0 auto; }
