@@ -1,11 +1,13 @@
+const body = document.body; // Safari
+const html = document.documentElement;
 const burgerTop = document.getElementsByClassName('nav__bar')[0];
 const burgerMid1 = document.getElementsByClassName('nav__bar')[1];
 const burgerMid2 = document.getElementsByClassName('nav__bar')[2];
 const burgerBot = document.getElementsByClassName('nav__bar')[3];
 const navContent = document.getElementById('nav__content');
 const header = document.getElementById('header__wrapper');
-const body = document.body; // Safari
-const html = document.documentElement;
+const homeHeading1 = document.getElementById('banner__heading--1');
+const homeHeading2 = document.getElementById('banner__heading--2');
 var navShowing = false;
 
 function navTransform() {
@@ -31,6 +33,11 @@ function scrollDetect() {
     } else {
         header.classList.remove("header--fixed");
     }
+  }
+
+  function showHeadings() {
+    homeHeading1.classList.add("showing");
+    homeHeading2.classList.add("showing");
   }
 
   window.onscroll = function() {scrollDetect()};

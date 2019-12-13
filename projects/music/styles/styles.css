@@ -4,6 +4,9 @@ html, body {
   background-color: #FAFFF4;
   box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Unica One", serif, cursive; }
 
@@ -70,7 +73,8 @@ nav {
   background-image: radial-gradient(farthest-corner at 21% 11%, #281328 70%, white 200%);
   padding: 40px 40px 40px 80px;
   box-sizing: border-box;
-  transition: right .3s ease; }
+  transition: right .3s ease;
+  z-index: 9; }
   @media (max-height: 500px) {
     #nav__content {
       padding: 0 0 0 80px; } }
@@ -166,15 +170,20 @@ footer {
     #banner {
       height: 100vh; } }
   #banner h2 {
+    font-size: 1.8rem;
     position: relative;
-    top: 40%;
+    top: 36%;
     left: 10%;
     width: 80%;
-    text-shadow: 2px 2px 12px white;
-    color: #281328; }
+    text-shadow: 0 0 8px white;
+    color: #281328;
+    opacity: 0;
+    transition: opacity .7s ease; }
     #banner h2:last-child {
-      top: 35%;
-      font-size: 1.1rem; }
+      top: 30%;
+      font-size: 1.3rem; }
+  #banner .showing {
+    opacity: 1; }
 
 main {
   margin: 47vh auto 40px; }
@@ -218,7 +227,9 @@ main {
     height: 57vw;
     max-height: 315px;
     margin: 0 auto;
-    display: block; }
+    display: block;
+    border-top: 6px solid #DDDB3E;
+    border-bottom: 6px solid #DDDB3E; }
   main p {
     font-size: 1.3rem;
     padding: 8px;
