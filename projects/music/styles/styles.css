@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
 p, a, q, li, ul, ol {
   font-family: "Abel", sans-serif; }
 
+.light {
+  font-weight: 400;
+  font-weight: light; }
+
 nav {
   align-self: center;
   height: 28px;
@@ -210,17 +214,24 @@ main {
       text-align: center;
       display: flex;
       align-self: center;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      background-color: #418efa;
+      width: 130px;
+      height: 42px;
+      border-radius: 5px;
+      box-sizing: border-box; }
       main .block__home .link--home a {
         font-size: 1.2rem;
         text-shadow: none;
-        margin-top: 0; }
+        margin-top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        z-index: 2;
+        padding: 6%; }
       main .block__home .link--home a, main .block__home .link--home a:active, main .block__home .link--home #triangle--top {
-        color: #281328; }
-      main .block__home .link--home #triangle--top {
-        align-self: flex-end;
-        position: relative;
-        left: 8px; }
+        color: #FAFFF4; }
   main iframe {
     width: 100vw;
     max-width: 560px;
