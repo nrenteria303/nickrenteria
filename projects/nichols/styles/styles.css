@@ -547,6 +547,38 @@ footer {
     width: calc(100vw - 200px);
     margin-left: auto; } }
 
+#sub-heading-cont {
+  color: #175676;
+  font-weight: bold;
+  width: 94vw;
+  max-width: 1200px;
+  margin: 70px auto 40px;
+  border: 12px dashed #175676;
+  padding: 0 15px;
+  box-sizing: border-box; }
+  #sub-heading-cont #lg-heading {
+    font-size: 3.3rem; }
+  #sub-heading-cont #sub-heading,
+  #sub-heading-cont #sub-heading-text {
+    opacity: 0;
+    transition: opacity 1.3s ease; }
+  #sub-heading-cont #sub-heading {
+    font-size: 2.3rem; }
+  #sub-heading-cont #sub-heading-text {
+    text-align: justify; }
+  @media (min-width: 980px) {
+    #sub-heading-cont {
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      #sub-heading-cont #sub-heading {
+        width: 300px;
+        text-align: right; }
+      #sub-heading-cont #sub-heading-text {
+        width: 60%;
+        max-width: 800px;
+        text-align: left; } }
+
 #desc_cont {
   color: #104F55;
   position: relative; }
@@ -563,7 +595,8 @@ footer {
     transform-style: preserve-3d;
     position: relative;
     background-size: cover;
-    margin-bottom: -5px; }
+    flex-basis: 33%;
+    border-bottom: 4px #175676 solid; }
     @media (min-width: 1120px) {
       #desc_cont .front_desc {
         border: solid 4px #f3f3f3;
@@ -572,12 +605,13 @@ footer {
         flex-direction: column;
         margin: 40px 9px; } }
     #desc_cont .front_desc .front-desc-heading,
-    #desc_cont .front_desc h3,
-    #desc_cont .front_desc h3 a {
+    #desc_cont .front_desc p,
+    #desc_cont .front_desc p a {
       z-index: 2;
-      color: #f6fff3; }
+      color: #f6fff3;
+      text-shadow: 0 0 6px black; }
     #desc_cont .front_desc .front-desc-heading {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
       text-align: center;
       text-decoration: underline;
       margin-top: 0; }
@@ -595,22 +629,12 @@ footer {
       @media (min-width: 1120px) {
         #desc_cont .front_desc:hover .icn_cont {
           transform: translateZ(38px); } }
-    #desc_cont .front_desc:first-child:hover .icn_cont {
-      box-shadow: none; }
-      @media (min-width: 1120px) {
-        #desc_cont .front_desc:first-child:hover .icn_cont {
-          box-shadow: -4px 4px 4px grey; } }
     #desc_cont .front_desc:nth-child(3):hover .icn_cont {
       box-shadow: none; }
       @media (min-width: 1120px) {
         #desc_cont .front_desc:nth-child(3):hover .icn_cont {
           box-shadow: 0 4px 4px grey; } }
-    #desc_cont .front_desc:last-child:hover .icn_cont {
-      box-shadow: none; }
-      @media (min-width: 1120px) {
-        #desc_cont .front_desc:last-child:hover .icn_cont {
-          box-shadow: 4px 4px 4px grey; } }
-    #desc_cont .front_desc:first-child::before, #desc_cont .front_desc:nth-child(3)::before, #desc_cont .front_desc:last-child::before {
+    #desc_cont .front_desc:first-child::before, #desc_cont .front_desc:nth-child(2)::before, #desc_cont .front_desc:last-child::before {
       content: '';
       position: absolute;
       height: 100%;
@@ -621,29 +645,34 @@ footer {
       right: 0;
       mix-blend-mode: darken;
       z-index: -1; }
+    @media (min-width: 1120px) {
+      #desc_cont .front_desc:first-child, #desc_cont .front_desc:last-child {
+        padding: 50px 0; }
+        #desc_cont .front_desc:first-child p, #desc_cont .front_desc:last-child p {
+          font-size: 1.5rem;
+          font-weight: bold; } }
     #desc_cont .front_desc:first-child {
-      background-image: url("../imgs/trees.jpg"); }
+      background-image: url("../imgs/paint-cans.jpg");
+      border-bottom: 4px #175676 solid; }
       #desc_cont .front_desc:first-child::before {
-        content: '';
+        background-color: #076007;
+        opacity: 0.5; }
+      @media (min-width: 1120px) {
+        #desc_cont .front_desc:first-child {
+          box-shadow: 0 8px 8px grey;
+          margin: 40px 9px; } }
+    #desc_cont .front_desc:nth-child(2) {
+      background-image: url("../imgs/trees.jpg"); }
+      #desc_cont .front_desc:nth-child(2)::before {
         background-color: #9f20ff;
         opacity: 0.85; }
       @media (min-width: 1120px) {
-        #desc_cont .front_desc:first-child {
+        #desc_cont .front_desc:nth-child(2) {
           box-shadow: -8px 8px 8px grey; } }
-    #desc_cont .front_desc:nth-child(3) {
-      background-image: url("../imgs/paint-cans.jpg");
-      margin-top: -5px; }
-      #desc_cont .front_desc:nth-child(3)::before {
-        background-color: darkgreen;
-        opacity: 0.5; }
-      @media (min-width: 1120px) {
-        #desc_cont .front_desc:nth-child(3) {
-          box-shadow: 0 8px 8px grey;
-          margin: 40px 9px; } }
     #desc_cont .front_desc:last-child {
       background-image: url("../imgs/house-front.jpg");
       background-position: 50% 80%;
-      margin: -5px auto 40px; }
+      margin: 0 auto 40px; }
       #desc_cont .front_desc:last-child::before {
         background-color: #175676;
         opacity: 0.7; }
@@ -651,41 +680,21 @@ footer {
         #desc_cont .front_desc:last-child {
           box-shadow: 8px 8px 8px grey;
           margin: 40px 9px; } }
-    #desc_cont .front_desc h3 {
+    #desc_cont .front_desc p {
       padding: 0 24px;
-      font-family: "Noto Serif";
       text-align: justify;
-      font-size: 1.1rem; }
+      font-size: 1.3rem;
+      font-weight: bold; }
       @media (min-width: 540px) {
-        #desc_cont .front_desc h3 {
+        #desc_cont .front_desc p {
           padding: 30px; } }
       @media (min-width: 1120px) {
-        #desc_cont .front_desc h3 {
+        #desc_cont .front_desc p {
           padding: 16px; } }
     #desc_cont .front_desc a {
       font-family: "Fira Sans";
       text-decoration: underline;
       color: #175676; }
-  #desc_cont hr {
-    border: none;
-    border-top: dotted #104F55 10px;
-    width: 86px;
-    margin: 0 auto;
-    top: 6px; }
-    #desc_cont hr::after, #desc_cont hr::before {
-      content: '';
-      height: 2px;
-      width: calc(50vw - 85px);
-      position: absolute;
-      background-color: #104F55;
-      margin-top: -5px; }
-    #desc_cont hr::after {
-      left: 16px; }
-    #desc_cont hr::before {
-      right: 16px; }
-    @media (min-width: 1120px) {
-      #desc_cont hr {
-        display: none; } }
 
 #front_contact_cont {
   text-align: center; }
