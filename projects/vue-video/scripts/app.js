@@ -8,7 +8,6 @@ var movieLineList = {
                     title: 'When Harry Got Hairy',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -16,7 +15,6 @@ var movieLineList = {
                     title: 'Plum and Plumber',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -24,7 +22,6 @@ var movieLineList = {
                     title: "National Lampoon's Sex Raft",
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -32,7 +29,6 @@ var movieLineList = {
                     title: "Weekend at Bernie Sanders'",
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
                     tags: ['Funny', 'Adventure'],
                 }
@@ -42,7 +38,6 @@ var movieLineList = {
                     title: 'Comedy 5',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
                     tags: ['Funny'],
                 },
@@ -50,7 +45,6 @@ var movieLineList = {
                     title: 'Comedy 6',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
                     tags: ['Funny'],
                 },
@@ -58,7 +52,6 @@ var movieLineList = {
                     title: 'Comedy 7',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -66,7 +59,6 @@ var movieLineList = {
                     title: 'Comedy 8',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
                     tags: ['Funny'],
                 }
@@ -76,7 +68,6 @@ var movieLineList = {
                     title: 'Comedy 9',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
                     tags: ['Funny'],
                 },
@@ -84,7 +75,6 @@ var movieLineList = {
                     title: 'Comedy 10',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -92,7 +82,6 @@ var movieLineList = {
                     title: 'Comedy 11',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -100,7 +89,6 @@ var movieLineList = {
                     title: 'Comedy 12',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
                     tags: ['Funny'],
                 }
@@ -110,7 +98,6 @@ var movieLineList = {
                     title: 'Comedy 13',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
                     tags: ['Funny'],
                 },
@@ -118,7 +105,6 @@ var movieLineList = {
                     title: 'Comedy 14',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -126,7 +112,6 @@ var movieLineList = {
                     title: 'Comedy 15',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
                     tags: ['Funny'],
                 },
@@ -134,7 +119,6 @@ var movieLineList = {
                     title: 'Comedy 16',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
                     tags: ['Funny'],
                 }
@@ -144,7 +128,6 @@ var movieLineList = {
                     title: 'Comedy 17',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -152,7 +135,6 @@ var movieLineList = {
                     title: 'Comedy 18',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
                     tags: ['Funny'],
                 },
@@ -160,17 +142,15 @@ var movieLineList = {
                     title: 'Comedy 19',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Funny', 'Adventure'],
+                    tags: ['Funny', 'Adventure', 'Animated'],
                 },
                 {
                     title: 'Comedy 20',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Funny'],
+                    tags: ['Funny', 'Kids Stuff'],
                 }
             ],
             carouselFace6: [
@@ -178,7 +158,6 @@ var movieLineList = {
                     title: 'Comedy 21',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
                     tags: ['Funny', 'Adventure'],
                 },
@@ -186,25 +165,22 @@ var movieLineList = {
                     title: 'Comedy 22',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Funny'],
+                    tags: ['Funny', 'Scary'],
                 },
                 {
                     title: 'Comedy 23',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Funny'],
+                    tags: ['Funny', 'Kids Stuff'],
                 },
                 {
                     title: 'Comedy 24',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Funny'],
+                    tags: ['Funny', 'Scary'],
                 }
             ]
         }
@@ -218,33 +194,29 @@ var movieLineList = {
                     title: 'The Hunt for Bedrock Sober',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
-                    tags: ['Tear Jerkers', 'Dark & Twisted'],
+                    tags: ['Tearjerker', 'Dark & Twisted'],
                 },
                 {
                     title: 'The Pianist 2: Fingerblast',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
-                    tags: ['Tear Jerkers', 'Scary', 'Action'],
+                    tags: ['Tearjerker', 'Scary', 'Action'],
                 },
                 {
                     title: 'Goodwill Hunting',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
-                    tags: ['Funny', 'Soap Operas', 'Tear Jerkers'],
+                    tags: ['Funny', 'Soap Operas', 'Tearjerker'],
                 },
                 {
                     title: 'Eternal Lunch Line of the Thoughtless Mind',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
-                    tags: ['Tear Jerkers', 'Teen Dramas'],
+                    tags: ['Tearjerker', 'Teen Drama'],
                 }
             ],
             carouselFace2: [
@@ -252,33 +224,29 @@ var movieLineList = {
                     title: 'Drama 5',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker'],
                 },
                 {
                     title: 'Drama 6',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
-                    tags: ['Tear Jerkers', 'Dark & Twisted'],
+                    tags: ['Tearjerker', 'Dark & Twisted'],
                 },
                 {
                     title: 'Drama 7',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
-                    tags: ['Tear Jerkers', 'Animation', 'Kids Stuff'],
+                    tags: ['Tearjerker', 'Animated', 'Kids Stuff'],
                 },
                 {
                     title: 'Drama 8',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker'],
                 }
             ],
             carouselFace3: [
@@ -286,33 +254,29 @@ var movieLineList = {
                     title: 'Drama 9',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Teen Drama'],
                 },
                 {
                     title: 'Drama 10',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Scary'],
                 },
                 {
                     title: 'Drama 11',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Kids Stuff'],
                 },
                 {
                     title: 'Drama 12',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Scary'],
                 }
             ],
             carouselFace4: [
@@ -320,23 +284,20 @@ var movieLineList = {
                     title: 'Drama 13',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Teen Drama'],
                 },
                 {
                     title: 'Drama 14',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Robots'],
                 },
                 {
                     title: 'Drama 15',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
                     tags: ['Soap Operas', 'Robots'],
                 },
@@ -344,9 +305,8 @@ var movieLineList = {
                     title: 'Drama 16',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
-                    tags: ['Teen Dramas', 'Adventure'],
+                    tags: ['Teen Drama', 'Adventure'],
                 }
             ],
             carouselFace5: [
@@ -354,33 +314,29 @@ var movieLineList = {
                     title: 'Drama 17',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Tear Jerkers', 'Dark & Twisted'],
+                    tags: ['Tearjerker', 'Dark & Twisted'],
                 },
                 {
                     title: 'Drama 18',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Soap Operas'],
                 },
                 {
                     title: 'Drama 19',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Tear Jerkers'],
+                    tags: ['Tearjerker', 'Fantasy'],
                 },
                 {
                     title: 'Drama 20',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
-                    tags: ['Teen Dramas', 'Fantasy'],
+                    tags: ['Teen Drama', 'Fantasy'],
                 }
             ],
             carouselFace6: [
@@ -388,23 +344,20 @@ var movieLineList = {
                     title: 'Drama 21',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Tear Jerkers', 'Animation'],
+                    tags: ['Tearjerker', 'Animated'],
                 },
                 {
                     title: 'Drama 22',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Funny', 'Teen Dramas'],
+                    tags: ['Funny', 'Teen Drama'],
                 },
                 {
                     title: 'Drama 23',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
                     tags: ['Soap Operas', 'Robots'],
                 },
@@ -412,9 +365,8 @@ var movieLineList = {
                     title: 'Drama 24',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
-                    tags: ['Tear Jerkers', 'Teen Dramas'],
+                    tags: ['Tearjerker', 'Teen Drama'],
                 }
             ]
         }
@@ -428,29 +380,29 @@ var movieLineList = {
                     title: 'Lunch Drunk Pub',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Tearjerker', 'Teen Drama'],
                 },
                 {
                     title: 'Little Miss Sunset',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Tearjerker', 'Dark & Twisted'],
                 },
                 {
                     title: 'Meet, Slay, Shove',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Tearjerker', 'Soap Operas'],
                 },
                 {
                     title: 'The Juice is Loose',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Tearjerker', 'Teen Drama'],
                 }
             ],
             carouselFace2: [
@@ -458,29 +410,29 @@ var movieLineList = {
                     title: 'Dramedy 5',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Tearjerker', 'Animated'],
                 },
                 {
                     title: 'Dramedy 6',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 7',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Tearjerker', 'Kids Stuff'],
                 },
                 {
                     title: 'Dramedy 8',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Tearjerker'],
                 }
             ],
             carouselFace3: [
@@ -488,29 +440,29 @@ var movieLineList = {
                     title: 'Dramedy 9',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 10',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 11',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 12',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Tearjerker'],
                 }
             ],
             carouselFace4: [
@@ -518,29 +470,29 @@ var movieLineList = {
                     title: 'Dramedy 13',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 14',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 15',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 16',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Tearjerker'],
                 }
             ],
             carouselFace5: [
@@ -548,29 +500,29 @@ var movieLineList = {
                     title: 'Dramedy 17',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 18',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 19',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 20',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Tearjerker'],
                 }
             ],
             carouselFace6: [
@@ -578,29 +530,29 @@ var movieLineList = {
                     title: 'Dramedy 21',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 22',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 23',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Tearjerker'],
                 },
                 {
                     title: 'Dramedy 24',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Tearjerker'],
                 }
             ]
         }
@@ -614,29 +566,29 @@ var movieLineList = {
                     title: 'Fast and the Furious',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Action', 'Soap Operas'],
                 },
                 {
                     title: 'More Fast, More Furious',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Action', 'Soap Operas'],
                 },
                 {
                     title: '3 Fast, 3 Furious',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast 4: Siberian Snow Drift',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Action'],
                 }
             ],
             carouselFace2: [
@@ -644,29 +596,29 @@ var movieLineList = {
                     title: 'Fast and the Furious 5',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Teen Drama', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 6',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 7',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Fantasy', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 8',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Action'],
                 }
             ],
             carouselFace3: [
@@ -674,29 +626,29 @@ var movieLineList = {
                     title: 'Fast and the Furious 9',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 10',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 11',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 12',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Funny', 'Action'],
                 }
             ],
             carouselFace4: [
@@ -704,29 +656,29 @@ var movieLineList = {
                     title: 'Fast and the Furious 13',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 14',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 15',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 16',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Funny', 'Action'],
                 }
             ],
             carouselFace5: [
@@ -734,29 +686,29 @@ var movieLineList = {
                     title: 'Fast and the Furious 17',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Action', 'Robots'],
                 },
                 {
                     title: 'Fast and the Furious 18',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 19',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 20',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Action', 'Robots'],
                 }
             ],
             carouselFace6: [
@@ -764,29 +716,29 @@ var movieLineList = {
                     title: 'Fast and the Furious 21',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 22',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Funny', 'Action'],
                 },
                 {
                     title: 'Fast and the Furious 23',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Action', 'Funny'],
                 },
                 {
                     title: 'Fast and the Furious 24',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Robots', 'Action'],
                 }
             ]
         }
@@ -800,29 +752,29 @@ var movieLineList = {
                     title: 'Werewolf Bar Mitzvah',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Scary'],
                 },
                 {
                     title: 'An American Werewolf in North Korea',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Animated', 'Scary'],
                 },
                 {
                     title: "National Lampoon's Stab Raft",
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Dark & Twisted', 'Scary', 'Fantasy'],
                 },
                 {
                     title: 'Devil II: Evil Escalator',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 1,
+                    tags: ['Funny', 'Scary'],
                 }
             ],
             carouselFace2: [
@@ -830,29 +782,29 @@ var movieLineList = {
                     title: 'Horror Movie 5',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Animated', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 6',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Kids Stuff', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 7',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Fantasy', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 8',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 2,
+                    tags: ['Funny', 'Scary'],
                 }
             ],
             carouselFace3: [
@@ -860,29 +812,29 @@ var movieLineList = {
                     title: 'Horror Movie 9',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Scary'],
                 },
                 {
                     title: 'Horror Movie 10',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Dark Twisted', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 11',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Dark & Twisted', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 12',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 3,
+                    tags: ['Action', 'Scary'],
                 }
             ],
             carouselFace4: [
@@ -890,29 +842,29 @@ var movieLineList = {
                     title: 'Horror Movie 13',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Robots', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 14',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Fantasy', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 15',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Action', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 16',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 4,
+                    tags: ['Fantasy', 'Scary'],
                 }
             ],
             carouselFace5: [
@@ -920,29 +872,29 @@ var movieLineList = {
                     title: 'Horror Movie 17',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Kids Stuff', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 18',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Robots', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 19',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Robots', 'Scary'],
                 },
                 {
                     title: 'Horror Movie 20',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 5,
+                    tags: ['Teen Drama', 'Scary'],
                 }
             ],
             carouselFace6: [
@@ -950,29 +902,29 @@ var movieLineList = {
                     title: 'Horror Movie 21',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Scary', 'Animated'],
                 },
                 {
                     title: 'Horror Movie 22',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Scary'],
                 },
                 {
                     title: 'Horror Movie 23',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Scary'],
                 },
                 {
                     title: 'Horror Movie 24',
                     imgSrc: 'images/PH_344x215.jpg',
                     description: 'Lorem ipsum setup explosion and with romance. Guy does good with one-liners and get victory from bad forces with robot tension.',
-                    subset: 'Line Title 1',
                     carouselFace: 6,
+                    tags: ['Dark & Twisted', 'Scary'],
                 }
             ]
         }
@@ -983,10 +935,12 @@ var app = new Vue({
     el: '#app',
     data: {
         movieLines: movieLineList,
-        carouselIndex1: 0,
         popupShowing: false,
         mobileMenuShowing: true,
         favs: [],
+        favTagClicked: false,
+        clickedTag: null,
+        clickedFavMovieArray: []
     },
     mounted: function() {
         if (window.innerWidth < 628) {
@@ -995,11 +949,7 @@ var app = new Vue({
     },
     methods: {
         toggleMobileMenu: function() {
-            if (this.mobileMenuShowing) {
-                this.mobileMenuShowing = false;
-            } else {
-                this.mobileMenuShowing = true;
-            }
+            this.mobileMenuShowing = !this.mobileMenuShowing;
         },
         decrementIndex: function(index) {
             this.movieLines[index].carouselIndex--;
@@ -1025,14 +975,30 @@ var app = new Vue({
             this.popupShowing = true;
         },
         hideFavs: function() {
+            this.favTagClicked = false;
             this.popupShowing = false;
+            this.clickedFavMovieArray = [];
         },
-        addFav: function(movie) {
-            this.favs.push(movie);
+        addFav: function(favedMovie, favedMovieTags) {
+            function MovieObj(title, tags) {
+                this.title = title;
+                this.tags = tags;
+            }
+            var newMovieObj = new MovieObj(favedMovie, favedMovieTags);
+            this.favs.push(newMovieObj);
+        },
+        removeFav: function(title) {
+            this.favs = this.favs.filter(function(movieObj) {return movieObj.title !== title});
             return this.favs;
         },
-        removeFav: function(index) {
-            this.favs.splice(index, 1);
+        filterGenre: function(tag) {
+            this.favTagClicked = true;
+            this.clickedTag = tag;
+            var filteredFavs = this.favs.filter(function(movieObj) {
+                return movieObj.tags.includes(tag);
+            });
+            this.clickedFavMovieArray.push(filteredFavs);
+            this.popupShowing = true;
         }
     },
 })

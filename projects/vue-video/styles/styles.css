@@ -430,6 +430,7 @@ footer {
   background: #323232;
   border: 4px solid lightgrey;
   border-radius: 40px;
+  box-shadow: 0 0 100px 100px grey;
   color: white;
   height: 92vh;
   width: 95vw;

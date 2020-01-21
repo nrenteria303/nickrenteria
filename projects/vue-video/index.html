@@ -28,18 +28,18 @@
             </a>
             <div id="nav_drop_cont" class="nav_drop_cont_hide">
                 <div class="nav_drop" id="nav_drop_fav">
-                  <p>Scary</p>
-                  <p>Funny</p>
-                  <p>Animation</p>
-                  <p>Tearjerkers</p>
-                  <p>Kids Stuff</p>
-                  <p>Dark &amp; Twisted</p>
-                  <p>Teen Dramas</p>
-                  <p>Soap Operas</p>
-                  <p>Fantasy</p>
-                  <p>Action</p>
-                  <p>Adventure</p>
-                  <p>Robots</p>
+                  <p v-on:click="filterGenre('Scary')">Scary</p>
+                  <p v-on:click="filterGenre('Funny')">Funny</p>
+                  <p v-on:click="filterGenre('Animated')">Animated</p>
+                  <p v-on:click="filterGenre('Tearjerker')">Tearjerker</p>
+                  <p v-on:click="filterGenre('Kids Stuff')">Kids Stuff</p>
+                  <p v-on:click="filterGenre('Dark & Twisted')">Dark &amp; Twisted</p>
+                  <p v-on:click="filterGenre('Teen Drama')">Teen Drama</p>
+                  <p v-on:click="filterGenre('Soap Operas')">Soap Operas</p>
+                  <p v-on:click="filterGenre('Fantasy')">Fantasy</p>
+                  <p v-on:click="filterGenre('Action')">Action</p>
+                  <p v-on:click="filterGenre('Adventure')">Adventure</p>
+                  <p v-on:click="filterGenre('Robots')">Robots</p>
                 </div> 
               </div>
           </div>
@@ -97,14 +97,14 @@
                     <p class="movie_line_description">{{ movie.description }}</p>
                     <div class="add_remove_cont">
                       <button class="add_remove_btn"
-                              v-if="favs.indexOf(movie.title) == -1" 
-                              v-on:click="addFav(movie.title)">
+                              v-if="favs.filter(function(movieObj) {return movieObj.title === movie.title}).length === 0" 
+                              v-on:click="addFav(movie.title, movie.tags)">
                         <i class="fas fa-plus"></i> 
                         Add to Favs
                       </button>
                       <button class="add_remove_btn"
                               v-else
-                              v-on:click="removeFav(favs.indexOf(movie.title))">
+                              v-on:click="removeFav(movie.title)">
                         <i class="fas fa-minus"></i> 
                         Remove from Favs
                       </button>
@@ -125,18 +125,28 @@
             class="fas fa-times">
         </i>
         <div id="fav_popup_inner">
-          <h1>Favorites</h1>
-          <h3 v-show="favs.length == 0">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
+          <h1><span v-show="favTagClicked">{{ clickedTag }} </span>Favorites</h1>
+          <h3 v-show="favs.length == 0 && !favTagClicked">You have no movies added to your favorites. Click the button below a movie's description to add it!</h3>
+          <h3 v-show="favTagClicked && clickedFavMovieArray[0].length === 0">You have no {{ clickedTag }} movies in your favorites. Click the button below a movie's description to add it!</h3>
           <div id="fav_movie_cont">
-            <h4 v-for="fav in favs" 
+            <h4 v-for="fav in favs"
+                v-show="!favTagClicked" 
                 class="fav_movie">
-              {{ fav }}
+              {{ fav.title }}
               <i class="fas fa-play-circle" 
                 title="play">
               </i>
-              <i v-on:click="removeFav(favs.indexOf(fav))"
+              <i v-on:click="removeFav(fav.title)"
                 class="fas fa-minus-circle"
                 title="remove from favorites">
+              </i>
+            </h4>
+            <h4 v-for="filteredFav in clickedFavMovieArray[0]"
+                v-show="clickedFavMovieArray[0].length > 0" 
+                class="fav_movie">
+              {{ filteredFav.title }}
+              <i class="fas fa-play-circle" 
+                title="play">
               </i>
             </h4>
           </div>
