@@ -973,6 +973,7 @@ var app = new Vue({
         },
         showFavs: function() {
             this.popupShowing = true;
+            this.favs = getLastFavMovies();
         },
         hideFavs: function() {
             this.favTagClicked = false;
@@ -986,14 +987,17 @@ var app = new Vue({
             }
             var newMovieObj = new MovieObj(favedMovie, favedMovieTags);
             this.favs.push(newMovieObj);
+            localStorage.setItem('lastFavMovies', JSON.stringify(this.favs));
         },
         removeFav: function(title) {
             this.favs = this.favs.filter(function(movieObj) {return movieObj.title !== title});
+            localStorage.setItem('lastFavMovies', JSON.stringify(this.favs));
             return this.favs;
         },
         filterGenre: function(tag) {
             this.favTagClicked = true;
             this.clickedTag = tag;
+            this.favs = getLastFavMovies();
             var filteredFavs = this.favs.filter(function(movieObj) {
                 return movieObj.tags.includes(tag);
             });
@@ -1002,3 +1006,16 @@ var app = new Vue({
         }
     },
 })
+
+function getLastFavMovies() {
+    var favMovies = localStorage.getItem('lastFavMovies');
+     if (favMovies) {
+        let newFavMovieArray = JSON.parse(favMovies);
+        return newFavMovieArray;
+    } else {
+        return [];
+    }
+}
+
+
+
