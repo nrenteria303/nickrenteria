@@ -403,7 +403,7 @@ footer {
       border: none; } }
 
 #home_img-1 {
-  background-image: url(../imgs/home_project_1_md.jpg);
+  background-image: url(../imgs/home-planter-md.jpg);
   background-size: cover;
   background-position: 40% 0; }
 
@@ -414,6 +414,11 @@ footer {
   @media (min-width: 850px) {
     #home_img-2 {
       order: 2; } }
+
+#home_img-3 {
+  background-image: url(../imgs/candle-holder-md.jpg);
+  background-size: cover;
+  background-position: 40% 0; }
 
 #about_main {
   margin: 0 auto;
@@ -462,10 +467,24 @@ footer {
       #about_quote q {
         font-size: 1.85rem; } }
 
+#about-window-img {
+  width: 100vw;
+  height: 260px;
+  background-image: url("../imgs/about-room-showcase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  border-top: 4px solid #3F0227;
+  border-bottom: 4px solid #3F0227; }
+  @media (min-width: 1020px) {
+    #about-window-img {
+      height: 350px; } }
+
 #about_story {
   padding: 0 16px;
   max-width: 700px;
-  margin: 0 auto; }
+  margin: 0 auto 80px; }
   #about_story h2 {
     font-size: 2.4rem; }
     @media (min-width: 850px) {
@@ -492,12 +511,15 @@ footer {
         margin-top: 0; } }
 
 #gallery_slideshow {
-  border-top: 4px solid #3F0227;
-  border-bottom: 4px solid #3F0227; }
+  border-top: 4px solid #3F0227; }
   #gallery_slideshow img {
     width: 100vw;
     margin: 0px auto;
-    display: block; }
+    display: block;
+    border-bottom: 4px solid #3F0227; }
+    @media (min-width: 850px) {
+      #gallery_slideshow img {
+        border-bottom: none; } }
   @media (min-width: 850px) {
     #gallery_slideshow {
       display: flex;
