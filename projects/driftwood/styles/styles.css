@@ -417,8 +417,8 @@ footer {
 
 #home_img-3 {
   background-image: url(../imgs/candle-holder-md.jpg);
-  background-size: cover;
-  background-position: 40% 0; }
+  background-size: cover 100%;
+  background-position: 25% 60%; }
 
 #about_main {
   margin: 0 auto;
@@ -440,7 +440,7 @@ footer {
     max-width: 860px;
     margin: 0 auto;
     display: block;
-    box-shadow: 0 2px 14px black; }
+    box-shadow: 0 2px 16px black; }
     @media (min-width: 850px) {
       #about_main img {
         border: inset 5px #f9faff;
@@ -475,11 +475,11 @@ footer {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  border-top: 4px solid #3F0227;
-  border-bottom: 4px solid #3F0227; }
+  box-shadow: 0 2px 16px black; }
   @media (min-width: 1020px) {
     #about-window-img {
-      height: 350px; } }
+      height: 350px;
+      box-shadow: 0 0 16px black inset; } }
 
 #about_story {
   padding: 0 16px;

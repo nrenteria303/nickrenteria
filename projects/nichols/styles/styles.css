@@ -565,7 +565,7 @@ footer {
   #sub-heading-cont #sub-heading {
     font-size: 2.3rem; }
   #sub-heading-cont #sub-heading-text {
-    text-align: justify; }
+    text-align: left; }
   @media (min-width: 980px) {
     #sub-heading-cont {
       display: flex;
@@ -576,8 +576,7 @@ footer {
         text-align: right; }
       #sub-heading-cont #sub-heading-text {
         width: 60%;
-        max-width: 800px;
-        text-align: left; } }
+        max-width: 800px; } }
 
 #desc_cont {
   color: #104F55;
@@ -689,7 +688,7 @@ footer {
           box-shadow: 8px 8px 8px grey;
           margin: 40px 0px; } }
     #desc_cont .front_desc p {
-      text-align: justify;
+      text-align: left;
       font-size: 1.3rem;
       font-weight: bold; }
       @media (min-width: 540px) {
