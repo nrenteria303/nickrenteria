@@ -532,10 +532,10 @@ nav {
       #js_pg .proj-tile-front h2 {
         font-size: 2rem; } }
   #js_pg .proj-tile-front p {
-    font-size: 1.1rem; }
+    font-size: 1rem; }
     @media (min-width: 875px) {
       #js_pg .proj-tile-front p {
-        font-size: 1.5rem; } }
+        font-size: 1.3rem; } }
 
 #js_pg .proj-tile-back {
   height: 100%;
