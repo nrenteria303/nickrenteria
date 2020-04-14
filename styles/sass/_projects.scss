@@ -94,6 +94,21 @@
 
 .proj-tile-front {
     transition: .5s ease-out transform; 
+
+    .demo-text {
+        position: absolute;
+        top: 10%;
+        font-size: 3rem;
+        font-family: sans-serif;
+        color: red;
+        opacity: 0.7;
+        z-index: 10;
+        transform: rotate(-20deg);
+
+        @media (min-width: $break-md) {
+            font-size: 4rem;
+        }
+    }
 }
 
 .proj-tile-back {    
