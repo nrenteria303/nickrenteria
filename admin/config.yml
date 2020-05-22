@@ -14,9 +14,105 @@ collections:
         create: true
         fields:
           - label: "About paragraphs"
-            name: "about-paragraphs"
+            name: "aboutParagraphs"
             widget: "list"
             fields:
               - {label: "P Number", name: "p-number", widget: "string"}
               - {label: "P Text", name: "p-text", widget: "text"}
+      - label: "Resume"
+        name: "resume"
+        file: "_posts/resume/resume.json"
+        format: "json"
+        create: true
+        fields:
+          - label: "Coding Stuff"
+            name: "codingStuff"
+            widget: "list"
+            fields:
+              - label: "Coding List Items"
+                name: "codingLis"
+                fields: 
+                  - {
+                    label: "List Item Content",
+                    name: "liContent",
+                    widget: "string"
+                  }
+                  - {
+                    label: "Is it a parent?",
+                    name: "isParent",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Is it a child?",
+                    name: "isChild",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Parent List Item",
+                    name: "parentLi",
+                    widget: "string",
+                    default: NULL
+                  }
+          - label: "Professional Specialties"
+            name: "proSpecs"
+            widget: "list"
+            fields:
+              - label: "Professional Items"
+                name: "proLis"
+                fields: 
+                  - {
+                    label: "List Item Content",
+                    name: "liContent",
+                    widget: "string"
+                  }
+                  - {
+                    label: "Is it a parent?",
+                    name: "isParent",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Is it a child?",
+                    name: "isChild",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Parent List Item",
+                    name: "parentLi",
+                    widget: "string",
+                    default: NULL
+                  }
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - label: "Education List Items"
+                name: "educationLis"
+                fields: 
+                  - {
+                    label: "List Item Content",
+                    name: "liContent",
+                    widget: "string"
+                  }
+                  - {
+                    label: "Is it a parent?",
+                    name: "isParent",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Is it a child?",
+                    name: "isChild",
+                    widget: "boolean",
+                    default: false
+                  }
+                  - {
+                    label: "Parent List Item",
+                    name: "parentLi",
+                    widget: "string",
+                    default: NULL
+                  }
       
