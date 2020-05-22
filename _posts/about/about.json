@@ -1,7 +1,19 @@
 {
-    "aboutPs": [
-        {
-            
-        }
-    ]
+  "aboutPs": [
+    {}
+  ],
+  "about-paragraphs": [
+    {
+      "p-number": "1",
+      "p-text": "Ever since grade school, I've been a big math nerd. It's always been my best subject academically speaking, and I've always had a passion for training my brain logically to solve problems, whether in a puzzle or a classroom."
+    },
+    {
+      "p-number": "2",
+      "p-text": "In college I focused on English and mathematics, and graduated with a BA in 2014. After that I worked in public education and private business, predominantly in renewable energy technology. Several of these positions led me to content-creation roles writing copy, editing website content, designing email campaigns, and authoring guest blogs and press releases. From there I began learning the behind-the-scenes technologies that made this work possible."
+    },
+    {
+      "p-number": "3",
+      "p-text": "After six months working under a veteran Web Developer mentor learning everything I could, and years implementing web development best practices, I'm ready to apply my knowledge and expertise to your next project or website. Take a look at my projects below to see what I can do for you, or my CodePen profile to see one-off design concepts and ideas."
+    }
+  ]
 }
