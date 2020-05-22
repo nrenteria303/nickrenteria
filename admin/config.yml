@@ -3,14 +3,17 @@ backend:
   branch: master
 media_folder: "imgs/uploads"
 collections: 
-  - label: "About Section"
-    name: "about"
-    file: "_posts/about/about.json"
-    format: "json"
-    description: "The paragraphs in the 'About Me' section of the site"
-    create: true
-    fields:
-      - label: "About Info"
-        name: "about info"
-        widget: "text"
+  - name: "Content"
+    label: "Site Content"
+    files:
+      - label: "About Section"
+        name: "about"
+        file: "_posts/about/about.json"
+        format: "json"
+        description: "The paragraphs in the 'About Me' section of the site"
+        create: true
+        fields:
+          - label: "About Info"
+            name: "about info"
+            widget: "text"
       
