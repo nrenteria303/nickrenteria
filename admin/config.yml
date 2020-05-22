@@ -6,14 +6,17 @@ collections:
   - name: "Content"
     label: "Site Content"
     files:
-      - label: "About Section"
+      - label: "About Info"
         name: "about"
         file: "_posts/about/about.json"
         format: "json"
         description: "The paragraphs in the 'About Me' section of the site"
         create: true
         fields:
-          - label: "About Info"
-            name: "about info"
-            widget: "text"
+          - label: "About paragraphs"
+            name: "about-paragraphs"
+            widget: "list"
+            fields:
+              - {label: "P Number", name: "p-number", widget: "string"}
+              - {label: "P Text", name: "p-text", widget: "text"}
       
