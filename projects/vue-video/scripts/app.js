@@ -1005,7 +1005,7 @@ var app = new Vue({
             this.popupShowing = true;
         }
     },
-})
+});
 
 function getLastFavMovies() {
     var favMovies = localStorage.getItem('lastFavMovies');
