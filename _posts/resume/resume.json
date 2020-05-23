@@ -21,6 +21,47 @@
       "isChild": true,
       "liContent": "responsive/mobile-first design",
       "parentLi": "CSS3"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "liContent": "Bootstrap",
+      "parentLi": "CSS3"
+    },
+    {
+      "isParent": true,
+      "isChild": false,
+      "liContent": "ES6/JavaScript"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "parentLi": "ES6/JavaScript",
+      "liContent": "vanilla"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "liContent": "jQuery",
+      "parentLi": "ES6/JavaScript"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "liContent": "AJAX",
+      "parentLi": "ES6/JavaScript"
+    },
+    {
+      "isParent": true,
+      "isChild": true,
+      "liContent": "Vue.js",
+      "parentLi": "ES6/JavaScript"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "parentLi": "Vue.js",
+      "liContent": "Vue CLI"
     }
   ]
 }
