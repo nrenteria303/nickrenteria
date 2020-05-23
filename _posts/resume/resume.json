@@ -4,6 +4,23 @@
       "isParent": false,
       "isChild": false,
       "liContent": "HTML5"
+    },
+    {
+      "isParent": true,
+      "isChild": false,
+      "liContent": "CSS3"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "liContent": "Sass/SCSS",
+      "parentLi": "CSS3"
+    },
+    {
+      "isParent": false,
+      "isChild": true,
+      "liContent": "responsive/mobile-first design",
+      "parentLi": "CSS3"
     }
   ]
 }
