@@ -29,90 +29,81 @@ collections:
             name: "codingStuff"
             widget: "list"
             fields:
-              - label: "Coding List Items"
-                name: "codingLis"
-                fields: 
-                  - {
-                    label: "List Item Content",
-                    name: "liContent",
-                    widget: "string"
-                  }
-                  - {
-                    label: "Is it a parent?",
-                    name: "isParent",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Is it a child?",
-                    name: "isChild",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Parent List Item",
-                    name: "parentLi",
-                    widget: "string",
-                    default: NULL
-                  }
+              - {
+                label: "List Item Content",
+                name: "liContent",
+                widget: "string"
+              }
+              - {
+                label: "Is it a parent?",
+                name: "isParent",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Is it a child?",
+                name: "isChild",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Parent List Item",
+                name: "parentLi",
+                widget: "string",
+                default: NULL
+              }
           - label: "Professional Specialties"
             name: "proSpecs"
             widget: "list"
             fields:
-              - label: "Professional Items"
-                name: "proLis"
-                fields: 
-                  - {
-                    label: "List Item Content",
-                    name: "liContent",
-                    widget: "string"
-                  }
-                  - {
-                    label: "Is it a parent?",
-                    name: "isParent",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Is it a child?",
-                    name: "isChild",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Parent List Item",
-                    name: "parentLi",
-                    widget: "string",
-                    default: NULL
-                  }
+              - {
+                label: "List Item Content",
+                name: "liContent",
+                widget: "string"
+              }
+              - {
+                label: "Is it a parent?",
+                name: "isParent",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Is it a child?",
+                name: "isChild",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Parent List Item",
+                name: "parentLi",
+                widget: "string",
+                default: NULL
+              }
           - label: "Education"
             name: "education"
             widget: "list"
             fields:
-              - label: "Education List Items"
-                name: "educationLis"
-                fields: 
-                  - {
-                    label: "List Item Content",
-                    name: "liContent",
-                    widget: "string"
-                  }
-                  - {
-                    label: "Is it a parent?",
-                    name: "isParent",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Is it a child?",
-                    name: "isChild",
-                    widget: "boolean",
-                    default: false
-                  }
-                  - {
-                    label: "Parent List Item",
-                    name: "parentLi",
-                    widget: "string",
-                    default: NULL
-                  }
+              - {
+                label: "List Item Content",
+                name: "liContent",
+                widget: "string"
+              }
+              - {
+                label: "Is it a parent?",
+                name: "isParent",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Is it a child?",
+                name: "isChild",
+                widget: "boolean",
+                default: false
+              }
+              - {
+                label: "Parent List Item",
+                name: "parentLi",
+                widget: "string",
+                default: NULL
+              }
       
