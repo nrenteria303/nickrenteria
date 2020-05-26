@@ -37,15 +37,16 @@
           <h2 v-cloak v-show="sortTagClicked" id="click_for_info">[ click an image for more info ]</h2>
 
           <div v-cloak v-for="character in characters" v-show="character.subset == sortSubset" class="character_cont" :id="character.contId">
-            <div id="img_links_cont">
-              <img @click="character.bioRevealed = true" class="character_img" :id="character.imageId" :src="character.images[character.imageIndex]" :alt="character.altText[character.imageIndex]" :title="character.altText[character.imageIndex]">
-              <div v-show="character.bioRevealed" class="evolution_link_cont">
-                <a class="evolution_link" v-show="character.images[character.imageIndex - 1]" @click.prevent="decreaseImageIndex(character)" href="#">&#8656; Previous Phase</a>
-                <a class="evolution_link" v-show="character.images[character.imageIndex + 1]" @click.prevent="increaseImageIndex(character)" href="#">Next Phase &#8658;</a>
+            <transition-group name="bio-fade">
+              <div id="img_links_cont" key="char-img">
+                <img @click="character.bioRevealed = true" class="character_img" :id="character.imageId" :src="character.images[character.imageIndex]" :alt="character.altText[character.imageIndex]" :title="character.altText[character.imageIndex]">
+                <div v-show="character.bioRevealed" class="evolution_link_cont">
+                  <a class="evolution_link" v-show="character.images[character.imageIndex - 1]" @click.prevent="decreaseImageIndex(character)" href="#">&#8656; Previous Phase</a>
+                  <a class="evolution_link" v-show="character.images[character.imageIndex + 1]" @click.prevent="increaseImageIndex(character)" href="#">Next Phase &#8658;</a>
+                </div>
               </div>
-            </div>
-            <transition name="bio-fade">
-              <div v-show="character.bioRevealed" class="character_bio">
+
+              <div v-if="character.bioRevealed" class="character_bio" key="img-bio">
                 <div class="character_top_line">
                   <h3 class="character_name">{{character.name}}</h3>
                   <div v-if="character.spoiler" class="spoiler_box">
@@ -57,7 +58,7 @@
                 </div>
                 <p class="character_desc">{{character.description}}</p>
               </div>
-            </transition>
+            </transition-group>
           </div>
           <div v-show="!sortTagClicked" id="character_preview_cont">
             <h1 id="character_preview_ob">[</h1>

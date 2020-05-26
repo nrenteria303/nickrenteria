@@ -397,13 +397,25 @@ h2 {
     text-align: center;
 }
 
+.character_cont span {
+    display: flex;
+}
 
 .bio-fade-enter-active {
     transition: all .4s ease-in;
+    transition-delay: 0.4s;
+}
+
+.bio-fade-enter-to {
+    opacity: 1;
 }
 
 .bio-fade-enter {
     opacity: 0;
+}
+
+.bio-fade-move {
+    transition: transform 0.4s;
 }
 
 [v-cloak] {
