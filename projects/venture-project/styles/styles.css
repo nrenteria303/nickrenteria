@@ -277,7 +277,7 @@ h2 {
 
 .character_cont {
     box-sizing: border-box;
-    width: 900px;  
+    max-width: 900px;  
     margin: 0 auto;
     display: flex; 
     justify-content: space-around;
@@ -789,6 +789,10 @@ footer p {
     #as_swim {
         display: none;
     }
+
+    .character_cont span {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 864px ) {
@@ -917,6 +921,7 @@ footer p {
     
     #character_preview_cont {  
         max-width: 340px;
+        width: 324px;
         max-height: 460px;
         margin: 0 auto;
     }
@@ -1018,8 +1023,9 @@ footer p {
     #sort_groups_text {
         font-size: 1.22rem;
     }
+
     #character_preview_cont {
-        width: 87%;
+        width: 258px;
     }
     
     #character_preview_text_1 {
