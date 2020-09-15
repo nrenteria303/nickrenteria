@@ -131,6 +131,7 @@
     
     a {
         color: $color-blue;
+        text-decoration: none;
         text-align: center;
         &:hover {
             color: $color-green;
@@ -172,14 +173,6 @@
         margin: auto auto;
         padding: 24px;
         align-items: center;
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
     }
 }
 

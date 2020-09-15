@@ -312,6 +312,12 @@ nav {
     font-size: 4rem;
     font-family: 'Times New Roman', Times, serif; }
 
+.fill a {
+  color: #0077b5;
+  text-decoration: none; }
+  .fill a:hover {
+    color: #12d400; }
+
 .fill img {
   height: 260px;
   border: 4px solid #0077b5;
@@ -385,7 +391,6 @@ nav {
         color: #0077b5;
         text-decoration: none; }
         #resume-fill ul li a:hover {
-          text-decoration: underline;
           color: #12d400; }
     #resume-fill ul li:nth-child(2n)::before {
       content: "►";
@@ -528,6 +533,7 @@ nav {
       padding: 6px 8px; } }
   .proj-tile-back a {
     color: #0077b5;
+    text-decoration: none;
     text-align: center; }
     .proj-tile-back a:hover {
       color: #12d400; }
@@ -558,10 +564,6 @@ nav {
   margin: auto auto;
   padding: 24px;
   align-items: center; }
-  #js_pg .proj-tile-back a {
-    text-decoration: none; }
-    #js_pg .proj-tile-back a:hover {
-      text-decoration: underline; }
 
 .coming-soon {
   text-align: center;
