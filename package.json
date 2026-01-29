@@ -1,19 +1,19 @@
 {
-  "name": "test_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nickrenteria-portfolio",
+  "version": "2.0.0",
+  "description": "Nick Renteria's Portfolio Website",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass styles/sass/styles.scss styles/styles.css --watch",
+    "sass:build": "sass styles/sass/styles.scss styles/styles.css --style=compressed"
   },
-  "author": "",
+  "author": "Nick Renteria",
   "license": "ISC",
-  "dependencies": {
-    "netlify-cms": "^2.10.49"
-  },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.0"
+    "sass": "^1.82.0",
+    "vite": "^6.0.5"
   }
 }
