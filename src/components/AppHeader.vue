@@ -26,7 +26,7 @@ import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = [
   { to: '/about',    label: 'About'    },
-  { to: '/resume',   label: 'Resume'   },
+  { to: '/resume',   label: 'Résumé'   },
   { to: '/projects', label: 'Projects' },
   { to: '/contact',  label: 'Contact'  }
 ]
