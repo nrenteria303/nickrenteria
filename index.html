@@ -1,145 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/nr_icn.ico">
-    <title>Nick Renteria - Work in Progress</title>
-    <meta name="description" content="Nick Renteria's portfolio website is currently undergoing a major update. Download my latest resume to learn more about my work.">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: linear-gradient(135deg, #293d94 0%, #461d70 100%);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        color: #fff;
-      }
-
-      .container {
-        max-width: 600px;
-        text-align: center;
-        animation: fadeIn 0.8s ease-in;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .icon {
-        width: 120px;
-				height: 120px;
-        margin-bottom: 30px;
-        animation: pulse 2s ease-in-out infinite;
-				margin-inline: auto;
-      }
-
-			.icon svg {
-				width: 100%;
-				height: 100%;
-			}
-
-      @keyframes pulse {
-        0%, 100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.15);
-        }
-      }
-
-      h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        letter-spacing: -1px;
-      }
-
-      p {
-        font-size: 1.25rem;
-        line-height: 1.6;
-        margin-bottom: 40px;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background: #fff;
-        color: #461d70;
-        padding: 16px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        background: #f8f9fa;
-      }
-
-      .cta-button:active {
-        transform: translateY(0);
-      }
-
-      .footer {
-        margin-top: 60px;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 640px) {
-        h1 {
-          font-size: 2rem;
-        }
-        
-        p {
-          font-size: 1.1rem;
-        }
-
-        .icon {
-          font-size: 60px;
-        }
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/nr_icn.ico" />
+    <title>Nick Renteria — Frontend Architect &amp; UX/UI Engineer</title>
+    <meta name="description" content="Nick Renteria is a Frontend Architect and UX/UI Engineer specializing in Vue.js, accessibility-first development, and large-scale web platforms." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  
   <body>
-    <div class="container">
-      <div class="icon">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="120" width="120">
-					<g id="construction">
-						<path id="Union" fill="#ffffff" d="M18.8301 1.50977c0.7648 0.0455 1.4892 0.24783 2.1396 0.57519 0.2865 0.14429 0.4871 0.41769 0.5381 0.73438 0.051 0.31679 -0.0535 0.63925 -0.2803 0.86621l-2.3144 2.31347 0.5859 0.58594 2.3145 -2.31348 0.0888 -0.0791c0.2179 -0.1713 0.4992 -0.24559 0.7764 -0.20117 0.3168 0.05096 0.591 0.25057 0.7354 0.53711C23.7886 5.27181 24 6.11229 24 7l-0.0068 0.2832c-0.1427 2.8121 -2.3979 5.0672 -5.21 5.21L18.5 12.5c-0.4853 0 -0.9559 -0.065 -1.4043 -0.1836l-1.1826 1.1826 4.2939 4.294c1.0805 1.0808 1.0807 2.8333 0 3.914 -1.0807 1.0808 -2.8331 1.0806 -3.914 0l-4.294 -4.2939 -4.29197 4.2939c-1.01316 1.0129 -2.61697 1.0769 -3.7041 0.1905l-0.20996 -0.1905c-1.0805 -1.0808 -1.0805 -2.8332 0 -3.914l4.29199 -4.294L6.75 12.1641l-0.33594 0.3359c-0.78091 0.7808 -2.04706 0.7806 -2.82812 0L1 9.91406C0.219052 9.13303 0.219052 7.86697 1 7.08594L5.58594 2.5c0.78104 -0.78083 2.04713 -0.78091 2.82812 0L11 5.08594c0.7806 0.78102 0.7807 2.0472 0 2.82812l-0.3359 0.33594 1.3349 1.33496 1.1836 -1.18359C13.0646 7.95352 13 7.484 13 7c0 -3.03756 2.4624 -5.49999 5.5 -5.5zM13.4131 15.999l4.2939 4.294c0.2999 0.2995 0.7862 0.2997 1.086 0 0.2996 -0.2998 0.2994 -0.7861 0 -1.086l-4.294 -4.2939zM18.5 3.5C16.567 3.50001 15 5.06701 15 7l0.0039 0.17188c0.0193 0.39872 0.1058 0.77882 0.2471 1.13085 0.1492 0.37159 0.0624 0.79689 -0.2207 1.08008L5.20703 19.207c-0.29959 0.2998 -0.29959 0.7862 0 1.086l0.05859 0.0527c0.3014 0.2455 0.74623 0.2282 1.02735 -0.0527l9.82323 -9.8242 0.1123 -0.0967c0.2762 -0.2045 0.6425 -0.2548 0.9678 -0.1241 0.4031 0.162 0.8424 0.252 1.3037 0.252l0.1797 -0.0049C20.5291 10.4015 22 8.87265 22 7l-0.0029 -0.08496 -1.7901 1.79199c-0.1874 0.18746 -0.4419 0.29289 -0.707 0.29297 -0.2652 0 -0.5195 -0.1055 -0.707 -0.29297l-2 -2c-0.3905 -0.39048 -0.3904 -1.02352 0 -1.41406l1.79 -1.79102zM8.16406 10.75l1.33496 1.335 1.08598 -1.086L9.25 9.66406zm-5.75 -2.25L5 11.0859 9.58594 6.5 7 3.91406z" stroke-width="1"></path>
-					</g>
-				</svg>
-			</div>
-      <h1>Work in Progress</h1>
-      <p>
-        This website is currently undergoing a major update. 
-        In the meantime, you can download my latest résumé to learn more about my work and experience.
-      </p>
-      <a href="files/Nick_Renteria_Resume.pdf" class="cta-button" download>Download My Résumé</a>
-      <div class="footer">
-        <p>Thank you for your patience!</p>
-      </div>
-    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
-
 </html>

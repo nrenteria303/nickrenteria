@@ -1,0 +1,63 @@
+// ─────────────────────────────────────────────
+// CSS Custom Properties (theme-aware)
+// ─────────────────────────────────────────────
+
+:root {
+  // Font families
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  // Layout
+  --max-width: 1200px;
+  --header-height: 68px;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  // Spacing
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  // ── Dark theme (default) ──────────────────
+  --color-bg-primary:       #0d0d1e;
+  --color-bg-secondary:     #161628;
+  --color-bg-card:          #1e1e38;
+  --color-text-primary:     #eeeef5;
+  --color-text-secondary:   #9898b8;
+  --color-accent-purple:    #8b5cf6;
+  --color-accent-green:     #10b981;
+  --color-accent-purple-dim: rgba(139, 92, 246, 0.12);
+  --color-accent-green-dim:  rgba(16, 185, 129, 0.12);
+  --color-border:           rgba(139, 92, 246, 0.18);
+  --color-border-subtle:    rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='light'] {
+  --color-bg-primary:       #f5f5fb;
+  --color-bg-secondary:     #ebebf5;
+  --color-bg-card:          #ffffff;
+  --color-text-primary:     #1a1a35;
+  --color-text-secondary:   #50507a;
+  --color-accent-purple:    #6d28d9;
+  --color-accent-green:     #059669;
+  --color-accent-purple-dim: rgba(109, 40, 217, 0.08);
+  --color-accent-green-dim:  rgba(5, 150, 105, 0.08);
+  --color-border:           rgba(109, 40, 217, 0.18);
+  --color-border-subtle:    rgba(0, 0, 0, 0.07);
+}
+
+// ─────────────────────────────────────────────
+// SCSS variables (compile-time only)
+// ─────────────────────────────────────────────
+
+$bp-sm:  640px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
