@@ -192,32 +192,7 @@
 </template>
 
 <script setup>
-const skillGroups = [
-  {
-    category: 'Frontend',
-    items: ['HTML', 'Pug', 'CSS', 'Sass / SCSS', 'Tailwind', 'Vanilla JS', 'React JS', 'Vue JS', 'Vuex', 'Pinia']
-  },
-  {
-    category: 'Build & Tooling',
-    items: ['Node.js', 'npm', 'Yarn', 'Vite', 'Git', 'CI Pipelines']
-  },
-  {
-    category: 'Accessibility',
-    items: ['WCAG 2.x', 'WAI-ARIA', 'Semantic HTML', 'Accessible Components']
-  },
-  {
-    category: 'CMS & Backend',
-    items: ['ASP.NET Core', 'Kentico 13', 'Kentico Xperience', 'Xperience by Kentico', 'C#', 'CSHTML', 'MVC', 'API Controllers']
-  },
-  {
-    category: 'Collaboration',
-    items: ['UX-to-Dev Translation', 'Client Technical Coordination', 'Solution Architecture Alignment']
-  },
-  {
-    category: 'AI & Productivity',
-    items: ['GitHub Copilot', 'AI Coding Agents', 'Workflow Automation']
-  }
-]
+import { SKILL_GROUPS_RESUME as skillGroups, CLIENTS as bluemodusClients } from '../data/site.js'
 
 const bluemodusBullets = [
   'Architected and built the complete frontend for six distinct Texas Association of School Boards websites, delivering consistent UX patterns across multiple properties',
@@ -232,28 +207,6 @@ const bluemodusBullets = [
   'Leveraged AI-assisted development tools (GitHub Copilot, coding agents) to accelerate implementation and reduce repetitive engineering effort'
 ]
 
-const bluemodusClients = [
-  'Ball Corporation',
-  'Texas Association of School Boards',
-  'Options Clearing Corporation',
-  'UC San Diego',
-  'AMGA',
-  'MGMA',
-  'Patterson Companies',
-  'PEMCO Mutual Insurance',
-  'Retail Industry Leaders Assoc.',
-  'Lytx',
-  'United Community Bank',
-  'Advancial Credit Union',
-  'Truliant Federal Credit Union',
-  'Excite Credit Union',
-  'Blue Rhino Propane',
-  'Ferrellgas',
-  'Roehl Transportation',
-  'Sullair / Hitachi',
-  'Mainfreight',
-  'CaroTrans'
-]
 </script>
 
 <style lang="scss" scoped>

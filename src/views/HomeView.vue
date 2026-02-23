@@ -42,15 +42,9 @@
 import { ref, onMounted } from 'vue'
 import headshot   from '@images/headshot-2.jpg'
 import atlSkyline from '@images/atlskyline.jpg'
+import { NAV_LINKS as navLinks } from '../data/site.js'
 
 const isVisible = ref(false)
-
-const navLinks = [
-  { to: '/about',    label: 'About'    },
-  { to: '/resume',   label: 'Résumé'   },
-  { to: '/projects', label: 'Projects' },
-  { to: '/contact',  label: 'Contact'  }
-]
 
 onMounted(() => {
   // small delay ensures CSS transitions fire after first paint

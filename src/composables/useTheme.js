@@ -1,11 +1,12 @@
-import { ref, watchEffect } from 'vue'
+import { ref, watch } from 'vue'
 
 // Module-level singleton so all components share the same state
 const theme = ref(
   (() => {
     try {
-      return localStorage.getItem('nr-theme') || 'dark'
+      return localStorage.getItem('nr-portfolio-theme') || 'dark'
     } catch {
+			console.warn('localStorage unavailable, defaulting to dark theme')
       return 'dark'
     }
   })()
@@ -16,14 +17,15 @@ export function useTheme() {
     theme.value = theme.value === 'dark' ? 'light' : 'dark'
   }
 
-  watchEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme.value)
+  watch(theme, (newTheme) => {
+    document.documentElement.setAttribute('data-theme', newTheme)
     try {
-      localStorage.setItem('nr-theme', theme.value)
+      localStorage.setItem('nr-portfolio-theme', newTheme)
     } catch {
       // ignore if localStorage unavailable
+			console.warn('localStorage unavailable, cannot persist theme preference')
     }
-  })
+  }, { immediate: true })
 
   return { theme, toggleTheme }
 }

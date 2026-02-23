@@ -137,43 +137,7 @@
 
 <script setup>
 import headshot from '@images/headshot-2.jpg'
-
-const skillGroups = [
-  {
-    category: 'Frontend',
-    items: ['Vue.js / Vuex / Pinia', 'HTML5 / Pug', 'CSS3 / Sass / Tailwind', 'JavaScript ES6+', 'React JS']
-  },
-  {
-    category: 'Build & Tooling',
-    items: ['Vite', 'Node.js / npm / Yarn', 'Git', 'CI Pipelines', 'GitHub Copilot / AI tooling']
-  },
-  {
-    category: 'Accessibility',
-    items: ['WCAG 2.x compliance', 'WAI-ARIA patterns', 'Semantic HTML', 'Lighthouse / WAVE audits']
-  },
-  {
-    category: 'CMS & Backend',
-    items: ['Kentico / Xperience by Kentico', 'ASP.NET Core', 'C# / CSHTML', 'MVC / API Controllers']
-  }
-]
-
-const clients = [
-  'Ball Corporation',
-  'Texas Association of School Boards',
-  'Options Clearing Corporation',
-  'UC San Diego (UCSD)',
-  'American Medical Group Association',
-  'Patterson Companies',
-  'PEMCO Mutual Insurance',
-  'Retail Industry Leaders Association',
-  'United Community Bank',
-  'Advancial Credit Union',
-  'Truliant Federal Credit Union',
-  'CaroTrans / Mainfreight',
-  'Blue Rhino Propane / Ferrellgas',
-  'Roehl Transportation',
-  'Lytx'
-]
+import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/site.js'
 </script>
 
 <style lang="scss" scoped>

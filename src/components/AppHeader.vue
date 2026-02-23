@@ -23,13 +23,7 @@
 
 <script setup>
 import ThemeToggle from './ThemeToggle.vue'
-
-const navLinks = [
-  { to: '/about',    label: 'About'    },
-  { to: '/resume',   label: 'Résumé'   },
-  { to: '/projects', label: 'Projects' },
-  { to: '/contact',  label: 'Contact'  }
-]
+import { NAV_LINKS as navLinks } from '../data/site.js'
 </script>
 
 <style lang="scss" scoped>
