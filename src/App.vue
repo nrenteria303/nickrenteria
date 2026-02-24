@@ -31,7 +31,7 @@ const isHome = computed(() => route.path === '/')
 .app {
   min-height: 100vh;
 }
-#app .btn {
+:where(#app) .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -54,7 +54,7 @@ const isHome = computed(() => route.path === '/')
 		flex-shrink: 0;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     opacity: 0.88;
     transform: translateY(-1px);
     color: #ffffff;
