@@ -38,7 +38,25 @@ import pongGameplay    from '@images/ping-pong-game-screenshot.png'
 import realestMain     from '@images/realestate-app-main-screen.jpg'
 import realestModal    from '@images/realestate-app-modal.png'
 
+import ctBooking    from '@images/carotrans/ct_project_booking-app-page.png'
+import ctAgents     from '@images/carotrans/ct_project_agents-corner.jpg'
+import ctDock       from '@images/carotrans/ct_project_dock-receipt-portal.jpg'
+import ctSailSched  from '@images/carotrans/ct_project_select-sail-sched.jpg'
+
 const projects = [
+  {
+    id:          'carotrans',
+    title:       'CaroTrans — Shipping Center',
+    type:        'internal',
+    tech:        ['Vue 3', 'Vuex', 'Pinia', 'vue-router', 'Webpack', 'Kentico CMS'],
+    description: 'A production authenticated shipping center built as a suite of ~15 Vue micro-apps embedded into a Kentico/Pug CMS. Each app handles a distinct workflow — bookings, rating & quotes, sailing schedules, dock receipts, and agent operations — unified by shared axios interceptors, Vuex stores, and a cross-bundle session token model.',
+    images: [
+      { src: ctBooking,   alt: 'CaroTrans booking app — multi-step container booking workflow'        },
+      { src: ctAgents,    alt: 'Agents Corner — URL-driven portal with vue-router navigation'         },
+      { src: ctDock,      alt: 'Dock Receipt Portal — form-heavy operational workflow'                },
+      { src: ctSailSched, alt: 'Sailing Schedules — searchable schedule selection interface'          }
+    ]
+  },
   {
     id:          'pong-game',
     title:       'Retro Pong',
