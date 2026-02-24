@@ -91,7 +91,6 @@ const { theme, toggleTheme } = useTheme()
     bottom: 1.75rem;
     right: 1.75rem;
     z-index: 900;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   }
 
   // Header variant — static positioning

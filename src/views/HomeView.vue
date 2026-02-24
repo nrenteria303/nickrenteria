@@ -13,8 +13,8 @@
           :src="headshot"
           alt="Nick Renteria"
           class="home__headshot-img"
-          width="140"
-          height="140"
+          width="160"
+          height="160"
         />
       </div>
 
@@ -40,7 +40,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import headshot   from '@images/headshot-2.jpg'
+import headshot   from '@images/headshot-2025.webp'
 import atlSkyline from '@images/atlskyline.jpg'
 import { NAV_LINKS as navLinks } from '../data/site.js'
 
@@ -81,10 +81,11 @@ $stagger-duration: 0.65s;
   inset: 0;
   background: linear-gradient(
     140deg,
-    rgba(10, 10, 24, 0.90) 0%,
-    rgba(26, 10, 46, 0.84) 50%,
-    rgba(10, 26, 20, 0.90) 100%
+    var(--home-overlay-1) 0%,
+    var(--home-overlay-2) 50%,
+    var(--home-overlay-3) 100%
   );
+  transition: background var(--transition-base);
   z-index: 1;
 }
 
@@ -111,16 +112,24 @@ $stagger-duration: 0.65s;
 .home__nav {
   opacity: 0;
   transform: translateY(26px);
+  // Property order: opacity | transform | color | background | border-color
+  // Delays are set per-property in .is-visible so only opacity/transform
+  // get the stagger; theme-change properties always animate at 0s delay.
   transition:
     opacity $stagger-duration ease,
-    transform $stagger-duration ease;
+    transform $stagger-duration ease,
+    color var(--transition-base),
+    background var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .is-visible {
-  .home__headshot { opacity: 1; transform: none; transition-delay: 0.08s;  }
-  .home__name     { opacity: 1; transform: none; transition-delay: 0.24s;  }
-  .home__title    { opacity: 1; transform: none; transition-delay: 0.40s;  }
-  .home__nav      { opacity: 1; transform: none; transition-delay: 0.56s;  }
+  // Delay order matches transition-property order above:
+  // opacity, transform → staggered; color, background, border-color → 0s
+  .home__headshot { opacity: 1; transform: none; transition-delay: 0.08s, 0.08s, 0s, 0s, 0s; }
+  .home__name     { opacity: 1; transform: none; transition-delay: 0.24s, 0.24s, 0s, 0s, 0s; }
+  .home__title    { opacity: 1; transform: none; transition-delay: 0.40s, 0.40s, 0s, 0s, 0s; }
+  .home__nav      { opacity: 1; transform: none; transition-delay: 0.56s, 0.56s, 0s, 0s, 0s; }
 }
 
 // ── Headshot ─────────────────────────────────
@@ -129,16 +138,17 @@ $stagger-duration: 0.65s;
 }
 
 .home__headshot-img {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   // Gradient border via background-clip trick
   border: 3px solid transparent;
   background:
-    linear-gradient(#0d0d1e, #0d0d1e) padding-box,
-    linear-gradient(135deg, #8b5cf6, #10b981) border-box;
+    linear-gradient(var(--home-headshot-bg), var(--home-headshot-bg)) padding-box,
+    linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-green)) border-box;
+  transition: background var(--transition-base);
   box-shadow:
     0 0 28px rgba(139, 92, 246, 0.35),
     0 0 56px rgba(16, 185, 129, 0.12);
@@ -149,7 +159,7 @@ $stagger-duration: 0.65s;
   font-family: var(--font-display);
   font-size: clamp(2rem, 6vw, 3.25rem);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--home-text);
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
@@ -159,7 +169,7 @@ $stagger-duration: 0.65s;
   font-family: var(--font-body);
   font-size: clamp(0.8rem, 2.4vw, 0.95rem);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--home-text-muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 2.75rem;
@@ -169,10 +179,10 @@ $stagger-duration: 0.65s;
 .home__nav {
   width: 100%;
   max-width: 300px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--home-nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--home-nav-border);
   border-radius: 14px;
   overflow: hidden;
 }
@@ -183,7 +193,7 @@ $stagger-duration: 0.65s;
   justify-content: space-between;
   padding: 1rem 1.5rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--home-nav-text);
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 500;
@@ -195,17 +205,17 @@ $stagger-duration: 0.65s;
 
   // Separator between items
   & + & {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid var(--home-nav-separator);
   }
 
   &:hover,
   &.router-link-active {
-    background: rgba(139, 92, 246, 0.18);
-    color: #ffffff;
+    background: var(--color-border);
+    color: var(--home-text);
     padding-left: 1.75rem;
 
     .home__nav-link-arrow {
-      color: #10b981;
+      color: var(--color-accent-green);
       transform: translateX(4px);
     }
   }
@@ -217,7 +227,7 @@ $stagger-duration: 0.65s;
 
 .home__nav-link-arrow {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--home-nav-arrow);
   transition:
     color var(--transition-fast),
     transform var(--transition-fast);
