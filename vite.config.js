@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   root: '.',
+  plugins: [vue()],
   publicDir: 'public',
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@images': resolve(__dirname, './images')
+    }
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
