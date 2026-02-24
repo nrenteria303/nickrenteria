@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" ref="aboutRoot">
     <div class="about__container">
 
       <!-- Page header -->
@@ -27,11 +27,11 @@
 
             <div class="about__stats">
               <div class="about__stat">
-                <span class="about__stat-value">8+</span>
+                <span class="about__stat-value">{{ statYears }}+</span>
                 <span class="about__stat-label">Years coding</span>
               </div>
               <div class="about__stat">
-                <span class="about__stat-value">35+</span>
+                <span class="about__stat-value">{{ statSites }}+</span>
                 <span class="about__stat-label">Sites launched</span>
               </div>
             </div>
@@ -136,8 +136,106 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import headshot from '@images/headshot-2.jpg'
 import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/site.js'
+
+const aboutRoot  = ref(null)
+const statYears  = ref(0)
+const statSites  = ref(0)
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// Collect cleanup callbacks so we can cancel in-flight animations on unmount
+const cleanups = []
+
+// ── Counter animation ──────────────────────────────────────────────────────
+// Linearly counts from 0 to `target` over `duration` ms using rAF.
+function countUp(targetRef, target, duration = 2000) {
+  if (prefersReducedMotion) { targetRef.value = target; return }
+
+  let cancelled = false
+  const start = performance.now()
+
+  const tick = (now) => {
+    if (cancelled) return
+    const progress = Math.min((now - start) / duration, 1)
+    targetRef.value = Math.floor(progress * target)
+    if (progress < 1) requestAnimationFrame(tick)
+    else targetRef.value = target
+  }
+
+  requestAnimationFrame(tick)
+  cleanups.push(() => { cancelled = true })
+}
+
+// ── Typewriter animation ───────────────────────────────────────────────────
+// Clears `el` text, then appends one character every `charMs` milliseconds.
+// Calls `onComplete` when done. Returns a cancel function.
+function typeWriter(el, text, onComplete, charMs = 55) {
+  let i = 0, cancelled = false, timer
+
+  el.textContent = ''
+
+  const tick = () => {
+    if (cancelled) return
+    el.textContent = text.slice(0, ++i)
+    if (i < text.length) timer = setTimeout(tick, charMs)
+    else onComplete?.()
+  }
+
+  timer = setTimeout(tick, charMs)
+  return () => { cancelled = true; clearTimeout(timer) }
+}
+
+onMounted(() => {
+  // Counters begin immediately on page load
+  countUp(statYears, 8)
+  countUp(statSites, 35)
+
+  // All observer-driven animations are skipped for reduced-motion users;
+  // the @media (prefers-reduced-motion) CSS block restores visibility.
+  if (prefersReducedMotion) return
+
+  const root = aboutRoot.value
+
+  // ── Section heading typewriter ──────────────────────────────────────────
+  // Each heading gets its own observer; fires once when 60% visible.
+  root.querySelectorAll('.about__section-title').forEach(el => {
+    const text = el.textContent.trim()
+    el.textContent = ''
+
+    const obs = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return
+      cleanups.push(typeWriter(el, text, () => el.classList.add('is-typed')))
+      obs.unobserve(el)
+    }, { threshold: 0.6 })
+
+    obs.observe(el)
+    cleanups.push(() => obs.disconnect())
+  })
+
+  // ── Client pill stagger ─────────────────────────────────────────────────
+  // Observes the list container; staggers each pill in by 0.07s increments.
+  const list = root.querySelector('.about__clients-list')
+  if (list) {
+    const items = list.querySelectorAll('.about__clients-item')
+
+    const obs = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return
+      items.forEach((item, i) => {
+        item.style.transitionDelay = `${(i * 0.07).toFixed(2)}s`
+        item.classList.add('is-visible')
+      })
+      obs.unobserve(list)
+    }, { threshold: 0.15 })
+
+    obs.observe(list)
+    cleanups.push(() => obs.disconnect())
+  }
+})
+
+onUnmounted(() => cleanups.forEach(fn => fn()))
 </script>
 
 <style lang="scss" scoped>
@@ -146,6 +244,7 @@ import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/s
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 1px);
   padding-bottom: var(--space-3xl);
+	overflow-y: hidden;
 }
 
 .about__container {
@@ -167,6 +266,7 @@ import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/s
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
+	width: fit-content;
 }
 
 .about__title-accent {
@@ -320,6 +420,14 @@ import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/s
     height: 2px;
     background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-green));
     border-radius: 2px;
+    // Starts collapsed; expands once .is-typed is added by the typewriter callback
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.4s ease;
+  }
+
+  &.is-typed::after {
+    transform: scaleX(1);
   }
 }
 
@@ -413,13 +521,41 @@ import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/s
   border: 1px solid var(--color-border);
   border-radius: 6px;
   padding: 4px 10px;
+  // Initial hidden state for scroll-in animation
+  opacity: 0;
+  transform: translateY(160px) rotate(28deg);
   transition:
+    opacity   0.55s ease,
+    transform 0.55s ease,
     background var(--transition-fast),
-    color var(--transition-fast);
+    color      var(--transition-fast);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 
   &:hover {
     background: var(--color-bg-card);
     color: var(--color-text-primary);
+  }
+}
+
+// ── Reduced-motion fallbacks ──────────────────
+// When the OS/browser requests reduced motion, skip all entrance animations
+// and show elements in their final visible state immediately.
+@media (prefers-reduced-motion: reduce) {
+  .about__section-title::after {
+    transform: scaleX(1);
+    transition: none;
+  }
+
+  .about__clients-item {
+    opacity: 1;
+    transform: none;
+    transition:
+      background var(--transition-fast),
+      color      var(--transition-fast);
   }
 }
 </style>
