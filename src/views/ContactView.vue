@@ -182,7 +182,7 @@
 
             <button
               type="submit"
-              class="contact__submit-btn"
+              class="contact__submit-btn btn"
               :class="{ 'contact__submit-btn--loading': formState === 'submitting' }"
               :disabled="formState === 'submitting'"
             >
@@ -324,6 +324,7 @@ function resetForm() {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
+	width: fit-content;
 }
 
 .contact__title-accent {
@@ -564,25 +565,6 @@ function resetForm() {
 
 // ── Submit button ────────────────────────────
 .contact__submit-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  border-radius: 8px;
-  font-family: var(--font-display);
-  font-size: 0.925rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-green));
-  border: none;
-  cursor: pointer;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
-
-  svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
 
   &:hover:not(:disabled) {
     opacity: 0.88;

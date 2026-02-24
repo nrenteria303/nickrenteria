@@ -93,6 +93,7 @@ const projects = [
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
+	width: fit-content;
 }
 
 .projects__title-accent {

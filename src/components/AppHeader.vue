@@ -48,6 +48,7 @@ import { NAV_LINKS as navLinks } from '../data/site.js'
     display: flex;
     align-items: center;
     gap: 2rem;
+		overflow-x: auto;
   }
 
   &__logo {

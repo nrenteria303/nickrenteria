@@ -10,7 +10,7 @@
         </div>
         <a
           href="/files/Nick_Renteria_Resume.pdf"
-          class="resume__download-btn"
+          class="resume__download-btn btn"
           download
           aria-label="Download résumé as PDF"
         >
@@ -245,6 +245,7 @@ const bluemodusBullets = [
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
+	width: fit-content;
 }
 
 .resume__title-accent {
@@ -252,34 +253,6 @@ const bluemodusBullets = [
   height: 3px;
   background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-green));
   border-radius: 2px;
-}
-
-.resume__download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
-  border-radius: 8px;
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-green));
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
-  flex-shrink: 0;
-  align-self: center;
-
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  &:hover {
-    opacity: 0.88;
-    transform: translateY(-1px);
-    color: #ffffff;
-  }
 }
 
 // ── Grid ─────────────────────────────────────
