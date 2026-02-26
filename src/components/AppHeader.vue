@@ -11,6 +11,7 @@
           :key="link.to"
           :to="link.to"
           class="app-header__nav-link"
+          :class="{ 'is-section-active': isSubActive(link.to) }"
         >
           {{ link.label }}
         </router-link>
@@ -22,8 +23,15 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
 import ThemeToggle from './ThemeToggle.vue'
 import { NAV_LINKS as navLinks } from '../data/site.js'
+
+const route = useRoute()
+
+// Treat a nav link as active when on the exact path OR any sub-path beneath it.
+// (router-link-active only applies to matched route chains, not flat siblings.)
+const isSubActive = (to) => route.path.startsWith(to + '/')
 </script>
 
 <style lang="scss" scoped>
@@ -98,7 +106,8 @@ import { NAV_LINKS as navLinks } from '../data/site.js'
     }
 
     &:hover,
-    &.router-link-active {
+    &.router-link-active,
+    &.is-section-active {
       color: var(--color-text-primary);
 
       &::after {
