@@ -706,14 +706,15 @@ const techGroups = [
 
 .ct__modal-content {
   position: relative;
-  max-width: min(92vw, 1100px);
+  max-width: min(95vw, 1210px);
   max-height: 90vh;
   display: flex;
 }
 
 .ct__modal-img {
   display: block;
-  width: 100%;
+  width: auto;
+	max-width: 100%;
   height: auto;
   max-height: 90vh;
   object-fit: contain;
