@@ -71,7 +71,7 @@ const projects = [
   },
   {
     id:          'realest',
-    title:       'Realest — Property Listings',
+    title:       'realEst — Property Listings',
     type:        'external',
     url:         'https://realest.netlify.app/',
     tech:        ['React JS'],

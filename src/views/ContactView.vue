@@ -566,11 +566,6 @@ function resetForm() {
 // ── Submit button ────────────────────────────
 .contact__submit-btn {
 
-  &:hover:not(:disabled) {
-    opacity: 0.88;
-    transform: translateY(-1px);
-  }
-
   &:active:not(:disabled) {
     transform: translateY(0);
   }

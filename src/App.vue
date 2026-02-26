@@ -42,8 +42,11 @@ const isHome = computed(() => route.path === '/')
   font-weight: 600;
   text-decoration: none;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--color-dark-purple), var(--color-dark-green));
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  background-image: linear-gradient(135deg, var(--color-dark-purple) 0%, var(--color-dark-green) 50%);
+	background-size: 200% 200%;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), background-position var(--transition-fast);
   flex-shrink: 0;
   align-self: center;
 	cursor: pointer;
@@ -55,8 +58,7 @@ const isHome = computed(() => route.path === '/')
   }
 
   &:hover:not(:disabled) {
-    opacity: 0.88;
-    transform: translateY(-1px);
+		background-position: 100% 100%;
     color: #ffffff;
   }
 }
