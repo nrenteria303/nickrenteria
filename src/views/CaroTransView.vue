@@ -71,14 +71,27 @@
             :key="shot.caption"
             class="ct__figure"
           >
-            <div class="ct__figure-wrap">
+            <a
+              class="ct__figure-wrap"
+              href="#"
+              :aria-label="`View ${shot.caption} screenshot at full size`"
+              aria-haspopup="dialog"
+              @click.prevent="openModal(shot, $event)"
+            >
               <img
                 :src="shot.src"
                 :alt="shot.alt"
                 class="ct__figure-img"
                 loading="lazy"
               />
-            </div>
+              <!-- Expand affordance icon, revealed on hover/focus -->
+              <span class="ct__figure-expand" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </span>
+            </a>
             <figcaption class="ct__figcaption">
               <span class="ct__figcaption-title">{{ shot.caption }}</span>
               <span class="ct__figcaption-desc">{{ shot.desc }}</span>
@@ -108,11 +121,52 @@
         </div>
       </section>
 
-    </div>
-  </div>
+    </div><!-- /.ct__container -->
+
+    <!-- ── Full-size image modal ──────────────── -->
+    <!-- Teleported to <body> so the inner <Transition> is outside .ct's DOM
+         subtree. This prevents the modal's transition from interfering with
+         the page-level <Transition mode="out-in"> leave callback chain,
+         which would otherwise cause the next page to never mount. -->
+    <Teleport to="body">
+      <Transition name="modal-fade">
+        <div
+          v-if="isModalOpen"
+          class="ct__modal"
+          role="dialog"
+          aria-modal="true"
+          :aria-label="`Screenshot: ${modalCaption}`"
+          @click.self="closeModal"
+        >
+          <div class="ct__modal-content">
+            <img
+              :src="modalSrc"
+              :alt="modalAlt"
+              class="ct__modal-img"
+            />
+            <button
+              ref="modalCloseBtn"
+              class="ct__modal-close"
+              aria-label="Close screenshot"
+              @click="closeModal"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
+
+  </div><!-- /.ct -->
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+
 import ctBooking    from '@images/carotrans/ct_project_booking-app-page.png'
 import ctAgents     from '@images/carotrans/ct_project_agents-corner.jpg'
 import ctDock       from '@images/carotrans/ct_project_dock-receipt-portal.jpg'
@@ -124,6 +178,57 @@ import ctExporting  from '@images/carotrans/ct_project_exporting-form.png'
 import ctPort       from '@images/carotrans/ct_project_origin-port-finder.jpg'
 import ctPwReset    from '@images/carotrans/ct_project_pw-reset.jpg'
 
+// ── Modal state ────────────────────────────────────────────────────────────
+const isModalOpen   = ref(false)
+const modalSrc      = ref('')
+const modalAlt      = ref('')
+const modalCaption  = ref('')
+const modalCloseBtn = ref(null)   // template ref → close button DOM element
+let   triggerEl     = null        // stores the <a> that opened the modal
+
+const openModal = (shot, event) => {
+  triggerEl     = event.currentTarget
+  modalSrc.value     = shot.src
+  modalAlt.value     = shot.alt
+  modalCaption.value = shot.caption
+  isModalOpen.value  = true
+  document.body.style.overflow = 'hidden'
+  // Move focus to close button after the modal is in the DOM
+  nextTick(() => modalCloseBtn.value?.focus())
+}
+
+const closeModal = () => {
+  // Capture trigger before reactive update removes the modal from the DOM
+  const returnTarget = triggerEl
+  isModalOpen.value  = false
+  document.body.style.overflow = ''
+  // Return focus to the thumbnail that opened the modal
+  nextTick(() => returnTarget?.focus())
+}
+
+// ── Keyboard handling ──────────────────────────────────────────────────────
+const onKeydown = (e) => {
+  if (!isModalOpen.value) return
+  if (e.key === 'Escape') {
+    closeModal()
+  } else if (e.key === 'Tab') {
+    // Modal contains exactly one focusable element (close button);
+    // prevent Tab from escaping the dialog.
+    e.preventDefault()
+    modalCloseBtn.value?.focus()
+  }
+}
+
+onMounted(() => {
+	window.addEventListener('keydown', onKeydown)})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', onKeydown)
+  // Restore scroll if the modal was open during navigation
+  document.body.style.overflow = ''
+})
+
+// ── Static data ────────────────────────────────────────────────────────────
 const tech = ['Vue 3', 'Vuex', 'Pinia', 'vue-router', 'Webpack', 'Kentico CMS']
 
 const screenshots = [
@@ -285,9 +390,7 @@ const techGroups = [
     color: var(--color-accent-purple);
     gap: 0.6rem;
 
-    svg {
-      transform: translateX(-3px);
-    }
+    svg { transform: translateX(-3px); }
   }
 }
 
@@ -457,16 +560,26 @@ const techGroups = [
     border-color: var(--color-border);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
 
-    .ct__figure-img {
-      transform: scale(1.03);
-    }
+    .ct__figure-img    { transform: scale(1.03); }
+    .ct__figure-expand { opacity: 1; }
   }
 }
 
+// The <a> wrapper — needs position:relative for the expand icon
 .ct__figure-wrap {
+  display: block;
+  position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--color-bg-secondary);
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent-purple);
+    outline-offset: -2px;
+
+    .ct__figure-expand { opacity: 1; }
+  }
 }
 
 .ct__figure-img {
@@ -476,6 +589,32 @@ const techGroups = [
   object-position: top center;
   display: block;
   transition: transform 0.4s ease;
+}
+
+// Expand affordance badge — top-right corner, shown on figure hover/focus
+.ct__figure-expand {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: rgba(13, 13, 30, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .ct__figcaption {
@@ -547,6 +686,98 @@ const techGroups = [
     content: '▸ ';
     color: var(--color-accent-green);
     font-size: 0.75rem;
+  }
+}
+
+// ── Full-size image modal ─────────────────────
+.ct__modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // Blurred backdrop — obscures page content without a hard black wall
+  background: rgba(10, 10, 24, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: var(--space-xl);
+}
+
+.ct__modal-content {
+  position: relative;
+  max-width: min(95vw, 1210px);
+  max-height: 90vh;
+  display: flex;
+}
+
+.ct__modal-img {
+  display: block;
+  width: auto;
+	max-width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.ct__modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+
+  svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-accent-purple);
+    color: var(--color-text-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent-purple);
+    outline-offset: 2px;
+  }
+}
+
+// ── Modal enter/leave transition ──────────────
+// These classes are applied by <Transition> to the root element of its slot
+// content (.ct__modal), so they ARE subject to scoped hashing. The content
+// scale is handled via a nested selector which is also scoped.
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.22s ease;
+
+  .ct__modal-content {
+    transition: transform 0.22s ease;
+  }
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+
+  .ct__modal-content {
+    transform: scale(0.96);
   }
 }
 </style>
