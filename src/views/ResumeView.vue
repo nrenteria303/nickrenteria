@@ -9,7 +9,7 @@
           <div class="resume__title-accent" aria-hidden="true"></div>
         </div>
         <a
-          href="/files/Nick_Renteria_Resume.pdf"
+          href="/files/Nick_Renteria-Resume.pdf"
           class="resume__download-btn btn"
           download
           aria-label="Download résumé as PDF"
@@ -101,21 +101,37 @@
             <!-- Freelance -->
             <article class="resume__job">
               <div class="resume__job-header">
-                <h3 class="resume__company">Freelance &amp; Contract Web Development</h3>
+                <h3 class="resume__company">Freelance Web Development</h3>
               </div>
 
               <div class="resume__roles">
                 <div class="resume__role">
                   <span class="resume__role-title">Web Developer</span>
-                  <span class="resume__role-dates">2019 – 2020</span>
+                  <span class="resume__role-dates">Apr 2019 – Nov 2020</span>
                 </div>
               </div>
 
               <p class="resume__job-desc">
-                Delivered small-to-mid-sized websites for local businesses and short-term
-                contracts, focusing on foundational frontend development, accessibility
-                fundamentals, and client communication. Provided early exposure to end-to-end
-                delivery across the full project lifecycle.
+                Delivered small-to-mid-sized websites for local businesses, focusing on foundational frontend development, accessibility fundamentals, and client communication. Provided early exposure to end-to-end delivery across the full project lifecycle.
+              </p>
+            </article>
+
+            <!-- Contract -->
+            <article class="resume__job">
+              <div class="resume__job-header">
+                <h3 class="resume__company">MarketPros Responsive Solutions</h3>
+                <span class="resume__location-badge">Atlanta, GA &mdash; Contract</span>
+              </div>
+
+              <div class="resume__roles">
+                <div class="resume__role">
+                  <span class="resume__role-title">Web Developer</span>
+                  <span class="resume__role-dates">Jun 2020 – Sep 2020</span>
+                </div>
+              </div>
+
+              <p class="resume__job-desc">
+                Worked directly with clients to build and maintain eCommerce websites on the OpenCart CMS platform. This involved the development of custom features as well as troubleshooting known issues and devising/implementing bugfixes, predominantly utilizing JS and CSS.
               </p>
             </article>
 
@@ -203,7 +219,7 @@ const bluemodusBullets = [
   'Owned and maintained frontend build pipelines (Node, Vite, npm/Yarn), troubleshooting and modernizing tooling to improve stability and developer experience',
   'Worked directly with UX designers and Solution Leads to align designs, content models, and technical constraints prior to implementation, reducing rework and delivery risk',
   'Collaborated with client IT and engineering teams to integrate third-party tools, APIs, and enterprise systems into frontend builds',
-  'Expanded backend responsibilities within ASP.NET Core and Kentico ecosystems, enabling vertically sliced feature delivery that reduced cross-team handoff overhead',
+  'Expanded backend responsibilities within ASP.NET Core and Kentico ecosystems, as well as developing Blazor-based server-side web apps, enabling vertically sliced feature delivery that reduced cross-team handoff overhead',
   'Leveraged AI-assisted development tools (GitHub Copilot, coding agents) to accelerate implementation and reduce repetitive engineering effort'
 ]
 
