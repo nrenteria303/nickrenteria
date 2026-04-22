@@ -59,7 +59,7 @@ export const CLIENTS = [
 export const SKILL_GROUPS_ABOUT = [
   {
     category: 'Frontend',
-    items: ['Vue.js / Vuex / Pinia', 'HTML5 / Pug', 'CSS3 / Sass / Tailwind', 'JavaScript ES6+', 'React JS']
+    items: ['Vue.js / Vuex / Pinia', 'React JS', 'Blazor', 'HTML5 / Pug', 'CSS3 / Sass / Tailwind', 'JavaScript ES6+', 'Typescript', 'Component-Driven Development', 'Responsive Design', 'Cross-Browser Compatibility']
   },
   {
     category: 'Build & Tooling',
@@ -89,7 +89,7 @@ export const SKILL_GROUPS_ABOUT = [
 export const SKILL_GROUPS_RESUME = [
   {
     category: 'Frontend',
-    items: ['HTML', 'Pug', 'CSS', 'Sass / SCSS', 'Tailwind', 'Vanilla JS', 'React JS', 'Vue JS', 'Vuex', 'Pinia']
+    items: ['HTML', 'Pug', 'CSS', 'Sass / SCSS', 'Tailwind', 'Vanilla JS', 'TypeScript', 'React JS', 'Vue JS', 'Vuex', 'Pinia', 'Blazor']
   },
   {
     category: 'Build & Tooling',
@@ -105,7 +105,7 @@ export const SKILL_GROUPS_RESUME = [
   },
   {
     category: 'Collaboration',
-    items: ['UX-to-Dev Translation', 'Client Technical Coordination', 'Solution Architecture Alignment']
+    items: ['Jira', 'UX-to-Dev Translation', 'Client Technical Coordination', 'Solution Architecture Alignment']
   },
   {
     category: 'AI & Productivity',
