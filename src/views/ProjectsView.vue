@@ -43,6 +43,9 @@ import ctAgents     from '@images/carotrans/ct_project_agents-corner.jpg'
 import ctDock       from '@images/carotrans/ct_project_dock-receipt-portal.jpg'
 import ctSailSched  from '@images/carotrans/ct_project_select-sail-sched.jpg'
 
+import mtScreenshotMain from '@images/Screenshot_regular.png'
+import mtScreenshotDetails from '@images/Screenshot_hover-details.png'
+
 const projects = [
   {
     id:          'carotrans',
@@ -55,6 +58,18 @@ const projects = [
       { src: ctAgents,    alt: 'Agents Corner — URL-driven portal with vue-router navigation'         },
       { src: ctDock,      alt: 'Dock Receipt Portal — form-heavy operational workflow'                },
       { src: ctSailSched, alt: 'Sailing Schedules — searchable schedule selection interface'          }
+    ]
+  },
+  {
+    id:          'movietab',
+    title:       'MovieTab Browser Extension',
+    type:        'external',
+    url:         'https://chromewebstore.google.com/detail/movietab/enfnlknoahcekkjemdlpekpndhdnfmlo',
+    tech:        ['React JS', 'TypeScript', 'Vite', 'TMDB API', 'Netlify Proxy', 'Chrome Extension Manifest V3'],
+    description: 'A Chrome- and Edge-compatible browser extension for discovering movies now in theaters. Built with React and TypeScript, it features a clean UI for browsing current releases, detailed movie info, and showtimes — all powered by the TMDB API and a Netlify proxy to handle CORS. Published on the Chrome Web Store with Manifest V3 compliance.',
+    images: [
+      { src: mtScreenshotMain, alt: 'MovieTab main screen showing a grid of current movie releases' },
+      { src: mtScreenshotDetails, alt: 'MovieTab detail view showing movie information and helpful links on hover' }
     ]
   },
   {
