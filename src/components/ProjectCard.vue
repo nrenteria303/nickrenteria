@@ -15,7 +15,7 @@
           />
         </transition>
 
-        <!-- Hover overlay for external links -->
+        <!-- Hover overlay -->
         <a
           v-if="project.type === 'external'"
           :href="project.url"
@@ -26,7 +26,7 @@
           tabindex="0"
         >
           <span class="project-card__overlay-pill">
-            View Live
+            {{ project.hoverOverlayText || 'View Live' }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
               <polyline points="15 3 21 3 21 9" />
@@ -34,6 +34,19 @@
             </svg>
           </span>
         </a>
+        <router-link
+          v-else
+          :to="`/projects/${project.id}`"
+          class="project-card__overlay"
+          :aria-label="`View details for ${project.title}`"
+          tabindex="0">
+          <span class="project-card__overlay-pill">
+            {{ project.hoverOverlayText || 'View Details' }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none">
+              <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </router-link>
 
         <!-- "Opens new tab" icon badge (always visible) -->
         <span v-if="project.type === 'external'" class="project-card__ext-badge" aria-hidden="true">

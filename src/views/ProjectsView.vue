@@ -64,6 +64,7 @@ const projects = [
     id:          'movietab',
     title:       'MovieTab Browser Extension',
     type:        'external',
+    hoverOverlayText: 'View on Chrome Web Store',
     url:         'https://chromewebstore.google.com/detail/movietab/enfnlknoahcekkjemdlpekpndhdnfmlo',
     tech:        ['React JS', 'TypeScript', 'Vite', 'TMDB API', 'Netlify Proxy', 'Chrome Extension Manifest V3'],
     description: 'A Chrome- and Edge-compatible browser extension for discovering movies now in theaters. Built with React and TypeScript, it features a clean UI for browsing current releases, detailed movie info, and showtimes — all powered by the TMDB API and a Netlify proxy to handle CORS. Published on the Chrome Web Store with Manifest V3 compliance.',
