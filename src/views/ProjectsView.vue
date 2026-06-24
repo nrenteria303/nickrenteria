@@ -9,6 +9,9 @@
         <p class="projects__intro">
           A selection of personal projects and proofs of concept. More to come.
         </p>
+        <p class="projects__intro">
+          You can also view my Github profile <a aria-label="Visit my github profile page" href="https://github.com/nrenteria303" target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
       </header>
 
       <!-- ── Project grid ─────────────────────── -->
@@ -43,6 +46,11 @@ import ctAgents     from '@images/carotrans/ct_project_agents-corner.jpg'
 import ctDock       from '@images/carotrans/ct_project_dock-receipt-portal.jpg'
 import ctSailSched  from '@images/carotrans/ct_project_select-sail-sched.jpg'
 
+import femaMainScreen from '@images/fema-data-lite/main-screen.png'
+import femaDatasetPage from '@images/fema-data-lite/dataset-page.png'
+import femaRecordsPage from '@images/fema-data-lite/records-page.png'
+import femaRecordsPageMaps from '@images/fema-data-lite/records-page-maps.png'
+
 import mtScreenshotMain from '@images/Screenshot_regular.png'
 import mtScreenshotDetails from '@images/Screenshot_hover-details.png'
 
@@ -58,6 +66,20 @@ const projects = [
       { src: ctAgents,    alt: 'Agents Corner — URL-driven portal with vue-router navigation'         },
       { src: ctDock,      alt: 'Dock Receipt Portal — form-heavy operational workflow'                },
       { src: ctSailSched, alt: 'Sailing Schedules — searchable schedule selection interface'          }
+    ]
+  },
+  {
+    id:          'fema-data-lite',
+    title:       'FEMA Data Explorer',
+    type:        'external',
+    url:         'https://fema-data-lite.netlify.app/',
+    tech:        ['React JS', 'TypeScript', 'Vite', 'OpenFEMA API', 'Google Maps API'],
+    description: 'A practice project that utilizes the OpenFEMA API and enables users to view FEMA-related data and individual records regarding disasters, alerts, financial transactions, and more. There are also records pages that use various Google Maps API Libraries to draw region polygons and place markers based on API data.',
+    images: [
+      { src: femaMainScreen, alt: 'Initial FEMA Data Explorer page showing various dataset options and search filters' },
+      { src: femaDatasetPage,    alt: 'FEMA Dataset detail page'    },
+      { src: femaRecordsPage,    alt: 'FEMA Dataset records explorer page'    },
+      { src: femaRecordsPageMaps,    alt: 'FEMA Dataset records explorer page using Google Maps API'    },
     ]
   },
   {
