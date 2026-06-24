@@ -73,7 +73,7 @@ const projects = [
     title:       'FEMA Data Explorer',
     type:        'external',
     url:         'https://fema-data-lite.netlify.app/',
-    tech:        ['React JS', 'TypeScript', 'Vite', 'OpenFEMA API', 'Google Maps API'],
+    tech:        ['React JS', 'React Router', 'TypeScript', 'Vite', 'OpenFEMA API', 'Google Maps API'],
     description: 'A practice project that utilizes the OpenFEMA API and enables users to view FEMA-related data and individual records regarding disasters, alerts, financial transactions, and more. There are also records pages that use various Google Maps API Libraries to draw region polygons and place markers based on API data.',
     images: [
       { src: femaMainScreen, alt: 'Initial FEMA Data Explorer page showing various dataset options and search filters' },
