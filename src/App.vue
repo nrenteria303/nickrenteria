@@ -3,8 +3,8 @@
     <AppHeader v-if="!isHome" />
 
     <router-view v-slot="{ Component }">
-      <transition name="page-fade" mode="out-in">
-        <component :is="Component" />
+      <transition name="page-fade">
+        <component :is="Component" :key="route.path" />
       </transition>
     </router-view>
 
@@ -30,6 +30,7 @@ const isHome = computed(() => route.path === '/')
 <style lang="scss">
 .app {
   min-height: 100vh;
+  position: relative;
 }
 :where(#app) .btn {
   display: inline-flex;

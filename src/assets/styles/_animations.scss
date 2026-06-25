@@ -31,14 +31,33 @@
 
 // ─────────────────────────────────────────────
 // Page-level transitions (Vue <Transition>)
+//
+// Using CSS animation (not transition) so the enter/leave opacity is driven
+// by keyframe fill-mode rather than a separate enter-from/leave-to class.
+// This avoids a race condition in Vue Router v5 where the RAF that removes
+// `page-fade-enter-from` can fire before the async-resolved component is
+// actually in the DOM, leaving it stuck at opacity 0.
 // ─────────────────────────────────────────────
 
-.page-fade-enter-active,
-.page-fade-leave-active {
-  transition: opacity 0.28s ease;
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.page-fade-enter-from,
-.page-fade-leave-to {
-  opacity: 0;
+@keyframes pageFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.page-fade-enter-active {
+  animation: pageFadeIn 0.28s ease both;
+}
+
+.page-fade-leave-active {
+  animation: pageFadeOut 0.28s ease both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
