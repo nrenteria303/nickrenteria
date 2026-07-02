@@ -72,12 +72,19 @@
             class="ct__figure"
           >
             <div class="ct__figure-wrap">
-              <img
-                :src="shot.src"
-                :alt="shot.alt"
-                class="ct__figure-img"
-                loading="lazy"
-              />
+              <a
+                href="#"
+                class="ct__figure-link"
+                @click.prevent="openModal(shot, $event)"
+                :aria-label="`Open full-size image: ${shot.caption}`"
+              >
+                <img
+                  :src="shot.src"
+                  :alt="shot.alt"
+                  class="ct__figure-img"
+                  loading="lazy"
+                />
+              </a>
             </div>
             <figcaption class="ct__figcaption">
               <span class="ct__figcaption-title">{{ shot.caption }}</span>
@@ -86,6 +93,13 @@
           </figure>
         </div>
       </section>
+
+      <ImageModal
+        v-if="isModalOpen"
+        :src="modalImage.src"
+        :alt="modalImage.alt"
+        @close="closeModal"
+      />
 
       <!-- ── Tech stack ──────────────────────── -->
       <section class="ct__section">
@@ -123,6 +137,7 @@ import ctLtl        from '@images/carotrans/ct_project_ltl-form.jpg'
 import ctExporting  from '@images/carotrans/ct_project_exporting-form.png'
 import ctPort       from '@images/carotrans/ct_project_origin-port-finder.jpg'
 import ctPwReset    from '@images/carotrans/ct_project_pw-reset.jpg'
+import ImageModal    from '../components/ImageModal.vue'
 
 const tech = ['Vue 2', 'Vuex', 'Vue Options API', 'vue-router', 'Webpack', 'Kentico CMS', 'Google Maps API']
 
@@ -245,6 +260,25 @@ const techGroups = [
     ]
   }
 ]
+
+import { nextTick, ref } from 'vue'
+
+const modalImage = ref({ src: '', alt: '' })
+const isModalOpen = ref(false)
+const lastThumbnail = ref(null)
+
+function openModal (shot, event) {
+  lastThumbnail.value = event.currentTarget instanceof HTMLElement ? event.currentTarget : null
+  modalImage.value = { src: shot.src, alt: shot.alt }
+  isModalOpen.value = true
+}
+
+function closeModal () {
+  isModalOpen.value = false
+  nextTick(() => {
+    lastThumbnail.value?.focus()
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -451,24 +485,41 @@ const techGroups = [
     box-shadow 0.28s ease,
     border-color 0.28s ease;
 
-  &:hover {
-    transform: translateY(-3px);
-    border-color: var(--color-border);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-
-    .ct__figure-img {
-      transform: scale(1.03);
+  &-link {
+    &:focus-visible,
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-border);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  
+      .ct__figure-img {
+        transform: scale(1.03);
+        box-shadow: 0 0 2px 0 var(--color-accent-purple) inset;
+      }
     }
   }
+
 }
 
 .ct__figure-wrap {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--color-bg-secondary);
+
+  &:has(.ct__figure-link:focus-visible) + .ct__figcaption {
+    background: var(--color-text-primary);
+    color: var(--color-bg-card);
+
+    .ct__figcaption-title,
+    .ct__figcaption-desc {
+      color: var(--color-bg-card);
+    }
+  }
 }
 
 .ct__figure-img {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px 12px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
