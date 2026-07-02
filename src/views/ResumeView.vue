@@ -9,7 +9,7 @@
           <div class="resume__title-accent" aria-hidden="true"></div>
         </div>
         <a
-          href="/files/Nick_Renteria-Resume.pdf"
+          href="/files/Nick_Renteria_Resume.pdf"
           class="resume__download-btn btn"
           download
           aria-label="Download résumé as PDF"
