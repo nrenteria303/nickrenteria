@@ -7,7 +7,7 @@
         <h1 class="projects__page-title">Projects</h1>
         <div class="projects__title-accent" aria-hidden="true"></div>
         <p class="projects__intro">
-          A selection of personal projects and proofs of concept. More to come.
+          A selection of personal projects, work for previous employers, and proofs of concept. More to come.
         </p>
         <p class="projects__intro">
           You can also view my Github profile <a aria-label="Visit my github profile page" href="https://github.com/nrenteria303" target="_blank" rel="noopener noreferrer">here</a>.
@@ -51,21 +51,28 @@ import femaDatasetPage from '@images/fema-data-lite/dataset-page.png'
 import femaRecordsPage from '@images/fema-data-lite/records-page.png'
 import femaRecordsPageMaps from '@images/fema-data-lite/records-page-maps.png'
 
+import tasbOrgHome from '@images/tasb/tasb-org-homepage.png'
+import tasbOrgSearch from '@images/tasb/tasb-org-search.png'
+import tasbOrgEventSearch from '@images/tasb/tasb-org-event-search.png'
+import tasbRmfHome from '@images/tasb/tasb-rmf-homepage.png'
+import tasbBcHome from '@images/tasb/tasb-bc-homepage.png'
+
 import mtScreenshotMain from '@images/Screenshot_regular.png'
 import mtScreenshotDetails from '@images/Screenshot_hover-details.png'
 
 const projects = [
   {
-    id:          'carotrans',
-    title:       'CaroTrans — Shipping Center',
+    id:          'tasb',
+    title:       'TASB Websites & Search App',
     type:        'internal',
-    tech:        ['Vue 3', 'Vuex', 'Pinia', 'vue-router', 'Webpack', 'Kentico CMS'],
-    description: 'A production authenticated shipping center built as a suite of ~15 Vue micro-apps embedded into a Kentico/Pug CMS. Each app handles a distinct workflow — bookings, rating & quotes, sailing schedules, dock receipts, and agent operations — unified by shared axios interceptors, Vuex stores, and a cross-bundle session token model.',
+    tech:        ['FE Ownership & Architecture', 'Handlebars', 'ASP.NET Core', 'Vue', 'Kontent Headless CMS'],
+    description: 'As a front-end architect and lead developer, I was responsible for the design, development, and maintenance of multiple TASB websites and a Vue-based search application. This included engineering a large, responsive, widely configurable component library and architecting the overall FE codebase. I also led the integration of Kontent Headless CMS for content management and collaborated with back-end developers to enhance the overall user experience.',
     images: [
-      { src: ctBooking,   alt: 'CaroTrans booking app — multi-step container booking workflow'        },
-      { src: ctAgents,    alt: 'Agents Corner — URL-driven portal with vue-router navigation'         },
-      { src: ctDock,      alt: 'Dock Receipt Portal — form-heavy operational workflow'                },
-      { src: ctSailSched, alt: 'Sailing Schedules — searchable schedule selection interface'          }
+      { src: tasbOrgHome,   alt: 'TASB Organization Homepage'},
+      { src: tasbOrgSearch,    alt: 'TASB Organization Search Page'},
+      { src: tasbOrgEventSearch,      alt: 'TASB Organization Event Search Page'},
+      { src: tasbRmfHome,      alt: 'TASB Risk Management Fund Homepage'},
+      { src: tasbBcHome, alt: 'TASB Benefits Cooperative Homepage'}
     ]
   },
   {
@@ -80,6 +87,19 @@ const projects = [
       { src: femaDatasetPage,    alt: 'FEMA Dataset detail page'    },
       { src: femaRecordsPage,    alt: 'FEMA Dataset records explorer page'    },
       { src: femaRecordsPageMaps,    alt: 'FEMA Dataset records explorer page using Google Maps API'    },
+    ]
+  },
+  {
+    id:          'carotrans',
+    title:       'CaroTrans — Shipping Center',
+    type:        'internal',
+    tech:        ['Vue 3', 'Vuex', 'Pinia', 'vue-router', 'Webpack', 'Kentico CMS', 'Google Maps API', 'Axios'],
+    description: 'A production authenticated shipping center built as a suite of ~8 Vue micro-apps embedded into a Kentico CMS. Each app handles a distinct workflow — bookings, rating & quotes, sailing schedules, dock receipts, and agent operations — unified by shared axios interceptors, Vuex stores, and a cross-bundle session token model.',
+    images: [
+      { src: ctBooking,   alt: 'CaroTrans booking app — multi-step container booking workflow'        },
+      { src: ctAgents,    alt: 'Agents Corner — URL-driven portal with vue-router navigation'         },
+      { src: ctDock,      alt: 'Dock Receipt Portal — form-heavy operational workflow'                },
+      { src: ctSailSched, alt: 'Sailing Schedules — searchable schedule selection interface'          }
     ]
   },
   {

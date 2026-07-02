@@ -27,6 +27,11 @@ const routes = [
     component: () => import('../views/CaroTransView.vue')
   },
   {
+    path: '/projects/tasb',
+    name: 'tasb',
+    component: () => import('../views/TASBView.vue')
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('../views/ContactView.vue')

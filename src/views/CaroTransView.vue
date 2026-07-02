@@ -46,7 +46,7 @@
         <p>
           I architected a production "authenticated shipping center" as a suite of Vue micro-apps
           embedded into a Kentico/Pug CMS site. Rather than forcing a monolithic SPA, the UI is
-          delivered as ~15 page-scoped Vue islands (14 root <code>App.vue</code> apps), each
+          delivered as ~8 page-scoped Vue islands (7 root <code>App.vue</code> apps), each
           mounted into a server-rendered page and configured via <code>data-*</code> contracts.
           This keeps first-load scope tight, preserves CMS authoring workflows, and still delivers
           app-grade interactions for bookings, rating/quotes, sailing schedules, documents, and
@@ -124,7 +124,7 @@ import ctExporting  from '@images/carotrans/ct_project_exporting-form.png'
 import ctPort       from '@images/carotrans/ct_project_origin-port-finder.jpg'
 import ctPwReset    from '@images/carotrans/ct_project_pw-reset.jpg'
 
-const tech = ['Vue 3', 'Vuex', 'Pinia', 'vue-router', 'Webpack', 'Kentico CMS']
+const tech = ['Vue 2', 'Vuex', 'Vue Options API', 'vue-router', 'Webpack', 'Kentico CMS', 'Google Maps API']
 
 const screenshots = [
   {
@@ -193,8 +193,8 @@ const techGroups = [
   {
     category: 'Frontend',
     items: [
-      'Vue 3 (Composition + Options API)',
-      '~15 page-scoped micro-app instances',
+      'Vue 2 w/ Options API',
+      '~8 page-scoped micro-app instances',
       '<script setup> in 6 core workflow apps',
       'data-* contract mounting pattern'
     ]
@@ -203,7 +203,6 @@ const techGroups = [
     category: 'State Management',
     items: [
       'Vuex — 8 stores (cross-app standard)',
-      'Pinia — Dock Receipts workflow',
       'localStorage-backed session tokens',
       'mitt for cross-app event coordination'
     ]
@@ -239,7 +238,7 @@ const techGroups = [
   {
     category: 'Platform',
     items: [
-      'Kentico CMS + Pug templates',
+      'Kentico CMS + CSHTML templates',
       'ASP.NET Core backend',
       'GA4 analytics via vue-gtag',
       'Multi-site / multi-brand deployment'
