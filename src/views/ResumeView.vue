@@ -466,11 +466,6 @@ const bluemodusBullets = [
   border-radius: 5px;
   padding: 3px 9px;
   transition: border-color var(--transition-fast), color var(--transition-fast);
-
-  &:hover {
-    border-color: var(--color-border);
-    color: var(--color-text-primary);
-  }
 }
 
 // ── Sidebar: skill groups ─────────────────────
@@ -506,11 +501,6 @@ const bluemodusBullets = [
   transition:
     background var(--transition-fast),
     color var(--transition-fast);
-
-  &:hover {
-    background: var(--color-bg-card);
-    color: var(--color-text-primary);
-  }
 }
 
 // ── Education ─────────────────────────────────

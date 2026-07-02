@@ -534,11 +534,6 @@ onUnmounted(() => cleanups.forEach(fn => fn()))
     opacity: 1;
     transform: none;
   }
-
-  &:hover {
-    background: var(--color-bg-card);
-    color: var(--color-text-primary);
-  }
 }
 
 // ── Reduced-motion fallbacks ──────────────────
