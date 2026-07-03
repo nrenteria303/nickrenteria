@@ -9,7 +9,7 @@
           <div class="resume__title-accent" aria-hidden="true"></div>
         </div>
         <a
-          href="/files/Nick_Renteria_Resume.pdf"
+          :href="resumeFile"
           class="resume__download-btn btn"
           download
           aria-label="Download résumé as PDF"
@@ -207,6 +207,9 @@
 
 <script setup>
 import { SKILL_GROUPS_RESUME as skillGroups, CLIENTS as bluemodusClients } from '../data/site.js'
+import resumeFile from '@files/Nick_Renteria_Resume.pdf'
+import KenticoDevCertFile from '@files/Kentico-Xperience-13-Certified-Developer.pdf'
+import KenticoMarketerCertFile from '@files/Kentico-Xperience-13-Certified-Marketer.pdf'
 
 const bluemodusBullets = [
   'Architected and built the complete frontend for six distinct Texas Association of School Boards websites, delivering consistent UX patterns across multiple properties',
@@ -218,7 +221,7 @@ const bluemodusBullets = [
   'Worked directly with UX designers via <strong>Figma</strong> and Solution Leads to align designs, content models, and technical constraints prior to implementation, reducing rework and delivery risk',
   'Collaborated with client IT and engineering teams to integrate third-party tools, APIs, and enterprise systems into frontend builds',
   'Expanded backend responsibilities within <strong>ASP.NET Core</strong> and <strong>Kentico</strong> ecosystems, as well as developing <strong>Blazor-based server-side web apps</strong>, enabling vertically sliced feature delivery that reduced cross-team handoff overhead',
-  'Became the only UX/UI developer at BlueModus to earn both a <strong><a href="./files/Kentico-Xperience-13-Certified-Marketer.pdf" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Marketer</a></strong> and <strong><a href="./files/Kentico-Xperience-13-Certified-Developer.pdf" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Developer</a></strong> distinction, demonstrating deep understanding of the CMS platform and its capabilities',
+  `Became the only UX/UI developer at BlueModus to earn both a <strong><a href="${KenticoMarketerCertFile}" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Marketer</a></strong> and <strong><a href="${KenticoDevCertFile}" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Developer</a></strong> distinction, demonstrating deep understanding of the CMS platform and its capabilities`,
   'Leveraged AI-assisted development tools (GitHub Copilot, coding agents) to accelerate implementation and reduce repetitive engineering effort'
 ]
 
