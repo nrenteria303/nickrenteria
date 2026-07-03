@@ -59,11 +59,11 @@ export const CLIENTS = [
 export const SKILL_GROUPS_ABOUT = [
   {
     category: 'Frontend',
-    items: ['Vue.js / Vuex / Pinia', 'React JS', 'Blazor', 'HTML5 / Pug', 'CSS3 / Sass / Tailwind', 'JavaScript ES6+', 'Typescript', 'Component-Driven Development', 'Responsive Design', 'Cross-Browser Compatibility']
+    items: ['Vue.js / Vuex / Pinia', 'React JS', 'Blazor', 'HTML5 / Pug', 'CSS3 / Sass / Tailwind', 'JavaScript ES6+', 'Typescript', 'Figma Dev Tools', 'Component-Driven Development', 'Responsive Design', 'Cross-Browser Compatibility']
   },
   {
     category: 'Build & Tooling',
-    items: ['Vite', 'Node.js / npm / Yarn', 'Git', 'CI Pipelines', 'GitHub Copilot / AI tooling']
+    items: ['Vite', 'Node.js / npm / Yarn', 'Webpack', 'Git', 'CI Pipelines', 'GitHub Copilot', 'Claude Code', 'ChatGPT & Codex', 'Agentic AI Development', 'Ralph loop']
   },
   {
     category: 'Accessibility',
@@ -93,11 +93,11 @@ export const SKILL_GROUPS_RESUME = [
   },
   {
     category: 'Build & Tooling',
-    items: ['Node.js', 'npm', 'Yarn', 'Vite', 'Git', 'CI Pipelines']
+    items: ['Node.js', 'npm', 'Yarn', 'Vite', 'Webpack', 'Git', 'CI Pipelines']
   },
   {
     category: 'Accessibility',
-    items: ['WCAG 2.x', 'WAI-ARIA', 'Semantic HTML', 'Accessible Components']
+    items: ['WCAG 2.x', 'WAI-ARIA', 'WAVE / Lighthouse Audits', 'Semantic HTML', 'Accessible Components']
   },
   {
     category: 'CMS & Backend',
@@ -105,10 +105,10 @@ export const SKILL_GROUPS_RESUME = [
   },
   {
     category: 'Collaboration',
-    items: ['Jira', 'UX-to-Dev Translation', 'Client Technical Coordination', 'Solution Architecture Alignment']
+    items: ['Jira', 'Figma', 'UX-to-Dev Translation', 'Client Technical Coordination', 'Solution Architecture Alignment']
   },
   {
     category: 'AI & Productivity',
-    items: ['GitHub Copilot', 'AI Coding Agents', 'Workflow Automation']
+    items: ['GitHub Copilot', 'Claude Code', 'ChatGPT & Codex', 'Agentic AI Development', 'Ralph loop', 'Workflow Automation']
   }
 ]

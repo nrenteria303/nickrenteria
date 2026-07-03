@@ -120,8 +120,8 @@ const projects = [
     title:       'Retro Pong',
     type:        'external',
     url:         'https://ping-pong-game-app.netlify.app/',
-    tech:        ['React JS'],
-    description: 'A retro-style Pong game built with React. Features a polished start screen with keyboard control reference, live scoring for both players, and smooth paddle physics — a focused exercise in component state and game loop logic.',
+    tech:        ['React JS', 'Vite', 'Claude Code', 'Ralph loop'],
+    description: 'A retro-style Pong game built with React. Features a polished start screen with keyboard control reference, live scoring for both players, and smooth paddle physics — a focused exercise in component state and game loop logic. I built this with the help of Claude Code and the Ralph loop by specifying the geometric logic of the gameplay and providing iterative feedback on styling and functionality.',
     images: [
       { src: pongStartScreen, alt: 'Pong start screen showing game controls and a Start button' },
       { src: pongGameplay,    alt: 'Pong gameplay in action — paddles, ball, and live score'    }
@@ -133,7 +133,7 @@ const projects = [
     type:        'external',
     url:         'https://realest.netlify.app/',
     tech:        ['React JS'],
-    description: 'A proof-of-concept real estate listing app built with React. Browse a grid of properties, filter by criteria, and click any card to open a detail modal with expanded listing information — demonstrating data-driven UI composition and modal patterns.',
+    description: 'An early proof-of-concept real estate listing app built with React. Browse a grid of properties, filter by criteria, and click any card to open a detail modal with expanded listing information — demonstrating data-driven UI composition and modal patterns.',
     images: [
       { src: realestMain,  alt: 'Real estate app main screen showing a filterable property listings grid' },
       { src: realestModal, alt: 'Property detail modal showing expanded listing info and stats'           }
