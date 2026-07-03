@@ -80,9 +80,7 @@
               <div class="resume__contributions">
                 <h4 class="resume__sub-heading">Key Contributions &amp; Achievements</h4>
                 <ul class="resume__list">
-                  <li v-for="item in bluemodusBullets" :key="item" class="resume__list-item">
-                    {{ item }}
-                  </li>
+                  <li v-for="item in bluemodusBullets" :key="item" class="resume__list-item" v-html="item"></li>
                 </ul>
               </div>
 
@@ -212,14 +210,15 @@ import { SKILL_GROUPS_RESUME as skillGroups, CLIENTS as bluemodusClients } from 
 
 const bluemodusBullets = [
   'Architected and built the complete frontend for six distinct Texas Association of School Boards websites, delivering consistent UX patterns across multiple properties',
-  'Designed and implemented the CaroWise application ecosystem using Vue.js — 8 interconnected apps enabling CaroTrans customers to view bookings, analyze shipping costs, and create global shipments',
-  'Personally contributed to the development and launch of 35+ client websites spanning finance, healthcare, education, logistics, and enterprise sectors',
-  'Led accessibility audits and remediation efforts that brought dozens of websites into WCAG 2.0 compliance using Lighthouse, WAVE, and semantic, ARIA-aware component patterns',
-  'Acted as internal Vue.js subject-matter expert, regularly debugging complex state, reactivity, and performance issues across active client projects',
-  'Owned and maintained frontend build pipelines (Node, Vite, npm/Yarn), troubleshooting and modernizing tooling to improve stability and developer experience',
-  'Worked directly with UX designers and Solution Leads to align designs, content models, and technical constraints prior to implementation, reducing rework and delivery risk',
+  'Designed and implemented the CaroWise application ecosystem using <strong>Vue.js</strong> — 8 interconnected apps enabling CaroTrans customers to view bookings, analyze shipping costs, and create global shipments',
+  'Personally contributed to the development and launch of <strong>35+ client websites</strong> spanning finance, healthcare, education, logistics, and enterprise sectors',
+  'Led accessibility audits and remediation efforts that brought dozens of websites into <strong>WCAG 2.0 compliance</strong> using Lighthouse, WAVE, and semantic, ARIA-aware component patterns',
+  'Acted as internal <strong>Vue.js subject-matter expert</strong>, regularly debugging complex state, reactivity, and performance issues across active client projects',
+  'Owned and maintained frontend build pipelines (<strong>Node, Vite, npm/Yarn</strong>), troubleshooting and modernizing tooling to improve stability and developer experience',
+  'Worked directly with UX designers via <strong>Figma</strong> and Solution Leads to align designs, content models, and technical constraints prior to implementation, reducing rework and delivery risk',
   'Collaborated with client IT and engineering teams to integrate third-party tools, APIs, and enterprise systems into frontend builds',
-  'Expanded backend responsibilities within ASP.NET Core and Kentico ecosystems, as well as developing Blazor-based server-side web apps, enabling vertically sliced feature delivery that reduced cross-team handoff overhead',
+  'Expanded backend responsibilities within <strong>ASP.NET Core</strong> and <strong>Kentico</strong> ecosystems, as well as developing <strong>Blazor-based server-side web apps</strong>, enabling vertically sliced feature delivery that reduced cross-team handoff overhead',
+  'Became the only UX/UI developer at BlueModus to earn both a <strong><a href="../../files/Kentico-Xperience-13-Certified-Marketer.pdf" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Marketer</a></strong> and <strong><a href="../../files/Kentico-Xperience-13-Certified-Developer.pdf" target="_blank" rel="noopener noreferrer">Kentico Xperience 13 Certified Developer</a></strong> distinction, demonstrating deep understanding of the CMS platform and its capabilities',
   'Leveraged AI-assisted development tools (GitHub Copilot, coding agents) to accelerate implementation and reduce repetitive engineering effort'
 ]
 
