@@ -138,6 +138,12 @@
 
         <!-- ── Sidebar ────────────────────────── -->
         <aside class="resume__sidebar">
+          
+          <!-- Work Experience Chart -->
+          <section class="resume__section">
+            <h3 class="resume__section-title">Work Experience Breakdown</h3>
+            <WorkBarChart />
+          </section>
 
           <!-- Skills -->
           <section class="resume__section">
@@ -197,14 +203,6 @@
               </li>
             </ul>
 
-          </section>
-          
-          <!-- Work Experience Chart -->
-          <section>
-            <h3 class="resume__section-title">Work Experience Breakdown</h3>
-            <h4 class="resume__sub-heading">Percent of total work experience by type</h4>
-            <br />
-            <WorkBarChart />
           </section>
 
         </aside>

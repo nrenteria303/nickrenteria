@@ -37,12 +37,16 @@
             </div>
           </div>
 
+          <div class="about__chart">
+            <WorkBarChart />
+          </div>
+
           <div class="about__personal">
-            <h3 class="about__personal-heading">Outside the code</h3>
+            <h3 class="about__personal-heading">Me, at a glance</h3>
             <p>
               Born and raised in the Denver-metro area of Colorado, I now call Atlanta, GA home.
               I've been writing code for about 8 years — first as a freelancer building sites
-              for local businesses, and for the past 5+ years as a Senior UX/UI Developer
+              for local businesses, and for 5+ years as a Senior UX/UI Developer
               at BlueModus, Inc.
             </p>
             <p>
@@ -136,6 +140,8 @@
 </template>
 
 <script setup>
+import WorkBarChart from '../components/WorkBarChart.vue'
+
 import { ref, onMounted, onUnmounted } from 'vue'
 import headshot from '@images/headshot-2.jpg'
 import { SKILL_GROUPS_ABOUT as skillGroups, CLIENTS as clients } from '../data/site.js'
