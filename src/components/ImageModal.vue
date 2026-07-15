@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { defineEmits, defineProps, nextTick, onMounted, ref } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
 
 const props = defineProps({
   src: { type: String, required: true },
