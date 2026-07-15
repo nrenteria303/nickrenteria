@@ -62,7 +62,7 @@
               <div class="resume__roles">
                 <div class="resume__role">
                   <span class="resume__role-title">Senior UX/UI Developer</span>
-                  <span class="resume__role-dates">Nov 2021 – Present</span>
+                  <span class="resume__role-dates">Nov 2021 – Feb 2026</span>
                 </div>
                 <div class="resume__role resume__role--secondary">
                   <span class="resume__role-title">UX/UI Developer</span>
@@ -196,16 +196,26 @@
                 rigorous teams
               </li>
             </ul>
+
+          </section>
+          
+          <!-- Work Experience Chart -->
+          <section>
+            <h3 class="resume__section-title">Work Experience Breakdown</h3>
+            <h4 class="resume__sub-heading">Percent of total work experience by type</h4>
+            <br />
+            <WorkBarChart />
           </section>
 
         </aside>
-
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import WorkBarChart from '../components/WorkBarChart.vue'
+
 import { SKILL_GROUPS_RESUME as skillGroups, CLIENTS as bluemodusClients } from '../data/site.js'
 import resumeFile from '@files/Nick_Renteria_Resume.pdf'
 import KenticoDevCertFile from '@files/Kentico-Xperience-13-Certified-Developer.pdf'
@@ -280,7 +290,7 @@ const bluemodusBullets = [
   gap: var(--space-2xl);
 
   @media (min-width: 960px) {
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 390px;
     gap: var(--space-3xl);
     align-items: start;
   }
