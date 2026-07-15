@@ -68,7 +68,7 @@ const options = {
 onMounted(() => {
     // Update chart data
     data.value = {
-        labels: ["Initial Education", "Freelance", "Contract", "Enterprise"],
+        labels: ["Initial Education", "Freelance", "Contract", "Enterprise/Agency"],
         datasets: [
             {
                 label: "Work Experience",
