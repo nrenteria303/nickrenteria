@@ -34,6 +34,8 @@
 </template>
 
 <script setup>
+import '../assets/styles/_internalProjectPage.scss'
+
 import ProjectCard from '../components/ProjectCard.vue'
 
 import pongStartScreen from '@images/ping-pong-game-startscreen.jpg'
