@@ -71,7 +71,7 @@ export const SKILL_GROUPS_ABOUT = [
   },
   {
     category: 'CMS & Backend',
-    items: ['Kentico / Xperience by Kentico', 'ASP.NET Core', 'C# / CSHTML', 'MVC / API Controllers']
+    items: ['Kentico / Xperience by Kentico', 'ASP.NET Core', 'C# / CSHTML', 'MVC / API Controllers', 'MS SQL Server Management Studio']
   }
 ]
 
@@ -101,7 +101,7 @@ export const SKILL_GROUPS_RESUME = [
   },
   {
     category: 'CMS & Backend',
-    items: ['ASP.NET Core', 'Kentico 13', 'Kentico Xperience', 'Xperience by Kentico', 'C#', 'CSHTML', 'MVC', 'API Controllers']
+    items: ['ASP.NET Core', 'Kentico 13', 'Kentico Xperience', 'Xperience by Kentico', 'C#', 'CSHTML', 'MVC', 'API Controllers', 'MS SQL Server Management Studio']
   },
   {
     category: 'Collaboration',

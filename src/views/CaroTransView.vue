@@ -127,6 +127,8 @@
 </template>
 
 <script setup>
+import '../assets/styles/_internalProjectPage.scss'
+
 import ctBooking    from '@images/carotrans/ct_project_booking-app-page.png'
 import ctAgents     from '@images/carotrans/ct_project_agents-corner.jpg'
 import ctDock       from '@images/carotrans/ct_project_dock-receipt-portal.jpg'

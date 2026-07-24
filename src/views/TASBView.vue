@@ -98,6 +98,8 @@
 </template>
 
 <script setup>
+import '../assets/styles/_internalProjectPage.scss'
+
 const tech = ['Pug and Handlebars markup templating', 'Custom SCSS', 'Vanilla JS/jQuery', 'Vue', 'Kontent CMS']
 
 const techGroups = [
